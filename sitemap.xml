@@ -1,35 +1,35 @@
-<?xml-stylesheet type="text/xsl" href="http://localhost:1313/sitemap.xsl"?>
+<?xml-stylesheet type="text/xsl" href="https://blog.gkzhb.tk/sitemap.xsl"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>http://localhost:1313/post/</loc>
+    <loc>https://blog.gkzhb.tk/post/</loc>
     <lastmod>2019-11-08T22:26:28+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>http://localhost:1313/</loc>
+    <loc>https://blog.gkzhb.tk/</loc>
     <lastmod>2019-11-08T22:26:28+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>http://localhost:1313/post/my-post/</loc>
+    <loc>https://blog.gkzhb.tk/post/my-post/</loc>
     <lastmod>2019-11-08T22:26:28+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>http://localhost:1313/categories/</loc>
+    <loc>https://blog.gkzhb.tk/categories/</loc>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>http://localhost:1313/tags/</loc>
+    <loc>https://blog.gkzhb.tk/tags/</loc>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
