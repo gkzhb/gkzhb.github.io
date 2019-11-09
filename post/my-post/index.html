@@ -141,6 +141,7 @@
 <ul>
 <li><a href="#三级标题">三级标题</a></li>
 </ul></li>
+</ul></li>
 <li><a href="#语法介绍">语法介绍</a>
 <ul>
 <li><a href="#标题">标题</a></li>
@@ -159,7 +160,6 @@
 <li><a href="#表格">表格</a></li>
 <li><a href="#数学公式">数学公式</a></li>
 </ul></li>
-</ul></li>
 </ul>
 </nav>
   </div>
@@ -173,9 +173,9 @@
 
 <h3 id="三级标题">三级标题</h3>
 
-<h2 id="语法介绍">语法介绍</h2>
+<h1 id="语法介绍">语法介绍</h1>
 
-<h3 id="标题">标题</h3>
+<h2 id="标题">标题</h2>
 
 <p>效果见上方</p>
 <div class="highlight"><div class="chroma">
@@ -194,7 +194,7 @@
 ### 三级标题</code></pre></td></tr></table>
 </div>
 </div>
-<h3 id="段落换行">段落换行</h3>
+<h2 id="段落换行">段落换行</h2>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre class="chroma"><code class="language-markdown" data-lang="markdown"><span class="lnt">1
@@ -223,7 +223,7 @@
 <p>第三段<br />
 换行（上一行末尾有两个空格）</p>
 
-<h3 id="文字样式">文字样式</h3>
+<h2 id="文字样式">文字样式</h2>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre class="chroma"><code class="language-markdown" data-lang="markdown"><span class="lnt">1
@@ -240,7 +240,7 @@
 
 <p><del>删除线</del> <del><strong>加粗删除</strong></del> <del><em>斜体删除</em></del></p>
 
-<h3 id="链接">链接</h3>
+<h2 id="链接">链接</h2>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre class="chroma"><code class="language-markdown" data-lang="markdown"><span class="lnt">1
@@ -257,7 +257,7 @@
 
 <p><a href="/">相对链接</a></p>
 
-<h3 id="图片">图片</h3>
+<h2 id="图片">图片</h2>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre class="chroma"><code class="language-markdown" data-lang="markdown"><span class="lnt">1
@@ -268,9 +268,9 @@
 </div>
 <p><img src="https://www.baidu.com/img/bd_logo1.png" alt="百(la)度(ji)" /></p>
 
-<h3 id="列表">列表</h3>
+<h2 id="列表">列表</h2>
 
-<h4 id="无序列表">无序列表</h4>
+<h3 id="无序列表">无序列表</h3>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre class="chroma"><code class="language-markdown" data-lang="markdown"><span class="lnt">1
@@ -289,7 +289,7 @@
 <li>列表项3</li>
 </ul>
 
-<h4 id="有序列表">有序列表</h4>
+<h3 id="有序列表">有序列表</h3>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre class="chroma"><span class="lnt">1
@@ -328,7 +328,7 @@
 <li><p>第三项</p></li>
 </ol>
 
-<h4 id="待办事项">待办事项</h4>
+<h3 id="待办事项">待办事项</h3>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre class="chroma"><code class="language-markdown" data-lang="markdown"><span class="lnt">1
@@ -344,7 +344,7 @@
 <li><label><input type="checkbox" checked disabled class="task-list-item"> 已完成</label></li>
 </ul>
 
-<h4 id="多级混合列表">多级混合列表</h4>
+<h3 id="多级混合列表">多级混合列表</h3>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre class="chroma"><code class="language-markdown" data-lang="markdown"><span class="lnt"> 1
@@ -411,7 +411,7 @@
 </ul></li>
 </ul>
 
-<h3 id="代码块">代码块</h3>
+<h2 id="代码块">代码块</h2>
 
 <p>行内代码：<code>inline code</code></p>
 <div class="highlight"><div class="chroma">
@@ -424,7 +424,7 @@
 hello world</code></pre></td></tr></table>
 </div>
 </div>
-<h3 id="表格">表格</h3>
+<h2 id="表格">表格</h2>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre class="chroma"><code class="language-markdown" data-lang="markdown"><span class="lnt">1
@@ -484,7 +484,7 @@ xxxxxxx|aaaaaaaaaa|bbbbbbbb|cccccccc
 </tbody>
 </table>
 
-<h3 id="数学公式">数学公式</h3>
+<h2 id="数学公式">数学公式</h2>
 
 <p>使用MathJax渲染</p>
 
@@ -505,7 +505,11 @@ xxxxxxx|aaaaaaaaaa|bbbbbbbb|cccccccc
       
       <nav class="post-nav">
         
-        
+        <a class="next" href="/post/ankisyncd/">
+            <span class="next-text nav-default">Anki 自建同步服务器 ankisyncd</span>
+            <span class="next-text nav-mobile">下一篇</span>
+            <i class="iconfont icon-right"></i>
+          </a>
       </nav>
     </footer>
   </article>

@@ -6,9 +6,19 @@
     <description>Recent content in Categories on ZHB&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
+    <lastBuildDate>Sun, 23 Jun 2019 11:25:09 +0800</lastBuildDate>
     
 	<atom:link href="https://blog.gkzhb.tk/categories/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Deploy</title>
+      <link>https://blog.gkzhb.tk/categories/deploy/</link>
+      <pubDate>Sun, 23 Jun 2019 11:25:09 +0800</pubDate>
+      
+      <guid>https://blog.gkzhb.tk/categories/deploy/</guid>
+      <description></description>
+    </item>
     
   </channel>
 </rss>

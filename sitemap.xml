@@ -3,14 +3,14 @@
   
   <url>
     <loc>https://blog.gkzhb.tk/post/</loc>
-    <lastmod>2019-11-08T22:26:28+08:00</lastmod>
+    <lastmod>2019-11-09T11:25:09+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
     <loc>https://blog.gkzhb.tk/</loc>
-    <lastmod>2019-11-08T22:26:28+08:00</lastmod>
+    <lastmod>2019-11-09T11:25:09+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
@@ -23,13 +23,50 @@
   </url>
   
   <url>
+    <loc>https://blog.gkzhb.tk/post/ankisyncd/</loc>
+    <lastmod>2019-11-09T11:25:09+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
     <loc>https://blog.gkzhb.tk/categories/</loc>
+    <lastmod>2019-11-09T11:25:09+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.gkzhb.tk/categories/deploy/</loc>
+    <lastmod>2019-11-09T11:25:09+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.gkzhb.tk/post/wallabag/</loc>
+    <lastmod>2019-11-09T11:18:11+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
     <loc>https://blog.gkzhb.tk/tags/</loc>
+    <lastmod>2019-11-09T11:05:46+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.gkzhb.tk/post/ngrok/</loc>
+    <lastmod>2019-11-09T11:05:46+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.gkzhb.tk/tags/%E5%86%85%E7%BD%91%E7%A9%BF%E9%80%8F/</loc>
+    <lastmod>2019-11-09T11:05:46+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>

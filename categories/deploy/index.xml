@@ -1,24 +1,15 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>ZHB&#39;s Blog</title>
-    <link>https://blog.gkzhb.tk/</link>
-    <description>Recent content on ZHB&#39;s Blog</description>
+    <title>Deploy on ZHB&#39;s Blog</title>
+    <link>https://blog.gkzhb.tk/categories/deploy/</link>
+    <description>Recent content in Deploy on ZHB&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Fri, 08 Nov 2019 22:26:28 +0800</lastBuildDate>
+    <lastBuildDate>Sun, 23 Jun 2019 11:25:09 +0800</lastBuildDate>
     
-	<atom:link href="https://blog.gkzhb.tk/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://blog.gkzhb.tk/categories/deploy/index.xml" rel="self" type="application/rss+xml" />
     
-    
-    <item>
-      <title>第一篇 Hugo 文章</title>
-      <link>https://blog.gkzhb.tk/post/my-post/</link>
-      <pubDate>Fri, 08 Nov 2019 22:26:28 +0800</pubDate>
-      
-      <guid>https://blog.gkzhb.tk/post/my-post/</guid>
-      <description>&lt;p&gt;测试 Hugo Markdown 语法样式&lt;/p&gt;</description>
-    </item>
     
     <item>
       <title>Anki 自建同步服务器 ankisyncd</title>
