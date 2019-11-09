@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>论文 on ZHB&#39;s Blog</title>
+    <link>https://blog.gkzhb.tk/categories/%E8%AE%BA%E6%96%87/</link>
+    <description>Recent content in 论文 on ZHB&#39;s Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Sun, 10 Nov 2019 00:51:56 +0800</lastBuildDate>
+    
+	<atom:link href="https://blog.gkzhb.tk/categories/%E8%AE%BA%E6%96%87/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>150 Successful Machine Learning Models: 6 Lessons Learned at Booking.com</title>
+      <link>https://blog.gkzhb.tk/post/booking-ml/</link>
+      <pubDate>Sun, 10 Nov 2019 00:51:56 +0800</pubDate>
+      
+      <guid>https://blog.gkzhb.tk/post/booking-ml/</guid>
+      <description>&lt;h2 id=&#34;abstract&#34;&gt;Abstract&lt;/h2&gt;
+
+&lt;p&gt;这篇论文介绍了在实际生产环境中机器学习如何发挥的重要作用。
+给出的结论是：成功的基础是迭代与假设驱动的过程&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>
