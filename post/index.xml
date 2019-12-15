@@ -6,10 +6,20 @@
     <description>Recent content in Posts on ZHB&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Sun, 10 Nov 2019 00:51:56 +0800</lastBuildDate>
+    <lastBuildDate>Sat, 14 Dec 2019 10:01:00 +0800</lastBuildDate>
     
 	<atom:link href="https://blog.gkzhb.tk/post/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Training Big Random Forests with Little Resources</title>
+      <link>https://blog.gkzhb.tk/post/big-random-forests/</link>
+      <pubDate>Sat, 14 Dec 2019 10:01:00 +0800</pubDate>
+      
+      <guid>https://blog.gkzhb.tk/post/big-random-forests/</guid>
+      <description>&lt;h2 id=&#34;abstract&#34;&gt;Abstract&lt;/h2&gt;
+&lt;p&gt;对大量数据实例使用随机森林一般需要大型计算集群来进行训练。这篇论文提出了一种简单有效的分层构造框架来提高训练的速度。其基本思路是一个多级构造方案：用数据的少量随机子集来构建顶层树，之后将所有训练实例通过顶层树分散到各个叶子节点后进行后续的处理。&lt;/p&gt;</description>
+    </item>
     
     <item>
       <title>150 Successful Machine Learning Models: 6 Lessons Learned at Booking.com</title>
@@ -18,7 +28,6 @@
       
       <guid>https://blog.gkzhb.tk/post/booking-ml/</guid>
       <description>&lt;h2 id=&#34;abstract&#34;&gt;Abstract&lt;/h2&gt;
-
 &lt;p&gt;这篇论文介绍了在实际生产环境中机器学习如何发挥的重要作用。
 给出的结论是：成功的基础是迭代与假设驱动的过程&lt;/p&gt;</description>
     </item>
@@ -38,10 +47,8 @@
       <pubDate>Sun, 23 Jun 2019 11:25:09 +0800</pubDate>
       
       <guid>https://blog.gkzhb.tk/post/ankisyncd/</guid>
-      <description>&lt;p&gt;Anki 是一个用于记忆的软件，客户端同时支持电脑端和移动端（除了 iOS 上 AnkiMobile 收费以外都是免费的）。如果要使用同步的功能，使用官方的 AnkiWeb 网速较慢，在同步大量的 media 文件的时候十分痛苦。GitHub 上有牛人实现了 Anki 同步的 API 接口，可以自建同步服务器：&lt;a href=&#34;https://github.com/dsnopek/anki-sync-server&#34;&gt;dsnopek/anki-sync-server&lt;/a&gt;。不过这个服务端已经很久没有维护过了，在电脑上最新的 Anki 已经无法正常同步了。于是我在 Google 上找到了一篇文章：&lt;a href=&#34;http://genedan.com/no-127-ankisyncd-a-custom-sync-server-for-anki-2-1/&#34;&gt;ankisyncd – A Custom Sync Server for Anki 2.1 | Gene Dan&amp;rsquo;s Blog&lt;/a&gt;。我按照博客里提供的 &lt;a href=&#34;https://github.com/tsudoko/anki-sync-server&#34;&gt;tsudoko/anki-sync-server&lt;/a&gt; 对应的文档，成功在自己的 VPS 上搭建了服务器，并且在 Ankidroid 上和 Linux 端 2.1.11 版本的 Anki 上成功同步数据。&lt;/p&gt;
-
+      <description>&lt;p&gt;Anki 是一个用于记忆的软件，客户端同时支持电脑端和移动端（除了 iOS 上 AnkiMobile 收费以外都是免费的）。如果要使用同步的功能，使用官方的 AnkiWeb 网速较慢，在同步大量的 media 文件的时候十分痛苦。GitHub 上有牛人实现了 Anki 同步的 API 接口，可以自建同步服务器：&lt;a href=&#34;https://github.com/dsnopek/anki-sync-server&#34;&gt;dsnopek/anki-sync-server&lt;/a&gt;。不过这个服务端已经很久没有维护过了，在电脑上最新的 Anki 已经无法正常同步了。于是我在 Google 上找到了一篇文章：&lt;a href=&#34;http://genedan.com/no-127-ankisyncd-a-custom-sync-server-for-anki-2-1/&#34;&gt;ankisyncd – A Custom Sync Server for Anki 2.1 | Gene Dan&#39;s Blog&lt;/a&gt;。我按照博客里提供的 &lt;a href=&#34;https://github.com/tsudoko/anki-sync-server&#34;&gt;tsudoko/anki-sync-server&lt;/a&gt; 对应的文档，成功在自己的 VPS 上搭建了服务器，并且在 Ankidroid 上和 Linux 端 2.1.11 版本的 Anki 上成功同步数据。&lt;/p&gt;
 &lt;p&gt;注意：&lt;/p&gt;
-
 &lt;ul&gt;
 &lt;li&gt;iOS 上 AnkiMobile 不支持自定义同步服务器&lt;/li&gt;
 &lt;li&gt;同步服务器没有 AnkiWeb 的网页端访问支持&lt;/li&gt;
@@ -55,7 +62,7 @@
       <pubDate>Wed, 03 Apr 2019 21:00:53 +0800</pubDate>
       
       <guid>https://blog.gkzhb.tk/post/wallabag/</guid>
-      <description>&lt;p&gt;&amp;ldquo;稍后阅读&amp;rdquo;英文对应于 &lt;em&gt;Read-It-Later&lt;/em&gt; ，是指将碎片化信息中需要花时间仔细阅读思考或需要二次阅读消化的内容收集起来，待空余时间统一消化理解。国外这方面的知名应用服务商有 Pocket、 Instapaper 以及我之前一直使用的网速慢而且标签功能有 bug 的 Ioreader 等。由于国外服务商在国内网速较慢，而国内的也没找到附合心意的服务商，我选择自建服务 wallabag，运行在我的阿里云 VPS 上。&lt;/p&gt;</description>
+      <description>&lt;p&gt;&amp;ldquo;稍后阅读&amp;quot;英文对应于 &lt;em&gt;Read-It-Later&lt;/em&gt; ，是指将碎片化信息中需要花时间仔细阅读思考或需要二次阅读消化的内容收集起来，待空余时间统一消化理解。国外这方面的知名应用服务商有 Pocket、 Instapaper 以及我之前一直使用的网速慢而且标签功能有 bug 的 Ioreader 等。由于国外服务商在国内网速较慢，而国内的也没找到附合心意的服务商，我选择自建服务 wallabag，运行在我的阿里云 VPS 上。&lt;/p&gt;</description>
     </item>
     
     <item>
