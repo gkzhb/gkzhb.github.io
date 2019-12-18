@@ -49,7 +49,7 @@
 <meta itemprop="description" content="很久以前就在知乎上看到可以用 reveal.js 在网页上制作 PPT。但是一直没有用过，直到最近课堂展示上看到有人用 HackMD 做网页端 Slides 才又有了兴致。HackMD 提供网页端服务，通过 Markdown 排版 Slides。看起来也是用的 reveal.js，可惜网络不(bei)好(qiang)，在公用电脑上不方便进行展示。于是我在网上寻找类似的功能，发现有 reveal.js 的 Hugo 主题 可以较好地实现。这里有一个该Hugo 主题的 Demo和我自己的简单的 Demo。">
 <meta itemprop="datePublished" content="2019-12-18T18:33:44&#43;08:00" />
 <meta itemprop="dateModified" content="2019-12-18T18:33:44&#43;08:00" />
-<meta itemprop="wordCount" content="1807">
+<meta itemprop="wordCount" content="1988">
 
 
 
@@ -147,8 +147,14 @@
       </ul>
     </li>
     <li><a href="#-revealjs-">添加 reveal.js 插件</a></li>
-    <li><a href="#heading4">更多</a></li>
-    <li><a href="#heading5">总结</a></li>
+    <li><a href="#heading4">小功能</a>
+      <ul>
+        <li><a href="#heading5">快捷键</a></li>
+        <li><a href="#-pdf">导出为 PDF</a></li>
+      </ul>
+    </li>
+    <li><a href="#heading6">更多</a></li>
+    <li><a href="#heading7">总结</a></li>
   </ul>
 </nav>
   </div>
@@ -273,7 +279,7 @@ This is my second slide.
 <pre class="chroma"><code class="language-text" data-lang="text">Web Server is available at http://localhost:1313/ (bind address 127.0.0.1)
 </code></pre></td></tr></table>
 </div>
-</div><p>这时可以打开 http://localhost:1313/ 即可实时预览，当文件有改动时，网页会自动刷新。</p>
+</div><p>这时可以打开 <code>http://localhost:1313/</code> 即可实时预览，当文件有改动时，网页会自动刷新。</p>
 <h2 id="heading2">网站结构</h2>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
@@ -299,7 +305,7 @@ This is my second slide.
     <span class="k">-</span> conclusion.md # 添加到 ted talk PPT 后
 </code></pre></td></tr></table>
 </div>
-</div><p>在这个结构中，最后会生成两个 PPT，一个是根目录的 PPT，一个是 <code>/ted-talk</code> 路径下的 PPT。在文件夹中的补充 Markdown 文件会按照其中配置头部信息中的 <code>weight</code> 属性排序。如：</p>
+</div><p>在这个目录结构中，最后会生成两个 PPT，一个是根目录的 PPT，一个是 <code>/ted-talk</code> 路径下的 PPT。在文件夹中的补充 Markdown 文件会按照其中配置头部信息中的 <code>weight</code> 属性排序。如：</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre class="chroma"><code><span class="lnt">1
@@ -405,6 +411,8 @@ weight = 10
 </code></pre></td></tr></table>
 </div>
 </div><p><code>id</code> 属性用来链接引用。如 <code>[Try the link](#custom-slide)</code> 会生成一个链接到对应 <code>id</code> 的 Slide 的链接。</p>
+<h4 id="note">note</h4>
+<p>使用 <code>{{% note %}}</code> 可以添加演讲者注释信息，在网页端按 <code>s</code> 键可以打开演讲者界面。</p>
 <h2 id="-revealjs-">添加 reveal.js 插件</h2>
 <p>在 <code>static</code> 目录下创建 <code>plugin</code> 文件夹，将 reveal.js 的插件放入其中。在需要使用插件的 Markdown 文件头部添加：</p>
 <div class="highlight"><div class="chroma">
@@ -423,7 +431,17 @@ slide_number = true
 <p>对于需要添加 css 的插件，还需要将 css 信息添加到页面样式中：</p>
 <p>在 <code>layouts/partials/&lt;path-to-slide&gt;/reveal-hugo</code> 目录下添加 <code>head.html</code> 文件，加上引用所需 css 的 html 代码。</p>
 <p>教程参考 <a href="https://themes.gohugo.io/theme/reveal-hugo/plugin-example">Plugin Example</a>，对应 css 配置见 <a href="https://github.com/dzello/reveal-hugo/blob/master/exampleSite/layouts/partials/plugin-example/reveal-hugo/head.html">reveal-hugo/head.html at master · dzello/reveal-hugo</a>。</p>
-<h2 id="heading4">更多</h2>
+<h2 id="heading4">小功能</h2>
+<h3 id="heading5">快捷键</h3>
+<ul>
+<li>上下左右控制 Slide 移动方向</li>
+<li><code>s</code> 进入演讲者模式</li>
+<li><code>o</code> 进入概览模式</li>
+<li><code>f</code> 进入全屏模式</li>
+</ul>
+<h3 id="-pdf">导出为 PDF</h3>
+<p>reveal.js 支持用 Chrome 浏览器导出为 PDF 文件，只需要在原来的网页地址后加上 <code>?print-pdf</code>，如 <code>https://gkzhb.gitee.io/slides/?print-pdf</code>，然后使用 Chrome 的打印功能即可导出为 PDF。</p>
+<h2 id="heading6">更多</h2>
 <p>参看<a href="https://themes.gohugo.io/theme/reveal-hugo">官方 Demo</a></p>
 <ul>
 <li>每张 Slide 可单独设置背景颜色、出现的变换效果及快慢等。</li>
@@ -432,7 +450,7 @@ slide_number = true
 </ul>
 <p>在 GitHub 项目 <code>exampleSite/content</code> 目录下可以看到演示 Demo 的源 Markdown 文件，可以作为参考样例。</p>
 <p>Hugo 也提供了添加自定义样式或 html 结构到特定网页的功能，感兴趣的也可以自行探索，当然也欢迎大家一起讨论。</p>
-<h2 id="heading5">总结</h2>
+<h2 id="heading7">总结</h2>
 <p>我个人觉得这个 Slide 最大的优点就是便携性与兼容性。</p>
 <ul>
 <li>我们可以将 Slides 部署到网上，方便在任何有网的地方进行访问，也可以将整个 <code>public</code> 文件夹放到 U 盘通过浏览器打开。简单的部署可以选择 Github 或码云（国内推荐，网速更快）的静态网站托管服务。</li>
