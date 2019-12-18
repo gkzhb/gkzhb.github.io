@@ -6,10 +6,19 @@
     <description>Recent content in Posts on ZHB&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Sat, 14 Dec 2019 10:01:00 +0800</lastBuildDate>
+    <lastBuildDate>Wed, 18 Dec 2019 18:33:44 +0800</lastBuildDate>
     
 	<atom:link href="https://blog.gkzhb.tk/post/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>用 Hugo 与 Markdown 制作网页 PPT</title>
+      <link>https://blog.gkzhb.tk/post/revealjs/</link>
+      <pubDate>Wed, 18 Dec 2019 18:33:44 +0800</pubDate>
+      
+      <guid>https://blog.gkzhb.tk/post/revealjs/</guid>
+      <description>&lt;p&gt;很久以前就在知乎上看到可以用 &lt;a href=&#34;https://github.com/hakimel/reveal.js/&#34;&gt;reveal.js&lt;/a&gt; 在网页上制作 PPT。但是一直没有用过，直到最近课堂展示上看到有人用 HackMD 做网页端 Slides 才又有了兴致。HackMD 提供网页端服务，通过 Markdown 排版 Slides。看起来也是用的 reveal.js，可惜网络不(bei)好(qiang)，在公用电脑上不方便进行展示。于是我在网上寻找类似的功能，发现有 &lt;a href=&#34;https://github.com/hakimel/reveal.js/&#34;&gt;reveal.js 的 Hugo 主题&lt;/a&gt; 可以较好地实现。这里有一个该&lt;a href=&#34;https://themes.gohugo.io/theme/reveal-hugo/#/&#34;&gt;Hugo 主题的 Demo&lt;/a&gt;和我自己的&lt;a href=&#34;https://gkzhb.gitee.io/slides&#34;&gt;简单的 Demo&lt;/a&gt;。&lt;/p&gt;</description>
+    </item>
     
     <item>
       <title>Training Big Random Forests with Little Resources</title>
