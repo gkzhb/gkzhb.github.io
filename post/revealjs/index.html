@@ -49,7 +49,7 @@
 <meta itemprop="description" content="很久以前就在知乎上看到可以用 reveal.js 在网页上制作 PPT。但是一直没有用过，直到最近课堂展示上看到有人用 HackMD 做网页端 Slides 才又有了兴致。HackMD 提供网页端服务，通过 Markdown 排版 Slides。看起来也是用的 reveal.js，可惜网络不(bei)好(qiang)，在公用电脑上不方便进行展示。于是我在网上寻找类似的功能，发现有 reveal.js 的 Hugo 主题 可以较好地实现。这里有一个该Hugo 主题的 Demo和我自己的简单的 Demo。">
 <meta itemprop="datePublished" content="2019-12-18T18:33:44&#43;08:00" />
 <meta itemprop="dateModified" content="2019-12-18T18:33:44&#43;08:00" />
-<meta itemprop="wordCount" content="1571">
+<meta itemprop="wordCount" content="1800">
 
 
 
@@ -154,11 +154,11 @@
   </div>
 </div>
     <div class="post-content">
-      <p>很久以前就在知乎上看到可以用 <a href="https://github.com/hakimel/reveal.js/">reveal.js</a> 在网页上制作 PPT。但是一直没有用过，直到最近课堂展示上看到有人用 HackMD 做网页端 Slides 才又有了兴致。HackMD 提供网页端服务，通过 Markdown 排版 Slides。看起来也是用的 reveal.js，可惜网络不(bei)好(qiang)，在公用电脑上不方便进行展示。于是我在网上寻找类似的功能，发现有 <a href="https://github.com/hakimel/reveal.js/">reveal.js 的 Hugo 主题</a> 可以较好地实现。这里有一个该<a href="https://themes.gohugo.io/theme/reveal-hugo/#/">Hugo 主题的 Demo</a>和我自己的<a href="https://gkzhb.gitee.io/slides">简单的 Demo</a>。</p>
+      <p>很久以前就在知乎上看到可以用 <a href="https://github.com/hakimel/reveal.js/">reveal.js</a> 在网页上制作 PPT。但是一直没有用过，直到最近课堂展示上看到有人用 HackMD 做网页端 Slides 才又有了兴致。HackMD 提供网页端服务，通过 Markdown 排版 Slides。看起来也是用的 reveal.js，可惜网络不(bei)好(qiang)，在公用电脑上不方便进行展示。于是我在网上寻找类似的功能，发现有 <a href="https://github.com/dzello/reveal-hugo">reveal.js 的 Hugo 主题</a> 可以较好地实现。这里有一个该<a href="https://themes.gohugo.io/theme/reveal-hugo">Hugo 主题的 Demo</a>和我自己的<a href="https://gkzhb.gitee.io/slides">简单的 Demo</a>。</p>
 <h2 id="heading">安装</h2>
 <p>Hugo 必装，Git 推荐安装。Hugo 在 Windows 下的安装参考<a href="https://www.gohugo.org/doc/tutorials/installing-on-windows/">Hugo 安装中文文档</a>，简单来说以下几步：</p>
 <ol>
-<li>在 <a href="https://github.com/gohugoio/hugo/releases/latest">https://github.com/gohugoio/hugo/releases/latest</a> 下载最新版 <code>hugo_0.61.0_Windows-64bit.zip</code> 或 <code>hugo_extended_0.61.0_Windows-64bit.zip</code> （32位电脑请自觉用 32bit）</li>
+<li>在 <a href="https://github.com/gohugoio/hugo/releases/latest">Latest Release · gohugoio/hugo</a> 下载最新版 <code>hugo_0.61.0_Windows-64bit.zip</code> 或 <code>hugo_extended_0.61.0_Windows-64bit.zip</code> （32位电脑请自觉用 32bit）</li>
 <li>解压安装包，将 <code>hugo_*.exe</code> 文件重命名为 <code>hugo.exe</code> ，并添加该文件所在目录到 PATH 环境变量中，方便命令行访问</li>
 <li>输入 <code>hugo help</code> 来验证配置是否成功，成功时输出会包括以下内容：</li>
 </ol>
@@ -262,7 +262,7 @@ This is my first slide.
 This is my second slide.
 </code></pre></td></tr></table>
 </div>
-</div><p>上面 <code>+++</code> 框起来的区域用来写网页相关配置头部信息，后面开始是正文内容。</p>
+</div><p>上面 <code>+++</code> 框起来的区域用来写网页相关配置头部信息。后面开始是正文内容。</p>
 <p>生成静态网站，只需在 <code>my-presentation</code> 目录下执行 <code>hugo</code> 命令。所有生成的静态网站数据在 <code>public</code> 文件夹下，打开 <code>index.html</code> 来查看网站内容。</p>
 <p>要实时预览，执行 <code>hugo server</code> 命令，会有类似以下输出（不要关闭这个窗口）：</p>
 <div class="highlight"><div class="chroma">
@@ -406,17 +406,23 @@ weight = 10
 </div>
 </div><p><code>id</code> 属性用来链接引用。如 <code>[Try the link](#custom-slide)</code> 会生成一个链接到对应 <code>id</code> 的 Slide 的链接。</p>
 <h2 id="-revealjs-">添加 reveal.js 插件</h2>
-<p>在 <code>static</code> 目录下创建 <code>plugin</code> 文件夹，将 reveal.js 的插件放入其中。在需要使用插件的 Markdown 文件头部添加</p>
+<p>在 <code>static</code> 目录下创建 <code>plugin</code> 文件夹，将 reveal.js 的插件放入其中。在需要使用插件的 Markdown 文件头部添加：</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-text" data-lang="text">plugins = [&#34;plugin/math-katex/math-katex.js&#34;]
+<pre class="chroma"><code class="language-text" data-lang="text">[reveal_hugo]
+plugins = [&#34;plugin/math-katex/math-katex.js&#34;]
+slide_number = true
 </code></pre></td></tr></table>
 </div>
-</div><p>路径要对应实际的 js 文件。</p>
+</div><p>路径要对应实际的 js 文件。顺便说一句，最后一行的 <code>slide_number</code> 为可选设置，它可以设置是否显示 Slide 页码，取值 <code>true</code> 或 <code>false</code>。</p>
 <p>对于需要添加 css 的插件，还需要将 css 信息添加到页面样式中：</p>
+<p>在 <code>layouts/partials/&lt;path-to-slide&gt;/reveal-hugo</code> 目录下添加 <code>head.html</code> 文件，加上引用所需 css 的 html 代码。</p>
+<p>教程参考 <a href="https://themes.gohugo.io/theme/reveal-hugo/plugin-example">Plugin Example</a>，对应 css 配置见 <a href="https://github.com/dzello/reveal-hugo/blob/master/exampleSite/layouts/partials/plugin-example/reveal-hugo/head.html">reveal-hugo/head.html at master · dzello/reveal-hugo</a>。</p>
 <h2 id="heading4">更多</h2>
 <p>参看<a href="https://themes.gohugo.io/theme/reveal-hugo">官方 Demo</a></p>
 <ul>
@@ -424,10 +430,12 @@ weight = 10
 <li>通过修改 Markdown 文件头部信息可以修改网页设置，如添加插件。</li>
 <li>使用 reveal.js 的 Markdown 语法渲染 Slide <code>{{&lt; markdown &gt;}}</code>与用 html 渲染 Slide <code>&lt;section data-noprocess&gt; ... &lt;/section&gt;</code></li>
 </ul>
+<p>在 GitHub 项目 <code>exampleSite/content</code> 目录下可以看到演示 Demo 的源 Markdown 文件，可以作为参考样例。</p>
+<p>Hugo 也提供了添加自定义样式或 html 结构到特定网页的功能，感兴趣的也可以自行探索，当然也欢迎大家一起讨论。</p>
 <h2 id="heading5">总结</h2>
 <p>我个人觉得这个 Slide 最大的优点就是便携性与兼容性。</p>
 <ul>
-<li>我们可以将 Slides 部署到网上，方便在任何有网的地方进行访问，也可以放到 U 盘通过浏览器打开。</li>
+<li>我们可以将 Slides 部署到网上，方便在任何有网的地方进行访问，也可以放到 U 盘通过浏览器打开。简单的部署可以选择 Github 或码云（国内推荐，网速更快）的静态网站托管服务。</li>
 <li>相比于 PPT 来说兼容性比较不错，只是浏览器不能过于老旧（吐槽一下我们学校图书馆中居然还有用 XP 系统并且默认浏览器不支持 HTTPS 的电脑）。</li>
 <li>而且相比 PDF Beamer 不需要安装庞大的 LaTeX 环境，却又能提供简单的动画效果及 Hugo 提供的实时预览功能。当然如果够大佬的话，也可以充分利用浏览器环境进行各种刁炸天的骚操作。</li>
 </ul>
