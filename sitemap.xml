@@ -2,15 +2,50 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://blog.gkzhb.tk/categories/</loc>
+    <lastmod>2020-02-08T16:15:20+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
     <loc>https://blog.gkzhb.tk/post/</loc>
-    <lastmod>2019-12-18T18:33:44+08:00</lastmod>
+    <lastmod>2020-02-08T16:15:20+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.gkzhb.tk/tags/</loc>
+    <lastmod>2020-02-08T16:15:20+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.gkzhb.tk/post/sub-k-means/</loc>
+    <lastmod>2020-02-08T16:15:20+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
     <loc>https://blog.gkzhb.tk/</loc>
-    <lastmod>2019-12-18T18:33:44+08:00</lastmod>
+    <lastmod>2020-02-08T16:15:20+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.gkzhb.tk/tags/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/</loc>
+    <lastmod>2020-02-08T16:15:20+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.gkzhb.tk/categories/%E8%AE%BA%E6%96%87/</loc>
+    <lastmod>2020-02-08T16:15:20+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
@@ -23,35 +58,7 @@
   </url>
   
   <url>
-    <loc>https://blog.gkzhb.tk/categories/</loc>
-    <lastmod>2019-12-14T10:01:00+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://blog.gkzhb.tk/tags/</loc>
-    <lastmod>2019-12-14T10:01:00+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
     <loc>https://blog.gkzhb.tk/post/big-random-forests/</loc>
-    <lastmod>2019-12-14T10:01:00+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://blog.gkzhb.tk/tags/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/</loc>
-    <lastmod>2019-12-14T10:01:00+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://blog.gkzhb.tk/categories/%E8%AE%BA%E6%96%87/</loc>
     <lastmod>2019-12-14T10:01:00+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>

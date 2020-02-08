@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>Towards an Optimal Subspace for K-Means - ZHB&#39;s Blog</title>
+  <meta name="renderer" content="webkit" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+<meta name="theme-color" content="#f8f5ec" />
+<meta name="msapplication-navbutton-color" content="#f8f5ec">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
+
+
+<meta name="author" content="zhb" /><meta name="description" content="Abstract 这篇论文提出了对 k-means 算法的一个降维的扩展。扩展的目标是在找到 k-menas 样式聚类分区的同时，将聚类转换到一个最优的子空间。子空间的维度是自动获取的，无需附加参数。而且这个子空间有助于我们了解高维空间的数据。
+降维操作的本质是对座标系进行刚体变换（平移和旋转）。
+" /><meta name="keywords" content="Hugo, theme, even" />
+
+
+
+
+
+
+<meta name="generator" content="Hugo 0.63.2 with theme even" />
+
+
+<link rel="canonical" href="https://blog.gkzhb.tk/post/sub-k-means/" />
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/manifest.json">
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+
+
+<link href="/dist/even.6c0b2359.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.css" integrity="sha256-7TyXnr2YU040zfSP+rEcz29ggW4j56/ujTPwjMzyqFY=" crossorigin="anonymous">
+
+
+<meta property="og:title" content="Towards an Optimal Subspace for K-Means" />
+<meta property="og:description" content="Abstract
+这篇论文提出了对 k-means 算法的一个降维的扩展。扩展的目标是在找到 k-menas 样式聚类分区的同时，将聚类转换到一个最优的子空间。子空间的维度是自动获取的，无需附加参数。而且这个子空间有助于我们了解高维空间的数据。
+降维操作的本质是对座标系进行刚体变换（平移和旋转）。" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://blog.gkzhb.tk/post/sub-k-means/" />
+<meta property="article:published_time" content="2020-02-08T16:15:20+08:00" />
+<meta property="article:modified_time" content="2020-02-08T16:15:20+08:00" />
+<meta itemprop="name" content="Towards an Optimal Subspace for K-Means">
+<meta itemprop="description" content="Abstract
+这篇论文提出了对 k-means 算法的一个降维的扩展。扩展的目标是在找到 k-menas 样式聚类分区的同时，将聚类转换到一个最优的子空间。子空间的维度是自动获取的，无需附加参数。而且这个子空间有助于我们了解高维空间的数据。
+降维操作的本质是对座标系进行刚体变换（平移和旋转）。">
+<meta itemprop="datePublished" content="2020-02-08T16:15:20&#43;08:00" />
+<meta itemprop="dateModified" content="2020-02-08T16:15:20&#43;08:00" />
+<meta itemprop="wordCount" content="3088">
+
+
+
+<meta itemprop="keywords" content="机器学习," /><meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Towards an Optimal Subspace for K-Means"/>
+<meta name="twitter:description" content="Abstract
+这篇论文提出了对 k-means 算法的一个降维的扩展。扩展的目标是在找到 k-menas 样式聚类分区的同时，将聚类转换到一个最优的子空间。子空间的维度是自动获取的，无需附加参数。而且这个子空间有助于我们了解高维空间的数据。
+降维操作的本质是对座标系进行刚体变换（平移和旋转）。"/>
+
+<!--[if lte IE 9]>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
+<![endif]-->
+
+<!--[if lt IE 9]>
+  <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+<![endif]-->
+
+</head>
+<body>
+  <div id="mobile-navbar" class="mobile-navbar">
+  <div class="mobile-header-logo">
+    <a href="/" class="logo">ZHB&#39;s Blog</a>
+  </div>
+  <div class="mobile-navbar-icon">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</div>
+<nav id="mobile-menu" class="mobile-menu slideout-menu">
+  <ul class="mobile-menu-list">
+    <a href="/">
+        <li class="mobile-menu-item">Home</li>
+      </a><a href="/post/">
+        <li class="mobile-menu-item">Archives</li>
+      </a><a href="/tags/">
+        <li class="mobile-menu-item">Tags</li>
+      </a><a href="/categories/">
+        <li class="mobile-menu-item">Categories</li>
+      </a>
+  </ul>
+</nav>
+  <div class="container" id="mobile-panel">
+    <header id="header" class="header">
+        <div class="logo-wrapper">
+  <a href="/" class="logo">ZHB&#39;s Blog</a>
+</div>
+
+<nav class="site-navbar">
+  <ul id="menu" class="menu">
+    <li class="menu-item">
+        <a class="menu-item-link" href="/">Home</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/post/">Archives</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/tags/">Tags</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/categories/">Categories</a>
+      </li>
+  </ul>
+</nav>
+    </header>
+
+    <main id="main" class="main">
+      <div class="content-wrapper">
+        <div id="content" class="content">
+          <article class="post">
+    
+    <header class="post-header">
+      <h1 class="post-title">Towards an Optimal Subspace for K-Means</h1>
+
+      <div class="post-meta">
+        <span class="post-time"> 2020-02-08 </span>
+        <div class="post-category">
+            <a href="/categories/%E8%AE%BA%E6%96%87/"> 论文 </a>
+            </div>
+        
+      </div>
+    </header>
+
+    <div class="post-toc" id="post-toc">
+  <h2 class="post-toc-title">文章目录</h2>
+  <div class="post-toc-content always-active">
+    <nav id="TableOfContents">
+  <ul>
+    <li><a href="#abstract">Abstract</a></li>
+    <li><a href="#k-means-算法-lloyds-algorithm">k-means 算法( Lloyd&rsquo;s Algorithm)</a></li>
+    <li><a href="#1-introduction">1 Introduction</a></li>
+    <li><a href="#2-subspace-k-means">2 Subspace k-means</a>
+      <ul>
+        <li><a href="#21-cost-function-代价函数">2.1 Cost Function 代价函数</a></li>
+        <li><a href="#22-optimization-algorithm">2.2 Optimization Algorithm</a></li>
+        <li><a href="#23-convergence-收敛性">2.3 Convergence 收敛性</a></li>
+        <li><a href="#3-experiments">3 Experiments</a></li>
+      </ul>
+    </li>
+    <li><a href="#链接">链接</a></li>
+  </ul>
+</nav>
+  </div>
+</div>
+    <div class="post-content">
+      <h2 id="abstract">Abstract</h2>
+<p>这篇论文提出了对 k-means 算法的一个降维的扩展。扩展的目标是在找到 k-menas 样式聚类分区的同时，将聚类转换到一个最优的子空间。子空间的维度是自动获取的，无需附加参数。而且这个子空间有助于我们了解高维空间的数据。</p>
+<p>降维操作的本质是对座标系进行刚体变换（平移和旋转）。</p>
+<h2 id="k-means-算法-lloyds-algorithm">k-means 算法( Lloyd&rsquo;s Algorithm)</h2>
+<p>指定参数 k 即聚类的数量，初始时从数据集中选出 k 个数据作为起始的 k 个聚类的中心。然后对每个数据点，选择距离它最近的聚类中心作为分类结果。得到所有数据的聚类分区后，对每个聚类计算新的聚类中心。迭代前面的操作直到满足终止条件。</p>
+<h2 id="1-introduction">1 Introduction</h2>
+<p>随着维数的增加，对算法发现内容的解释变得越来越困难。SubKmeans 能找到一种聚类分区，并同时对数据进行转换，以突出显示在数据集中找到的结构。</p>
+<p>图 1 是一个五维合成数据集的示例，包含三个聚类，图中点的颜色表示不同聚类。在图 1 的三个图中，每个图中一行或一列代表一个 feature，每个小方块都是散点图，对角线的方格是单个 feature 的数据分布。</p>
+<p>图 1a 是原数据集的结果，图 1b 是使用 PCA 变换后操作的结果，图 1c 是使用 SubKmeans 进行分区和转换的结果。可以看出图 1c 中前两个 features 包含了聚类结构的所有信息。其它三个 feature 仅代表单峰结构，不提供任何关键信息。聚类空间包含所有有用的结构，噪声空间包含不相关（单峰）结构。</p>
+<p>这篇论文提出了 SubKmeans 算法，它能自动确定聚类空间的维数并实现降维。</p>
+<h2 id="2-subspace-k-means">2 Subspace k-means</h2>
+<p>介绍 SubKmeans 算法</p>
+<p>表 1 显示了符号和描述。</p>
+<table>
+<thead>
+<tr>
+<th>符号</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>$d\in N$</td>
+<td>原始空间的维度</td>
+</tr>
+<tr>
+<td>$m\in N$</td>
+<td>聚类空间的维度</td>
+</tr>
+<tr>
+<td>$k\in N$</td>
+<td>聚类数量</td>
+</tr>
+<tr>
+<td>$D$</td>
+<td>整个数据集合</td>
+</tr>
+<tr>
+<td>$C_i$</td>
+<td>聚类 $i$ 的数据集合</td>
+</tr>
+<tr>
+<td>$x\in R^d$</td>
+<td>数据点</td>
+</tr>
+<tr>
+<td>$\mu_D\in R^d$</td>
+<td>原始空间中所有数据均值</td>
+</tr>
+<tr>
+<td>$\mu_i\in R^m$</td>
+<td>原始空间中聚类 $i$ 中数据均值</td>
+</tr>
+<tr>
+<td>$S_D\in R^{d\times d}$</td>
+<td>原始空间中数据集的散布矩阵</td>
+</tr>
+<tr>
+<td>$S_i\in R^{d\times d}$</td>
+<td>原始空间中聚类 $i$ 数据的散布矩阵</td>
+</tr>
+<tr>
+<td>$\sum$</td>
+<td>见公式 3 定义</td>
+</tr>
+<tr>
+<td>$P_C\in R^{m\times d}$</td>
+<td>在前 $m$ 个属性上的投影</td>
+</tr>
+<tr>
+<td>$P_N\in R^{(d-m)\times d}$</td>
+<td>在后 $d-m$ 个属性上的投影</td>
+</tr>
+<tr>
+<td>$V\in R^{d\times d}$</td>
+<td>刚体变换的（正交）矩阵</td>
+</tr>
+<tr>
+<td>$I_l$</td>
+<td>$l\times l$ 单位矩阵</td>
+</tr>
+<tr>
+<td>$0_{l,r}$</td>
+<td>$l\times r$零矩阵</td>
+</tr>
+</tbody>
+</table>
+<h3 id="21-cost-function-代价函数">2.1 Cost Function 代价函数</h3>
+<p>在 k-means 算法中，我们需要找到一组 $C_i$，使距离的平方误差最小 $\sum\limits_{i=1}^k\sum\limits_{x\in C_k}|x-\mu_i|^2$</p>
+<p>我们假设数据空间可以分为两个任意定向的子空间，第一个 m 维子空间包含 k 个聚类的所有结构信息，将此子空间称为<strong>聚类空间</strong>。</p>
+<p>和该子空间正交的剩余 $d-m$ 维子空间是第二个子空间，称为<strong>噪声空间</strong>。它不包含聚类的结构信息。而且每个维度的数据点值服从单峰对称分布。我们用单个聚类来描述此空间。</p>
+<p>进一步，我们假设可以找到一个正交变换矩阵 $V$，该矩阵旋转（并反射/映）原始空间，使得变换后的空间中的前 $m$ 个特征对应于聚类空间，而最后 $d-m$ 个特征对应于噪声空间。 我们可以使用两个简单的投影 $P_C$ $P_N$ 将这些特征分成各自的子空间。</p>
+<p>数据点 $x$ 可以通过 $P_C^TV^Tx$ 投影到聚类空间中。</p>
+<p>合并这些假设就可以得到需要使它最小的代价函数（公式 1）。这个函数在两个子空间之间构建了一种权衡，我们希望将聚类结构信息从噪声空间中挤出到聚类空间中。第一项相比原始空间，更好地表示了包含聚类信息的特征；第二项则更好地表现了不含聚类信息的特征。</p>
+<h3 id="22-optimization-algorithm">2.2 Optimization Algorithm</h3>
+<p>算法 1 是根据 Lloyd 算法改进得到的，所以和 Lloyd 算法一样，这个算法只能找到局部最小值。对于不同的初始值，得到的结果是不一样的。所以需要使用不同的初始值多次运行，才能得到较不错的结果。</p>
+<p>输入：</p>
+<ul>
+<li>数据集 $D$</li>
+<li>聚类数量 $k$</li>
+</ul>
+<p>输出：</p>
+<ul>
+<li>聚类集合 ${C_1,\dots,C_k}$</li>
+<li>变换矩阵 $V$</li>
+<li>聚类空间维度 $m$</li>
+</ul>
+<p>初始化阶段：</p>
+<ul>
+<li>V 随机正交矩阵</li>
+<li>m 自定义初始值</li>
+<li>$\mu_D$</li>
+<li>$S_D$</li>
+<li>$\forall i\in[1,k]: 随机选出 \mu_i$</li>
+</ul>
+<p>循环：</p>
+<ul>
+<li>11: 清空所有集合 $C_j$</li>
+<li>12-14: 将所有数据分类到 $C_j$ 集合中，这一步在其它参数固定的情况下，最小化代价函数</li>
+<li>15-17: 更新阶段 固定数据点分类的情况下，更新聚类中心点 $\mu_i$ 和散布矩阵 $S_i$</li>
+<li>18: 获得所有特征向量 $V$ 和 $\varepsilon$</li>
+</ul>
+<p>后面具体介绍每一步及其正确性</p>
+<h4 id="221-estimation-of-the-cluster-centers-mu_i">2.2.1 Estimation of the cluster centers $\mu_i$</h4>
+<p>对于聚类中心的估计：</p>
+<p>当代价函数最小时，代价函数对 $\mu_i$ 的偏导为 0。由这个等式推导出后面的 $\mu_i$ 值，这个值符合我们直觉的期望：聚类中所有点的平均值，而且这个值与 $V$ 和 $m$ 无关。</p>
+<h4 id="222-estimation-of-the-transformation-matrix-v">2.2.2 Estimation of the transformation matrix V</h4>
+<p>接下来我们估计 $V$ 的值，这里不求偏导，而是改写代价函数。得到的结果可以帮助我们解决特征分解问题。</p>
+<p>前两步是矩阵基本运算，第三到第四个等式的变换是因为一个标量的值可以写作 $1\times 1$ 矩阵的迹 trace（对角线的值求和）。得到公式 2 的值。接着依靠迹的循环置换属性和加法性质可以继续化简。</p>
+<p>循环置换：$tr(ABC)=tr(BCA)=tr(CAB)$</p>
+<p>接着我们发现 $P_CP_C^T$ 是一个对角矩阵，矩阵中非对角线元都为0。而且前 m 个对角线元为 1，而后 $d-m$ 个都是 0。$P_N$ 则是对角线上 0 和 1 与之相反。之后容易得到下面的等式（对任意方阵A）。</p>
+<p>有一条性质是任意方阵的迹等于特征值之和。又由于 $V$ 是正交阵，$V^TS_DV$ 只改变 $S_D$ 的特征向量的方向，而不会改变特征值。所以对于任意的正交阵 V，$tr(V^TS_DV) 的值不会变。</p>
+<p>最后结合上面的结论可以化简到公式 3，其中第二项对不同的 $V$ 来说是不变的。前一个式子中，$P_CP_C^T$ 将与之相乘的方阵左上 $m\times m$ 方阵保留。</p>
+<p>在聚类划分固定的情况下，$\mu_i$ 是固定的，$S_i$ 和 $\sum$ 也都是定值，此时只有 $V$ 决定代价函数的大小。我们将 $\sum$ 的特征向量作为 $V$ 的列，并且按照特征值递增的顺序排列对应的特征向量。这样得到的 $V^T\sum V$ 为对角阵，可以最小化代价函数。对 $\sum$ 其进行特征值分解，得到目标 $V$。</p>
+<h4 id="223-estimation-of-the-dimensionality-m-of-the-clustered-space">2.2.3 Estimation of the dimensionality m of the clustered space</h4>
+<p>上一步中得到的 $V$ 是独立于 $m$ 的，所以可以在每一轮中对 $m$ 进行优化，而不影响下一轮。我们仍然可以用公式 3 来得到 $m$ 的取值。这个式子中只有 $P_C$ 受 $m$ 影响，而且 $m$ 影响几个特征值求和。所以只要取负的特征值可以使代价函数最小。如果全为正，则令 $m=0$，这时表示在当前分类下无法找到结构信息。特征值为 0 则随意是否加上都行，不影响结果，不过我们更希望缩小聚类空间，所以对于非常小的特征值也更倾向于投影到噪声空间中。</p>
+<h3 id="23-convergence-收敛性">2.3 Convergence 收敛性</h3>
+<p>代价函数在每次更新和复制步骤中都会减小，而且一定有下界，所以算法一定会收敛到一个局部最小值。</p>
+<h3 id="3-experiments">3 Experiments</h3>
+<p>对八个现实世界中的数据集做了测试，将 SubKmeans 与另外两种广泛使用的降维预处理方法 PCA 和 ICA 进行对比。在 PCA 或 ICA 进行预处理后，再用标准 k-menas 算法进行聚类。他们也将 SubKmeans 和其它四种在聚类时降维的算法 LDA-k-means, FOSSCLU, ORCLUS, 4C 进行对比。聚类数都取数据集对应的分类标签数。</p>
+<p>运行环境：Intel Core i7 3.40GHz, 32GB RAM, Linux</p>
+<p>对数据集特征进行标准化处理，FOSSCLU, LDA-k-means, ICA-k-means, PCA-k-means, SubKmeans 每个跑 40 次，对代价函数值进行排序，去掉代价更大的一半，然后对每个算法得到平均 NMI。</p>
+<p>定量结果在表 2 中，第一行括号中是 $m$ 的值，除两个数据集外，SubKmeans 的 NMI 得分都是最高的。</p>
+<p>即使是低维数据集，使用 SubKmeans 做可视化也是有优势的。图 3 将它的转换与 PCA 进行对比。第一行是 Subkmeans 聚类空间前两个特征的散点图，第二行是 噪声空间前两个特征的散点图，第三行是 PCA 找到的前两个特征。SubKmeans 对实际数据的聚类结构也能清晰地表现出来。而 PCA 变换的聚类结果在多个数据集上并不明显，效果不如 SubKmeans。</p>
+<p>图 4 展示了当聚类数量 $k$ 取值大于实际聚类时 SubKmeans 的表现，左右两边分别对应图 3 中的第 2 列和最后一列数据集，但是 $k$ 取值为实际分类的两倍。聚类空间的前两个特征的散点图形状变换不大。</p>
+<h4 id="31-runtime-experiments">3.1 Runtime Experiments</h4>
+<p>与其它四种算法相比，SubKmeans 运行速度更快。测试数据使用合成数据集，数据点平均分布在三个完全分开的高斯聚类上，选用能得到最佳 NMI 的参数值。</p>
+<p>图 2 是两个实验的结果，左边是数据集规模对运行时间的影响，右边是原始特征维度数的影响。每种算法运行十次，取中值结果。显然 SubKmeans 最快。</p>
+<h2 id="链接">链接</h2>
+<ul>
+<li><a href="https://doi.org/10.1145/3097983.3097989">Towards an Optimal Subspace for K-Means | Proceedings of the 23rd ACM SIGKDD International Conference on Knowledge Discovery and Data Mining</a></li>
+<li><a href="https://baike.baidu.com/item/K%E5%9D%87%E5%80%BC%E8%81%9A%E7%B1%BB%E7%AE%97%E6%B3%95">K均值聚类算法_百度百科</a></li>
+<li><a href="https://www.jianshu.com/p/f9c6b36395f6">降维算法一 : PCA (Principal Component Analysis) - 简书</a></li>
+<li><a href="https://blog.csdn.net/u013850277/article/details/88411966">KMeans 算法（一）_Stay Focused And Work Hard !!!-CSDN博客</a></li>
+<li><a href="https://blog.csdn.net/joeland209/article/details/72147763">K-Means的三种迭代算法_joeland209的博客-CSDN博客</a></li>
+<li><a href="https://blog.csdn.net/liuweiyuxiang/article/details/86510191">一文读懂图像中点的坐标变换(刚体变换，相似变换，仿射变换，投影变换)_Lavi的专栏-CSDN博客</a></li>
+</ul>
+    </div>
+
+    
+<footer class="post-footer">
+      <div class="post-tags">
+          <a href="/tags/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/">机器学习</a>
+          </div>
+      <nav class="post-nav">
+        
+        <a class="next" href="/post/revealjs/">
+            <span class="next-text nav-default">用 Hugo 与 Markdown 制作网页 PPT</span>
+            <span class="next-text nav-mobile">下一篇</span>
+            <i class="iconfont icon-right"></i>
+          </a>
+      </nav>
+    </footer>
+  </article>
+        </div>
+        
+
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="social-links">
+      <a href="mailto:zhb896579388@163.com" class="iconfont icon-email" title="email"></a>
+      <a href="https://github.com/gkzhb" class="iconfont icon-github" title="github"></a>
+  <a href="https://blog.gkzhb.tk/index.xml" type="application/rss+xml" class="iconfont icon-rss" title="rss"></a>
+</div>
+
+<div class="copyright">
+  <span class="power-by">
+    由 <a class="hexo-link" href="https://gohugo.io">Hugo</a> 强力驱动
+  </span>
+  <span class="division">|</span>
+  <span class="theme-info">
+    主题 - 
+    <a class="theme-link" href="https://github.com/olOwOlo/hugo-theme-even">Even</a>
+  </span>
+
+  
+
+  <span class="copyright-year">
+    &copy; 
+    2019 - 
+    2020
+    <span class="heart">
+      <i class="iconfont icon-heart"></i>
+    </span>
+    <span class="author">zhb</span>
+  </span>
+</div>
+    </footer>
+
+    <div class="back-to-top" id="back-to-top">
+      <i class="iconfont icon-up"></i>
+    </div>
+  </div>
+  
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/slideout@1.0.1/dist/slideout.min.js" integrity="sha256-t+zJ/g8/KXIJMjSVQdnibt4dlaDxc9zXr/9oNPeWqdg=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.js" integrity="sha256-XVLffZaxoWfGUEbdzuLi7pwaUJv1cecsQJQqGLe7axY=" crossorigin="anonymous"></script>
+<script type="text/javascript" src="/dist/even.2139186b.min.js"></script>
+  <script type="text/javascript">
+    window.MathJax = {
+      tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]},
+      showProcessingMessages: false,
+      messageStyle: 'none'
+    };
+  </script>
+  <script async src="https://cdn.jsdelivr.net/npm/mathjax@2.7.5/MathJax.js?config=TeX-MML-AM_CHTML"  integrity="sha256-nvJJv9wWKEm88qvoQl9ekL2J+k/RWIsaSScxxlsrv8k=" crossorigin="anonymous"></script>
+
+
+
+
+
+
+
+
+</body>
+</html>

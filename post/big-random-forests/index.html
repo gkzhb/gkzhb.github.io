@@ -24,7 +24,7 @@
 
 
 
-<meta name="generator" content="Hugo 0.60.1 with theme even" />
+<meta name="generator" content="Hugo 0.63.2 with theme even" />
 
 
 <link rel="canonical" href="https://blog.gkzhb.tk/post/big-random-forests/" />
@@ -141,13 +141,13 @@
     <li><a href="#1-introduction">1 Introduction</a></li>
     <li><a href="#2-background">2 Background</a>
       <ul>
-        <li><a href="#21-largescale-construction">2.1 Large-Scale Construction</a></li>
+        <li><a href="#21-large-scale-construction">2.1 Large-Scale Construction</a></li>
         <li><a href="#22-deep-trees">2.2 Deep Trees</a></li>
       </ul>
     </li>
     <li><a href="#3-algorithmic-framework">3 Algorithmic Framework</a>
       <ul>
-        <li><a href="#31-wrapperbased-construction">3.1 Wrapper-Based Construction</a></li>
+        <li><a href="#31-wrapper-based-construction">3.1 Wrapper-Based Construction</a></li>
         <li><a href="#32-implementation">3.2 Implementation</a></li>
       </ul>
     </li>
@@ -175,7 +175,7 @@
 <p>$T$ 表示一组训练模式，$T_i$ 表示第i棵树，而 $f_i(x)$ 表示第i棵树的预测函数。公式1表示随机森林预测结果的表达式，其中函数C表示从B棵树的预测结果得到最终预测结果的函数。在回归模型中通常取平均值，而分类模型通常取最大分类结果数。</p>
 <p>一棵树从根节点开始递归地构造，而且使用训练数据的一个子集来训练节点。每个节点将数据分为两个子集，这两个子集被分别用来构造该节点下的两棵子树。当训练节点的数据子集只有一种分类结果时或满足其它条件（如达到设定最大深度）时，该节点成为叶子节点。在图 1 中给出了一个简单的示例，对于一个与训练实例的子集 $S\subseteq T'$ 相对应的内部节点，搜索一个分裂维度 i 和一个使信息增益最大化的阈值 $\theta$ 。信息增益见公式 2 。L和R两个S的子集是根据 $x_i$ 与 $\theta$ 的关系确定的。Q是一个度量集合中杂质的函数，如公式3和4分别对应回归和分类问题，公式 3 中 $\hat{y}$ 可能是打错了应该是 $\bar{y}$，是 y 的均值。</p>
 <p>随机森林的总体结构在算法 1 中进行了概述。对每颗树从集合 T 中随机提取样本 T&rsquo; 构建树。算法 2 中描述了构造树的方法。</p>
-<h3 id="21-largescale-construction">2.1 Large-Scale Construction</h3>
+<h3 id="21-large-scale-construction">2.1 Large-Scale Construction</h3>
 <blockquote>
 <p>这一部份探讨对于大量数据时森林构造的性能优化。</p>
 </blockquote>
@@ -191,7 +191,7 @@
 <h2 id="3-algorithmic-framework">3 Algorithmic Framework</h2>
 <p>提出了一种基于包装的方法，该方法可以处理单个计算节点上的大量数据集。</p>
 <p>3.1 概述一棵树的构造，3.2 介绍整体的实现如何同时构造所有的树。基本思路是由一小部分数据构造出顶层树，之后用这棵树将所有数据尽可能均匀地划分到不同的子集中。</p>
-<h3 id="31-wrapperbased-construction">3.1 Wrapper-Based Construction</h3>
+<h3 id="31-wrapper-based-construction">3.1 Wrapper-Based Construction</h3>
 <p>整体流程见算法 3：第一阶段，从所有训练集 T 中随机抽取一个子集 S，用于构建顶部树 $T_{top}$。第二阶段：训练数据 T 中所有数据都被这棵树分类到某个叶子节点中。第三阶段：对上一步分出的每个集合 $T_i$ 计算它的底部树，并将其附加到对应的顶部树的叶节点。这样就构成了一棵大树 $\cal T$。这棵大树类似于用 <code>BuildTree</code> 方法构造的一棵树。但是为了避免生成的顶层树很不平衡，不能直接套用 <code>BuildTree</code> 方法。</p>
 <h4 id="311-construction-of-top-trees">3.1.1 Construction of Top Trees.</h4>
 <p>算法 4 对 <code>BuildTree</code> 进行了两点修改：</p>
@@ -219,12 +219,12 @@
 <p>只对分类问题进行测试。实验数据规模见表 1，d 是特征数。最大的 landsat-osm 是一个遥感数据集。</p>
 <h3 id="42-model-parameters">4.2 Model Parameters</h3>
 <p>分析两个重要参数的影响</p>
-<h4 id="421-nb-">4.2.1 $n_b$ 每棵顶部树构建的底部树数量</h4>
+<h4 id="421-n_b-每棵顶部树构建的底部树数量">4.2.1 $n_b$ 每棵顶部树构建的底部树数量</h4>
 <p>增大 $n_b$ 来减少每棵顶部树的构建规模来减少构造时间，即让更多的树共享顶部树，不过这会导致随机性的减弱。</p>
 <p>M 是叶子 bucket 大小</p>
 <p>图 4：用 covtype 数据集探究这个参数的影响。使用 M 1000, 20000, 75000。M 很小时，会构建更大的顶部树，构造性能会更差。</p>
 <p>在每个测试例子中，底部树的数量总和都是 24 棵。$n_b$ 越大，精度越差，但是差异很小。同样地，M 的变化对精度影响叶很小，所以只要底部树的数量足够多，构造叶子更大的顶部树不会对精度有较大影响。</p>
-<h4 id="422-lambda-">4.2.2 $\lambda$ 调节平衡性的指标</h4>
+<h4 id="422-lambda-调节平衡性的指标">4.2.2 $\lambda$ 调节平衡性的指标</h4>
 <p>使用改进信息增益函数作为节点划分依据的标准随机森林和本模型对比。</p>
 <p>图 5：同样使用 covtype 数据集，使用不同的 $\lambda$，每个测试节点都构造 24 棵底部树( $n_t=6, n_b=4$ )。</p>
 <p>左边是标准随机森林实现，右边是论文提出的方法（底部树中仍然使用 G 而不是 $\bar{G}$）。</p>
@@ -283,7 +283,8 @@
 
   <span class="copyright-year">
     &copy; 
-    2019
+    2019 - 
+    2020
     <span class="heart">
       <i class="iconfont icon-heart"></i>
     </span>

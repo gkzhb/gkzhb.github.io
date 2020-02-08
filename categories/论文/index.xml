@@ -6,10 +6,21 @@
     <description>Recent content in 论文 on ZHB&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Sat, 14 Dec 2019 10:01:00 +0800</lastBuildDate>
+    <lastBuildDate>Sat, 08 Feb 2020 16:15:20 +0800</lastBuildDate>
     
 	<atom:link href="https://blog.gkzhb.tk/categories/%E8%AE%BA%E6%96%87/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Towards an Optimal Subspace for K-Means</title>
+      <link>https://blog.gkzhb.tk/post/sub-k-means/</link>
+      <pubDate>Sat, 08 Feb 2020 16:15:20 +0800</pubDate>
+      
+      <guid>https://blog.gkzhb.tk/post/sub-k-means/</guid>
+      <description>&lt;h2 id=&#34;abstract&#34;&gt;Abstract&lt;/h2&gt;
+&lt;p&gt;这篇论文提出了对 k-means 算法的一个降维的扩展。扩展的目标是在找到 k-menas 样式聚类分区的同时，将聚类转换到一个最优的子空间。子空间的维度是自动获取的，无需附加参数。而且这个子空间有助于我们了解高维空间的数据。&lt;/p&gt;
+&lt;p&gt;降维操作的本质是对座标系进行刚体变换（平移和旋转）。&lt;/p&gt;</description>
+    </item>
     
     <item>
       <title>Training Big Random Forests with Little Resources</title>

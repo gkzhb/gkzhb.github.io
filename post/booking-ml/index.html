@@ -24,7 +24,7 @@
 
 
 
-<meta name="generator" content="Hugo 0.60.1 with theme even" />
+<meta name="generator" content="Hugo 0.63.2 with theme even" />
 
 
 <link rel="canonical" href="https://blog.gkzhb.tk/post/booking-ml/" />
@@ -142,14 +142,14 @@
   <ul>
     <li><a href="#abstract">Abstract</a></li>
     <li><a href="#1-introduction">1 Introduction</a></li>
-    <li><a href="#2-inception-machine-learning-as-a-swiss-knife-for-product-development-">2 Inception: Machine learning as a swiss knife for product development 初始阶段</a>
+    <li><a href="#2-inception-machine-learning-as-a-swiss-knife-for-product-development-初始阶段">2 Inception: Machine learning as a swiss knife for product development 初始阶段</a>
       <ul>
-        <li><a href="#21-model-families-">2.1 Model Families 模型家族</a></li>
-        <li><a href="#22-all-model-families-can-provide-value-">2.2 All Model Families Can Provide Value 所有模型族都能提供价值</a></li>
-        <li><a href="#3-modeling-offline-model-performance-is-just-a-health-check-">3 Modeling: Offline model performance is just a health check 离线模型性能检测的作用</a></li>
+        <li><a href="#21-model-families-模型家族">2.1 Model Families 模型家族</a></li>
+        <li><a href="#22-all-model-families-can-provide-value-所有模型族都能提供价值">2.2 All Model Families Can Provide Value 所有模型族都能提供价值</a></li>
+        <li><a href="#3-modeling-offline-model-performance-is-just-a-health-check-离线模型性能检测的作用">3 Modeling: Offline model performance is just a health check 离线模型性能检测的作用</a></li>
         <li><a href="#4-modeling-before-solving-a-problem-design-it">4 Modeling: Before solving a problem, design it</a></li>
         <li><a href="#5-deployment-time-is-money">5 Deployment: Time is money</a></li>
-        <li><a href="#6-monitoring-unsupervised-red-flags-">6 Monitoring: Unsupervised red flags 实时检测模型缺陷的有效工具：响应分布分析</a></li>
+        <li><a href="#6-monitoring-unsupervised-red-flags-实时检测模型缺陷的有效工具响应分布分析">6 Monitoring: Unsupervised red flags 实时检测模型缺陷的有效工具：响应分布分析</a></li>
         <li><a href="#7-evaluation-experiment-design-sophistication-pays-off">7 Evaluation: Experiment design sophistication pays off</a></li>
       </ul>
     </li>
@@ -173,9 +173,9 @@
 </ul>
 <p>过去他们尝试将机器学习用于这些方面，但是发现想驱动真正的业务影响非常困难，而且人们难以区分和理解在建模上花费的努力和实际观察到的影响，很多发行刊物上描述了机器学习特定的用例以及对业务指标的影响，但是没有发现有描述开发测试产品来通过机器学习获得商业和用户价值的过程。在这项工作中，他们分析了150种成功的面向客户的机器学习技术的应用程序，并分享了他们发现的挑战，及他们的解决方案，以及在此过程中经验教训和一般建议，这就是他们这篇论文的贡献。</p>
 <p>后面按照开发过程的顺序介绍：初始，建模，部署，监控和评估</p>
-<h2 id="2-inception-machine-learning-as-a-swiss-knife-for-product-development-">2 Inception: Machine learning as a swiss knife for product development 初始阶段</h2>
+<h2 id="2-inception-machine-learning-as-a-swiss-knife-for-product-development-初始阶段">2 Inception: Machine learning as a swiss knife for product development 初始阶段</h2>
 <p>机器学习可以在很多非常不同环境中的产品中使用。实践中，模型被用来帮助团队改善产品并向用户学习。在一方面，机器学习可以在极其特定的环境中使用，但对应模型的适用面很窄；另一个极端是充当语义层的模型。比如分析用户旅行目的地的灵活性。也就是量化了一些潜在的用户行为指标以供开发者使用来改进产品。这种模型与具体的业务指标联系不紧密，但它们应用范围更广。</p>
-<h3 id="21-model-families-">2.1 Model Families 模型家族</h3>
+<h3 id="21-model-families-模型家族">2.1 Model Families 模型家族</h3>
 <p>下面的内容介绍了他们如何分类使用这些模型。这种模型分类为机器学习的使用提供了一个大致的参考思路。</p>
 <p><strong>2.1.1 旅行者偏好模型</strong></p>
 <p>用户对旅行中的不同方面有不同的关注度，比如地点、房价、位置、质量、日期、设施等。所以他们使用一些方面作为维度，通过多个模型组合得到用户偏好描述。这一族的模型是作为语义层。比如日期语义层可以判断用户对时间是否敏感，如果用户不太关心日期，在一些情况下会有日期的推荐。</p>
@@ -189,10 +189,10 @@
 <p>机器学习从大量庞杂的数据中如图片、结构化调查、用户评论和介绍中提取出住宿的特点和有代表性的摘要信息提供给用户，方便用户作出选择。如图1b</p>
 <p><strong>2.1.6 Content Augmentation 内容扩充</strong></p>
 <p>通过用户的数据反馈，提供更加多样的地点数据。如图1c。比如性价比、不同时间的价格趋势。</p>
-<h3 id="22-all-model-families-can-provide-value-">2.2 All Model Families Can Provide Value 所有模型族都能提供价值</h3>
+<h3 id="22-all-model-families-can-provide-value-所有模型族都能提供价值">2.2 All Model Families Can Provide Value 所有模型族都能提供价值</h3>
 <p>图2中每个柱是一个模型族对某一产品核心参数的贡献，数值是用中位数进行比较。大多数模型族都是有贡献的（大于1）。这些结果是在引入模型或改进模型的适合测量出来的。</p>
 <p>而且模型的使用会有一个迭代的过程。这个过程具有乘积效应。如图3每个柱表示在某一方面作出了改进与提升。每个柱的长度表示这次改进与第一次的相关性。所以后面的每次改进提升都会受到初始的影响。</p>
-<h3 id="3-modeling-offline-model-performance-is-just-a-health-check-">3 Modeling: Offline model performance is just a health check 离线模型性能检测的作用</h3>
+<h3 id="3-modeling-offline-model-performance-is-just-a-health-check-离线模型性能检测的作用">3 Modeling: Offline model performance is just a health check 离线模型性能检测的作用</h3>
 <p>模型带来的价值通过RCTs（随机对照实验）和特定业务指标来估计。有趣的一点是模型性能提升不一定会获得价值的提升。图4显示了性能和转化率的关系。横坐标为新模型与当前模型在离线性能预测上的相对差异，纵坐标是两个模型所针对的特定业务指标的差异。图中有23对模型的比较。目测它们没有相关性，而计算也说明缺乏相关性。这个相关性的缺乏实际是在离线性能提升与商业价值的提升之间。这个现象相关的原因大概有以下几点：</p>
 <ul>
 <li>价值绩效饱和：在一些业务问题中无法无尽地从模型绩效收益中获得业务价值。所以在某些时候，价值与绩效曲线趋于饱和，绩效收益不会产生价值收益，或者收益太小难以观察到。</li>
@@ -219,7 +219,7 @@
 <li>网络优化：将多个请求打包到一个请求包中以减小网络负载</li>
 <li>最小要素转化：为了减少计算进行更大粒度的预测</li>
 </ul>
-<h3 id="6-monitoring-unsupervised-red-flags-">6 Monitoring: Unsupervised red flags 实时检测模型缺陷的有效工具：响应分布分析</h3>
+<h3 id="6-monitoring-unsupervised-red-flags-实时检测模型缺陷的有效工具响应分布分析">6 Monitoring: Unsupervised red flags 实时检测模型缺陷的有效工具：响应分布分析</h3>
 <p>模型处理请求的时候，需要监视输出质量，这有两个挑战：</p>
 <ul>
 <li>不完整的反馈：很多时候无法观察到真实的标签（预测用户的特殊要求，但只能知道进行预订的用户的标签）</li>
@@ -252,7 +252,7 @@
 <p>Booking.com 内部大量使用随机对照实验进行实验。这节用 triggered analysis（触发分析） 和 treatment design（实验组设计） 来区分特定模型和实现方法对业务指标的因果影响。</p>
 <h4 id="71-selective-triggering">7.1 Selective triggering</h4>
 <p>RCT中，将所有对象分为对照组和实验组。如图8 左边对照组，右边实验组。在机器学习中，很多时候模型需要特定的特征才能使用，所以有时不是所有的数据对象都适用于模型。所以将不适应的数据对象也放到实验组会削弱实际模型的效果。因此应用触发分析，仅分析两组中的可触发的对象。触发就是指数据对象可以应用于模型。</p>
-<h4 id="72-modeloutput-dependent-triggering">7.2 Model-output dependent triggering</h4>
+<h4 id="72-model-output-dependent-triggering">7.2 Model-output dependent triggering</h4>
 <p>有时候模型的处理标准也可能取决于模型输出。此时可以设置三组实验，如图9，最左边的不使用模型，右边两组使用模型，并根据结果作为触发，但只有实验组1的会实施改变。最后会从 T1 和 T2 触发的数据中进行统计分析</p>
 <h4 id="73-controlling-performance-impact">7.3 Controlling performance impact</h4>
 <p>7.2 的方法可以用来区分引进新模型时，模型的功能和模型计算导致的延迟对业务指标的影响。图9中 C 和 T1 的对比是新功能和性能下降综合的影响，而 C 和 T2 的比较只包括了性能下降的影响。T1 与 T2 的比较说明了在相同延迟下新功能带来的影响。</p>
@@ -306,7 +306,8 @@
 
   <span class="copyright-year">
     &copy; 
-    2019
+    2019 - 
+    2020
     <span class="heart">
       <i class="iconfont icon-heart"></i>
     </span>
