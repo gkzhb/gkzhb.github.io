@@ -1,2 +1,2 @@
 User-agent: *
-Sitemap: https://blog.gkzhb.tk/sitemap.xml
+Sitemap: https://blog.gkzhb.top/sitemap.xml
