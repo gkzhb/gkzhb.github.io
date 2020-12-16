@@ -6,5 +6,6 @@
 &lt;ul>
 &lt;li>iOS 上 AnkiMobile 不支持自定义同步服务器&lt;/li>
 &lt;li>同步服务器没有 AnkiWeb 的网页端访问支持&lt;/li>
-&lt;li>ankisyncd 服务器支持 PC 端 Anki 版本 2.1.1 - 2.1.11，但是 2.1.9 版本不支持&lt;/li>
+&lt;li>ankisyncd 服务器支持 PC 端 Anki 版本 &lt;strong>2.1.1 - 2.1.11&lt;/strong>，但是 2.1.9 版本不支持&lt;/li>
+&lt;li>PC 端最新版 Anki 因为更新了同步协议，而目前开源同步服务端并没有更新到新的协议，所以要使用自建服务器，请务必&lt;strong>使用老版 Anki&lt;/strong>&lt;/li>
 &lt;/ul></description></item><item><title>自建”稍后阅读“服务—— wallabag</title><link>https://blog.gkzhb.tk/post/wallabag/</link><pubDate>Wed, 03 Apr 2019 21:00:53 +0800</pubDate><guid>https://blog.gkzhb.tk/post/wallabag/</guid><description>&lt;p>&amp;ldquo;稍后阅读&amp;quot;英文对应于 &lt;em>Read-It-Later&lt;/em> ，是指将碎片化信息中需要花时间仔细阅读思考或需要二次阅读消化的内容收集起来，待空余时间统一消化理解。国外这方面的知名应用服务商有 Pocket、 Instapaper 以及我之前一直使用的网速慢而且标签功能有 bug 的 Ioreader 等。由于国外服务商在国内网速较慢，而国内的也没找到附合心意的服务商，我选择自建服务 wallabag，运行在我的阿里云 VPS 上。&lt;/p></description></item><item><title>使用 ngrok 实现内网穿透（自建 ngrok 服务器）</title><link>https://blog.gkzhb.tk/post/ngrok/</link><pubDate>Sat, 16 Mar 2019 19:18:13 +0800</pubDate><guid>https://blog.gkzhb.tk/post/ngrok/</guid><description>&lt;p>有时候我希望能直接通过互联网访问到层层路由下的个人电脑，但是在没有固定 IPv4 的情况下很难做到这一点。一个解决方法就是使用内网穿透技术，而我选择用 ngrok 来实现。ngrok 在 1.x 版本时是开源的，到了 2.x 版本就闭源了。因为自建 ngrok 服务器需要将自己生成的证书编译到客户端中，所以只能使用开源的 1.x 版本从源码编译生成。&lt;/p></description></item></channel></rss>
