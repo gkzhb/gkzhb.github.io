@@ -1,0 +1,299 @@
+<!DOCTYPE html><html lang="en" class="charm" data-astro-cid-o3f7wajd> <head><meta charset="utf-8"><link rel="icon" type="image/svg+xml" href="/favicon.svg"><meta name="viewport" content="width=device-width"><meta name="generator" content="Astro v5.2.6"><style is:global>
+    @font-face {
+      font-family: 'LXGW ZhenKai';
+      src: url('https://static.zeoseven.com/zsft/2/main.woff2') format('woff2'),
+          url('https://static-host.zeoseven.com/zsft/2/main.woff2') format('woff2');
+      unicode-range: U+0061-007A, U+0041-005A, U+0030-0039, U+002E, U+002C, U+0021, U+003F, U+003A, U+003B, U+002D;
+    }
+  </style><meta name="astro-view-transitions-enabled" content="true"><meta name="astro-view-transitions-fallback" content="animate"><script type="module" src="/_astro/ClientRouter.astro_astro_type_script_index_0_lang.BOel_0Ki.js"></script><script>
+"use strict";(()=>{(()=>{let t="theme-toggle",n;function r(){return window.matchMedia("(prefers-color-scheme: dark)").matches?"dark":"light"}function l(){let e=localStorage.getItem(t);return e==="dark"||e==="light"?e:null}function m(){return n||l()||r()}function s(e){e===r()?localStorage.removeItem(t):localStorage.setItem(t,e)}function h(e){let o=document.documentElement;o.classList.toggle("dark",e==="dark"),o.dataset.theme=e,o.style.colorScheme=e}function a(e){n=e,s(e),h(e)}function c(){a(m())}c(),document.addEventListener("astro:after-swap",c),window.astroThemeToggle={setTheme:a,getTheme:m}})();})();
+</script><title>自建”稍后阅读“服务—— wallabag | Title on home page</title><link rel="canonical" href="https://blog.gkzhb.top/posts/wallabag/"><meta name="description" content="Description on home page"><meta name="robots" content="index, follow"><link rel="alternate" title="自建”稍后阅读“服务—— wallabag | Title on home page" href="/rss.xml" type="application/rss+xml"><script type="module">const c="1.2.1",o={bg:"background: #fcfaf2;",block:"display: inline-block; padding: 2px 6px;",badge:"color: #fcfaf2; background: #e06458;",text:"color: #374151;",arrow:"color: #212121;",link:"color: #e06458; text-decoration: underline;"};console.info(`%c Charm Theme  %cv${c} %c
+%c→%cGithub: %chttps://github.com/Yuhanawa/astro-charm`,`${o.block} ${o.badge} font-weight: bold;`,`${o.block} ${o.bg} ${o.text} opacity: 0.8;`,o.bg,`${o.block} ${o.bg} ${o.arrow}`,`${o.block} ${o.bg} ${o.text}`,`${o.block} ${o.bg} ${o.link}`);</script><style>:where(#astro-theme-toggle){padding:0;margin:0;border:none;background:none;cursor:pointer;width:100%;height:100%}.astro-theme-toggle-icon-light,.astro-theme-toggle-icon-dark{width:100%;height:100%;& *{display:block}}.astro-theme-toggle-icon-light{display:block;.dark &{display:none}}.astro-theme-toggle-icon-dark{display:none;.dark &{display:block}}
+</style>
+<link rel="stylesheet" href="/_astro/_special_.BPu38SJZ.css"><script type="module" src="/_astro/page.CPvyyiTs.js"></script></head> <body data-astro-cid-o3f7wajd> <main data-astro-cid-o3f7wajd>  <div class="mobile-menu-container" data-astro-cid-2yeyokk7> <header class="mobile-header" data-astro-cid-2yeyokk7> <a class="title" title="gkzhb's blog" href="/" data-astro-cid-2yeyokk7>gkzhb&#39;s blog</a> <button class="menu-toggle" aria-label="Toggle menu" data-astro-cid-2yeyokk7> <svg width="1em" height="1em" class="menu-icon" data-astro-cid-2yeyokk7="true" data-icon="solar:hamburger-menu-bold-duotone">   <symbol id="ai:solar:hamburger-menu-bold-duotone" viewBox="0 0 24 24"><path fill="currentColor" d="M12 22c-4.714 0-7.071 0-8.536-1.465C2 19.072 2 16.714 2 12s0-7.071 1.464-8.536C4.93 2 7.286 2 12 2s7.071 0 8.535 1.464C22 4.93 22 7.286 22 12s0 7.071-1.465 8.535C19.072 22 16.714 22 12 22" opacity=".5"/><path fill="currentColor" d="M18.75 8a.75.75 0 0 1-.75.75H6a.75.75 0 0 1 0-1.5h12a.75.75 0 0 1 .75.75m0 4a.75.75 0 0 1-.75.75H6a.75.75 0 0 1 0-1.5h12a.75.75 0 0 1 .75.75m0 4a.75.75 0 0 1-.75.75H6a.75.75 0 0 1 0-1.5h12a.75.75 0 0 1 .75.75"/></symbol><use href="#ai:solar:hamburger-menu-bold-duotone"></use>  </svg> </button> </header> <nav class="mobile-menu" data-astro-cid-2yeyokk7> <div class="menu-content" data-astro-cid-2yeyokk7> <ul class="nav-list" data-astro-cid-2yeyokk7> <li style="animation-delay: 0.2s;" data-astro-cid-2yeyokk7> <a href="/" title="Home" data-astro-prefetch="viewport" data-astro-cid-2yeyokk7> <div class="icon-state-wrapper" data-active="false" data-astro-cid-272faz54><svg width="1em" height="1em" viewBox="0 0 24 24" class="icon default icon" data-astro-cid-2yeyokk7="true" data-astro-cid-272faz54="true" data-astro-cid-bfoveg4b="true" data-icon="solar:file-text-broken">   <use href="#ai:solar:file-text-broken"></use>  </svg><svg width="1em" height="1em" viewBox="0 0 24 24" class="icon hover icon" data-astro-cid-2yeyokk7="true" data-astro-cid-272faz54="true" data-astro-cid-bfoveg4b="true" data-icon="solar:file-smile-outline">   <use href="#ai:solar:file-smile-outline"></use>  </svg><svg width="1em" height="1em" viewBox="0 0 24 24" class="icon active icon" data-astro-cid-2yeyokk7="true" data-astro-cid-272faz54="true" data-astro-cid-bfoveg4b="true" data-icon="solar:file-smile-bold-duotone">   <use href="#ai:solar:file-smile-bold-duotone"></use>  </svg></div> <span data-astro-cid-2yeyokk7>Home</span> </a> </li> <li style="animation-delay: 0.30000000000000004s;" data-astro-cid-2yeyokk7> <a href="/about" title="About" data-astro-prefetch="viewport" data-astro-cid-2yeyokk7> <div class="icon-state-wrapper" data-active="false" data-astro-cid-272faz54><svg width="1em" height="1em" viewBox="0 0 24 24" class="icon default icon" data-astro-cid-2yeyokk7="true" data-astro-cid-272faz54="true" data-astro-cid-bfoveg4b="true" data-icon="solar:ghost-broken">   <use href="#ai:solar:ghost-broken"></use>  </svg><svg width="1em" height="1em" viewBox="0 0 24 24" class="icon hover icon" data-astro-cid-2yeyokk7="true" data-astro-cid-272faz54="true" data-astro-cid-bfoveg4b="true" data-icon="solar:ghost-smile-outline">   <use href="#ai:solar:ghost-smile-outline"></use>  </svg><svg width="1em" height="1em" viewBox="0 0 24 24" class="icon active icon" data-astro-cid-2yeyokk7="true" data-astro-cid-272faz54="true" data-astro-cid-bfoveg4b="true" data-icon="solar:ghost-smile-bold-duotone">   <use href="#ai:solar:ghost-smile-bold-duotone"></use>  </svg></div> <span data-astro-cid-2yeyokk7>About</span> </a> </li> </ul> <div class="social-links" data-astro-cid-2yeyokk7> <a href="https://github.com/gkzhb" title="GitHub" class="social-link" style="animation-delay: 0.5s;" data-astro-cid-2yeyokk7> <svg width="1em" height="1em" viewBox="0 0 24 24" class="icon" data-astro-cid-2yeyokk7="true" data-icon="simple-icons:github">   <use href="#ai:simple-icons:github"></use>  </svg> <span data-astro-cid-2yeyokk7>GitHub</span> </a> </div> </div> </nav> </div> <br data-astro-cid-2yeyokk7>  <script data-astro-rerun>
+  document.querySelector(".menu-toggle")?.addEventListener("click", () => {
+    const mobileMenu = document.querySelector(".mobile-menu");
+    const menuIcon = document.querySelector(".menu-icon");
+
+    mobileMenu?.classList.toggle("active");
+    menuIcon?.classList.toggle("active");
+    document.body.style.overflow = mobileMenu?.classList.contains("active")
+      ? "hidden"
+      : "";
+  });
+
+  document.addEventListener("click", (event) => {
+    if (
+      event.target instanceof Element &&
+      !event.target.closest(".mobile-menu") &&
+      !event.target.closest(".menu-toggle")
+    ) {
+      const mobileMenu = document.querySelector(".mobile-menu");
+      const menuIcon = document.querySelector(".menu-icon");
+
+      mobileMenu?.classList.remove("active");
+      menuIcon?.classList.remove("active");
+      document.body.style.overflow = "";
+    }
+  });
+</script> <div class="side" data-astro-cid-jalpcphr> <div class="container" data-astro-cid-jalpcphr> <div class="shooting-star-container" aria-hidden="true" aria-label="shooting stars animation" data-astro-cid-eggminjp style="--shootingTime: 3000ms;--starColor: var(--charm-highlight-color);--starTailColor: rgba(0, 0, 255, 0);"> <div class="night" data-astro-cid-eggminjp style="--shootingTime: 3000ms;--starColor: var(--charm-highlight-color);--starTailColor: rgba(0, 0, 255, 0);"> <div class="shooting-star" style="--index: 1; --delay: 1039ms; --top-offset: 190px; --left-offset: 111px;; --shootingTime: 3000ms;--starColor: var(--charm-highlight-color);--starTailColor: rgba(0, 0, 255, 0);" data-astro-cid-eggminjp></div><div class="shooting-star" style="--index: 2; --delay: 5243ms; --top-offset: 158px; --left-offset: 277px;; --shootingTime: 3000ms;--starColor: var(--charm-highlight-color);--starTailColor: rgba(0, 0, 255, 0);" data-astro-cid-eggminjp></div><div class="shooting-star" style="--index: 3; --delay: 10630ms; --top-offset: -68px; --left-offset: 19px;; --shootingTime: 3000ms;--starColor: var(--charm-highlight-color);--starTailColor: rgba(0, 0, 255, 0);" data-astro-cid-eggminjp></div><div class="shooting-star" style="--index: 4; --delay: 1136ms; --top-offset: 119px; --left-offset: 49px;; --shootingTime: 3000ms;--starColor: var(--charm-highlight-color);--starTailColor: rgba(0, 0, 255, 0);" data-astro-cid-eggminjp></div><div class="shooting-star" style="--index: 5; --delay: 1495ms; --top-offset: 17px; --left-offset: 53px;; --shootingTime: 3000ms;--starColor: var(--charm-highlight-color);--starTailColor: rgba(0, 0, 255, 0);" data-astro-cid-eggminjp></div> </div> </div>  <div class="center" data-astro-cid-jalpcphr> <nav data-astro-cid-jalpcphr> <a href="/" title="Home" data-astro-prefetch="viewport" data-astro-cid-jalpcphr> <div class="item" data-astro-cid-jalpcphr> <span class="title transparent" data-astro-cid-jalpcphr> Home </span> <div class="icon-state-wrapper" data-active="false" data-astro-cid-272faz54><svg width="1em" height="1em" data-astro-cid-jalpcphr="true" class="icon default icon" data-astro-cid-272faz54="true" data-astro-cid-bfoveg4b="true" data-icon="solar:file-text-broken">   <symbol id="ai:solar:file-text-broken" viewBox="0 0 24 24"><g fill="none"><path stroke="currentColor" stroke-linecap="round" stroke-width="1.5" d="M6 14.5h8M6 18h5.5"/><path stroke="currentColor" stroke-width="1.5" d="M13 2.5V5c0 2.357 0 3.536.732 4.268S15.643 10 18 10h4"/><path fill="currentColor" d="M2.75 10a.75.75 0 0 0-1.5 0zm18.5 4a.75.75 0 0 0 1.5 0zm-5.857-9.946l-.502.557zm3.959 3.563l-.502.557zm2.302 2.537l-.685.305zM3.172 20.828l.53-.53zm17.656 0l-.53-.53zM1.355 5.927a.75.75 0 0 0 1.493.146zm21.29 12.146a.75.75 0 1 0-1.493-.146zM14 21.25h-4v1.5h4zM2.75 14v-4h-1.5v4zm18.5-.437V14h1.5v-.437zM14.891 4.61l3.959 3.563l1.003-1.115l-3.958-3.563zm7.859 8.952c0-1.689.015-2.758-.41-3.714l-1.371.61c.266.598.281 1.283.281 3.104zm-3.9-5.389c1.353 1.218 1.853 1.688 2.119 2.285l1.37-.61c-.426-.957-1.23-1.66-2.486-2.79zM10.03 2.75c1.582 0 2.179.012 2.71.216l.538-1.4c-.852-.328-1.78-.316-3.248-.316zm5.865.746c-1.086-.977-1.765-1.604-2.617-1.93l-.537 1.4c.532.204.98.592 2.15 1.645zM10 21.25c-1.907 0-3.261-.002-4.29-.14c-1.005-.135-1.585-.389-2.008-.812l-1.06 1.06c.748.75 1.697 1.081 2.869 1.239c1.15.155 2.625.153 4.489.153zM1.25 14c0 1.864-.002 3.338.153 4.489c.158 1.172.49 2.121 1.238 2.87l1.06-1.06c-.422-.424-.676-1.004-.811-2.01c-.138-1.027-.14-2.382-.14-4.289zM14 22.75c1.864 0 3.338.002 4.489-.153c1.172-.158 2.121-.49 2.87-1.238l-1.06-1.06c-.424.422-1.004.676-2.01.811c-1.027.138-2.382.14-4.289.14zm-3.97-21.5c-1.875 0-3.356-.002-4.511.153c-1.177.158-2.129.49-2.878 1.238l1.06 1.06c.424-.422 1.005-.676 2.017-.811c1.033-.138 2.395-.14 4.312-.14zM2.848 6.073c.121-1.234.382-1.9.854-2.371l-1.06-1.06c-.836.834-1.153 1.919-1.287 3.285zm18.304 11.854c-.121 1.234-.383 1.9-.854 2.371l1.06 1.06c.836-.834 1.153-1.919 1.287-3.285z"/></g></symbol><use href="#ai:solar:file-text-broken"></use>  </svg><svg width="1em" height="1em" data-astro-cid-jalpcphr="true" class="icon hover icon" data-astro-cid-272faz54="true" data-astro-cid-bfoveg4b="true" data-icon="solar:file-smile-outline">   <symbol id="ai:solar:file-smile-outline" viewBox="0 0 24 24"><path fill="currentColor" fill-rule="evenodd" d="M12.25 2.834c-.46-.078-1.088-.084-2.22-.084c-1.917 0-3.28.002-4.312.14c-1.012.135-1.593.39-2.016.812s-.677 1.003-.812 2.009c-.138 1.028-.14 2.382-.14 4.29v4c0 1.906.002 3.26.14 4.288c.135 1.006.389 1.586.812 2.01c.423.422 1.003.676 2.009.811c1.028.139 2.382.14 4.289.14h4c1.907 0 3.262-.002 4.29-.14c1.005-.135 1.585-.389 2.008-.812s.677-1.003.812-2.009c.138-1.027.14-2.382.14-4.289v-.437c0-1.536-.01-2.264-.174-2.813h-3.13c-1.133 0-2.058 0-2.79-.098c-.763-.103-1.425-.325-1.954-.854s-.751-1.19-.854-1.955c-.098-.73-.098-1.656-.098-2.79zm1.5.776V5c0 1.2.002 2.024.085 2.643c.08.598.224.891.428 1.094s.496.348 1.094.428c.619.083 1.443.085 2.643.085h2.02a46 46 0 0 0-1.17-1.076l-3.959-3.563A37 37 0 0 0 13.75 3.61m-3.575-2.36c1.385 0 2.28 0 3.103.315c.823.316 1.485.912 2.51 1.835l.107.096l3.958 3.563l.125.112c1.184 1.065 1.95 1.754 2.361 2.678s.412 1.954.411 3.546v.661c0 1.838 0 3.294-.153 4.433c-.158 1.172-.49 2.121-1.238 2.87c-.749.748-1.698 1.08-2.87 1.238c-1.14.153-2.595.153-4.433.153H9.944c-1.838 0-3.294 0-4.433-.153c-1.172-.158-2.121-.49-2.87-1.238c-.748-.749-1.08-1.698-1.238-2.87c-.153-1.14-.153-2.595-.153-4.433V9.945c0-1.838 0-3.294.153-4.433c.158-1.172.49-2.121 1.238-2.87c.75-.749 1.701-1.08 2.878-1.238c1.144-.153 2.607-.153 4.455-.153h.202" clip-rule="evenodd"/><path fill="currentColor" d="M18 14.5c0 .829-.448 1.5-1 1.5s-1-.671-1-1.5c0-.828.448-1.5 1-1.5s1 .672 1 1.5"/><path fill="currentColor" fill-rule="evenodd" d="M8.376 17.084a.75.75 0 0 1 1.04-.208a4.66 4.66 0 0 0 5.168 0a.75.75 0 1 1 .832 1.248a6.16 6.16 0 0 1-6.832 0a.75.75 0 0 1-.208-1.04" clip-rule="evenodd"/><path fill="currentColor" d="M8 14.5c0 .829-.448 1.5-1 1.5s-1-.671-1-1.5c0-.828.448-1.5 1-1.5s1 .672 1 1.5"/></symbol><use href="#ai:solar:file-smile-outline"></use>  </svg><svg width="1em" height="1em" data-astro-cid-jalpcphr="true" class="icon active icon" data-astro-cid-272faz54="true" data-astro-cid-bfoveg4b="true" data-icon="solar:file-smile-bold-duotone">   <symbol id="ai:solar:file-smile-bold-duotone" viewBox="0 0 24 24"><path fill="currentColor" fill-rule="evenodd" d="M14 22h-4c-3.771 0-5.657 0-6.828-1.172S2 17.771 2 14v-4c0-3.771 0-5.657 1.172-6.828S6.239 2 10.03 2c.606 0 1.091 0 1.5.017q-.02.12-.02.244l-.01 2.834c0 1.097 0 2.067.105 2.848c.114.847.375 1.694 1.067 2.386c.69.69 1.538.952 2.385 1.066c.781.105 1.751.105 2.848.105h4.052c.043.534.043 1.19.043 2.063V14c0 3.771 0 5.657-1.172 6.828S17.771 22 14 22" clip-rule="evenodd" opacity=".5"/><path fill="currentColor" d="M8 14.5c0 .828-.448 1.5-1 1.5s-1-.672-1-1.5s.448-1.5 1-1.5s1 .672 1 1.5m1.416 2.376a.75.75 0 0 0-.832 1.248a6.16 6.16 0 0 0 6.832 0a.75.75 0 1 0-.832-1.248a4.66 4.66 0 0 1-5.168 0M18 14.5c0 .828-.448 1.5-1 1.5s-1-.672-1-1.5s.448-1.5 1-1.5s1 .672 1 1.5M11.51 2.26l-.01 2.835c0 1.097 0 2.066.105 2.848c.114.847.375 1.694 1.067 2.385c.69.691 1.538.953 2.385 1.067c.781.105 1.751.105 2.848.105h4.052q.02.232.028.5H22c0-.268 0-.402-.01-.56a5.3 5.3 0 0 0-.958-2.641c-.094-.128-.158-.204-.285-.357C19.954 7.494 18.91 6.312 18 5.5c-.81-.724-1.921-1.515-2.89-2.161c-.832-.556-1.248-.834-1.819-1.04a6 6 0 0 0-.506-.154c-.384-.095-.758-.128-1.285-.14z"/></symbol><use href="#ai:solar:file-smile-bold-duotone"></use>  </svg></div> </div> </a> <a href="/about" title="About" data-astro-prefetch="viewport" data-astro-cid-jalpcphr> <div class="item" data-astro-cid-jalpcphr> <span class="title transparent" data-astro-cid-jalpcphr> About </span> <div class="icon-state-wrapper" data-active="false" data-astro-cid-272faz54><svg width="1em" height="1em" data-astro-cid-jalpcphr="true" class="icon default icon" data-astro-cid-272faz54="true" data-astro-cid-bfoveg4b="true" data-icon="solar:ghost-broken">   <symbol id="ai:solar:ghost-broken" viewBox="0 0 24 24"><g fill="none"><path fill="currentColor" d="M16 10.5c0 .828-.448 1.5-1 1.5s-1-.672-1-1.5s.448-1.5 1-1.5s1 .672 1 1.5"/><ellipse cx="9" cy="10.5" fill="currentColor" rx="1" ry="1.5"/><path stroke="currentColor" stroke-linecap="round" stroke-width="1.5" d="M22 12.3C22 6.613 17.523 2 12 2S2 6.612 2 12.3v7.423c0 1.322 1.351 2.182 2.5 1.591a2.82 2.82 0 0 1 2.896.186a2.82 2.82 0 0 0 3.208 0l.353-.242a1.84 1.84 0 0 1 2.086 0l.353.242a2.82 2.82 0 0 0 3.208 0a2.82 2.82 0 0 1 2.897-.186c1.148.591 2.499-.269 2.499-1.591v-3.711"/></g></symbol><use href="#ai:solar:ghost-broken"></use>  </svg><svg width="1em" height="1em" data-astro-cid-jalpcphr="true" class="icon hover icon" data-astro-cid-272faz54="true" data-astro-cid-bfoveg4b="true" data-icon="solar:ghost-smile-outline">   <symbol id="ai:solar:ghost-smile-outline" viewBox="0 0 24 24"><path fill="currentColor" d="M10 9.5c0 .828-.448 1.5-1 1.5s-1-.672-1-1.5S8.448 8 9 8s1 .672 1 1.5m5 1.5c.552 0 1-.672 1-1.5S15.552 8 15 8s-1 .672-1 1.5s.448 1.5 1 1.5m-5.553 3.398a.75.75 0 1 0-.894 1.204A5.77 5.77 0 0 0 12 16.75a5.77 5.77 0 0 0 3.447-1.148a.75.75 0 1 0-.894-1.204A4.27 4.27 0 0 1 12 15.25a4.27 4.27 0 0 1-2.553-.852"/><path fill="currentColor" fill-rule="evenodd" d="M12 1.25C6.042 1.25 1.25 6.219 1.25 12.3v7.423c0 1.847 1.912 3.123 3.593 2.258a2.07 2.07 0 0 1 2.129.137a3.57 3.57 0 0 0 4.056 0l.353-.242a1.085 1.085 0 0 1 1.238 0l.353.242a3.57 3.57 0 0 0 4.056 0a2.07 2.07 0 0 1 2.13-.137c1.68.865 3.592-.412 3.592-2.258v-7.422C22.75 6.219 17.958 1.25 12 1.25M2.75 12.3c0-5.295 4.162-9.55 9.25-9.55s9.25 4.255 9.25 9.55v7.423c0 .798-.79 1.242-1.406.924a3.57 3.57 0 0 0-3.665.235a2.07 2.07 0 0 1-2.358 0l-.353-.243a2.585 2.585 0 0 0-2.936 0l-.353.242a2.07 2.07 0 0 1-2.358 0a3.57 3.57 0 0 0-3.665-.234c-.617.318-1.406-.126-1.406-.924z" clip-rule="evenodd"/></symbol><use href="#ai:solar:ghost-smile-outline"></use>  </svg><svg width="1em" height="1em" data-astro-cid-jalpcphr="true" class="icon active icon" data-astro-cid-272faz54="true" data-astro-cid-bfoveg4b="true" data-icon="solar:ghost-smile-bold-duotone">   <symbol id="ai:solar:ghost-smile-bold-duotone" viewBox="0 0 24 24"><path fill="currentColor" d="M22 12v7.206a1.727 1.727 0 0 1-2.5 1.544a2.89 2.89 0 0 0-2.896.18a2.89 2.89 0 0 1-3.208 0l-.353-.234a1.88 1.88 0 0 0-2.086 0l-.353.235a2.89 2.89 0 0 1-3.208 0a2.89 2.89 0 0 0-2.897-.18A1.727 1.727 0 0 1 2 19.205V12C2 6.477 6.477 2 12 2s10 4.477 10 10" opacity=".5"/><path fill="currentColor" d="M9.447 14.398a.75.75 0 1 0-.894 1.204A5.77 5.77 0 0 0 12 16.75a5.77 5.77 0 0 0 3.447-1.148a.75.75 0 1 0-.894-1.204A4.27 4.27 0 0 1 12 15.25a4.27 4.27 0 0 1-2.553-.852M16 9.5c0 .828-.448 1.5-1 1.5s-1-.672-1-1.5s.448-1.5 1-1.5s1 .672 1 1.5M9 11c.552 0 1-.672 1-1.5S9.552 8 9 8s-1 .672-1 1.5s.448 1.5 1 1.5"/></symbol><use href="#ai:solar:ghost-smile-bold-duotone"></use>  </svg></div> </div> </a> </nav> <div class="content" data-astro-cid-jalpcphr> <ul class="side-home" data-astro-cid-fjevzmm4> <li data-astro-cid-fjevzmm4><strong class="side-home-title" data-astro-cid-fjevzmm4="true">gkzhb&#39;s blog</strong></li> <li class="side-home-sub" data-astro-cid-fjevzmm4></li> <li class="side-home-bio" data-astro-cid-fjevzmm4><p data-astro-cid-fjevzmm4>Always believe that something wonderful is about to happen.</p></li> </ul> </div> </div> </div> <div class="footer" data-astro-cid-jalpcphr> <a id="theme-toggle" href="javascript:void(0)" role="button" data-astro-cid-jalpcphr> <div class="item width-2" data-astro-cid-jalpcphr> <span class="title transparent" data-astro-cid-jalpcphr> <span class="light" data-astro-cid-jalpcphr>light</span> <span class="dark" data-astro-cid-jalpcphr>dark</span> </span> <div class="icon-wrapper" data-astro-cid-bfoveg4b><svg width="1em" height="1em" data-astro-cid-jalpcphr="true" class="icon light-only icon" data-astro-cid-bfoveg4b="true" data-icon="solar:cloud-sun-2-bold-duotone">   <symbol id="ai:solar:cloud-sun-2-bold-duotone" viewBox="0 0 24 24"><path fill="currentColor" d="M11.5 8a3.5 3.5 0 1 1-7 0a3.5 3.5 0 0 1 7 0" opacity=".5"/><path fill="currentColor" fill-rule="evenodd" d="M7.5 1.25a.75.75 0 0 1 .75.75v.5a.75.75 0 0 1-1.5 0V2a.75.75 0 0 1 .75-.75M3.08 3.08a.75.75 0 0 1 1.062 0l.216.217a.75.75 0 0 1-1.061 1.06l-.216-.216a.75.75 0 0 1 0-1.06m8.839 0a.75.75 0 0 1 0 1.061l-.216.216a.75.75 0 1 1-1.06-1.06l.215-.216a.75.75 0 0 1 1.061 0M1.25 7.5A.75.75 0 0 1 2 6.75h.5a.75.75 0 0 1 0 1.5H2a.75.75 0 0 1-.75-.75m3.108 3.143a.75.75 0 0 1 0 1.06l-.216.216a.75.75 0 0 1-1.061-1.06l.216-.216a.75.75 0 0 1 1.06 0" clip-rule="evenodd" opacity=".5"/><path fill="currentColor" d="M16.286 22C19.442 22 22 19.472 22 16.353c0-2.472-1.607-4.573-3.845-5.338C17.837 8.194 15.415 6 12.476 6C9.32 6 6.762 8.528 6.762 11.647c0 .69.125 1.35.354 1.962a4.4 4.4 0 0 0-.83-.08C3.919 13.53 2 15.426 2 17.765S3.919 22 6.286 22z"/></symbol><use href="#ai:solar:cloud-sun-2-bold-duotone"></use>  </svg><svg width="1em" height="1em" data-astro-cid-jalpcphr="true" class="icon dark-only icon" data-astro-cid-bfoveg4b="true" data-icon="solar:moon-bold-duotone">   <symbol id="ai:solar:moon-bold-duotone" viewBox="0 0 24 24"><path fill="currentColor" fill-rule="evenodd" d="M22 12c0 5.523-4.477 10-10 10a10 10 0 0 1-3.321-.564A9 9 0 0 1 8 18a8.97 8.97 0 0 1 2.138-5.824A6.5 6.5 0 0 0 15.5 15a6.5 6.5 0 0 0 5.567-3.143c.24-.396.933-.32.933.143" clip-rule="evenodd" opacity=".5"/><path fill="currentColor" d="M2 12c0 4.359 2.789 8.066 6.679 9.435A9 9 0 0 1 8 18c0-2.221.805-4.254 2.138-5.824A6.47 6.47 0 0 1 9 8.5a6.5 6.5 0 0 1 3.143-5.567C12.54 2.693 12.463 2 12 2C6.477 2 2 6.477 2 12"/></symbol><use href="#ai:solar:moon-bold-duotone"></use>  </svg></div> </div> </a> <a href="https://github.com/gkzhb" data-astro-cid-jalpcphr> <div class="item width-2" data-astro-cid-jalpcphr> <span class="title transparent" data-astro-cid-jalpcphr> GitHub </span> <svg width="1em" height="1em" data-astro-cid-jalpcphr="true" class="icon" data-icon="simple-icons:github">   <symbol id="ai:simple-icons:github" viewBox="0 0 24 24"><path fill="currentColor" d="M12 .297c-6.63 0-12 5.373-12 12c0 5.303 3.438 9.8 8.205 11.385c.6.113.82-.258.82-.577c0-.285-.01-1.04-.015-2.04c-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729c1.205.084 1.838 1.236 1.838 1.236c1.07 1.835 2.809 1.305 3.495.998c.108-.776.417-1.305.76-1.605c-2.665-.3-5.466-1.332-5.466-5.93c0-1.31.465-2.38 1.235-3.22c-.135-.303-.54-1.523.105-3.176c0 0 1.005-.322 3.3 1.23c.96-.267 1.98-.399 3-.405c1.02.006 2.04.138 3 .405c2.28-1.552 3.285-1.23 3.285-1.23c.645 1.653.24 2.873.12 3.176c.765.84 1.23 1.91 1.23 3.22c0 4.61-2.805 5.625-5.475 5.92c.42.36.81 1.096.81 2.22c0 1.606-.015 2.896-.015 3.286c0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></symbol><use href="#ai:simple-icons:github"></use>  </svg> </div> </a> </div> </div> <script type="module" src="/_astro/BaseSide.astro_astro_type_script_index_0_lang.DOrw5quG.js"></script>   <div class="content-wrapper" data-astro-cid-4n3psh5z>    <article data-pagefind-body> <h1 data-astro-cid-xa76vfdz>自建”稍后阅读“服务—— wallabag</h1> <p class="inline-meta" data-astro-cid-xa76vfdz>  <span data-astro-cid-xa76vfdz>published: </span> <time datetime="2019-04-03T13:00:53.000Z" data-astro-cid-xa76vfdz> 4/3/2019 </time>  <span data-astro-cid-xa76vfdz> and </span>  <span data-astro-cid-xa76vfdz>updated: </span> <time datetime="2019-11-09T03:18:11.000Z" data-astro-cid-xa76vfdz> 11/9/2019 </time>  </p> <p class="inline-meta" data-pagefind-ignore data-astro-cid-xa76vfdz> <span class="category" data-astro-cid-xa76vfdz> <svg width="1em" height="1em" data-astro-cid-xa76vfdz="true" data-icon="solar:bookmark-bold-duotone">   <symbol id="ai:solar:bookmark-bold-duotone" viewBox="0 0 24 24"><path fill="currentColor" d="M21 11.098v4.993c0 3.096 0 4.645-.734 5.321c-.35.323-.792.526-1.263.58c-.987.113-2.14-.907-4.445-2.946c-1.02-.901-1.529-1.352-2.118-1.47a2.2 2.2 0 0 0-.88 0c-.59.118-1.099.569-2.118 1.47c-2.305 2.039-3.458 3.059-4.445 2.945a2.24 2.24 0 0 1-1.263-.579C3 20.736 3 19.188 3 16.091v-4.994C3 6.81 3 4.666 4.318 3.333S7.758 2 12 2s6.364 0 7.682 1.332S21 6.81 21 11.098" opacity=".5"/><path fill="currentColor" d="M9 5.25a.75.75 0 0 0 0 1.5h6a.75.75 0 0 0 0-1.5z"/></symbol><use href="#ai:solar:bookmark-bold-duotone"></use>  </svg> <a href="/categories/Linux" data-astro-cid-xa76vfdz> Linux </a> </span>  </p> <div class="admonition warning" data-pagefind-ignore data-astro-cid-xa76vfdz> <span class="title" data-astro-cid-xa76vfdz>
+Timeliness Warning · Last updated
+5 years 4 months ago </span> <p data-astro-cid-xa76vfdz> <strong data-astro-cid-xa76vfdz>
+The information in this article may be outdated. Please verify
+          carefully.
+</strong> </p> </div>     <p>“稍后阅读”英文对应于 <em>Read-It-Later</em> ，是指将碎片化信息中需要花时间仔细阅读思考或需要二次阅读消化的内容收集起来，待空余时间统一消化理解。国外这方面的知名应用服务商有 Pocket、 Instapaper 以及我之前一直使用的网速慢而且标签功能有 bug 的 Ioreader 等。由于国外服务商在国内网速较慢，而国内的也没找到附合心意的服务商，我选择自建服务 wallabag，运行在我的阿里云 VPS 上。</p>
+<!--more-->
+<h1 id="wallabag-官方文档">wallabag 官方文档<a class="anchor" href="#wallabag-官方文档"><span class="anchor-icon" data-pagefind-ignore="">#</span></a></h1>
+<ul>
+<li><a href="https://doc.wallabag.org/en/" data-external="" rel="nofollow noopener noreferrer" target="_blank">wallabag 官方文档</a></li>
+</ul>
+<p>主要安装过程参考上方 wallabag 官方文档的 <code>Installation</code> 一栏。</p>
+<h1 id="环境安装">环境安装<a class="anchor" href="#环境安装"><span class="anchor-icon" data-pagefind-ignore="">#</span></a></h1>
+<p>VPS 当然选择的是 Linux 系统，我使用的发行版是 Ubuntu。</p>
+<p>注意以下命令行中 <code>$</code> 开头为普通用户执行的命令，<code>#</code> 开头表示命令需要以 <code>root</code> 权限运行。也就是说，如果是普通用户遇到 <code>#</code> 开头的命令，需要在命令前添加 <code>sudo</code> 执行。</p>
+<h2 id="安装-php-世界上最好的语言">安装 php （世界上最好的语言）<a class="anchor" href="#安装-php-世界上最好的语言"><span class="anchor-icon" data-pagefind-ignore="">#</span></a></h2>
+<p>这里我安装的是 php7.0</p>
+<div class="code-block"><div class="code-header"><span class="code-title hidden"></span><span class="code-language">bash</span><button class="code-copy" data-code="apt-get install php" onclick="navigator.clipboard.writeText(this.dataset.code ?? &#x22;Copy failed&#x22;);
+                  this.classList.add(&#x22;copied&#x22;); setTimeout(() => this.classList.remove(&#x22;copied&#x22;), 1000);"> </button></div><pre class="astro-code astro-code-themes vitesse-light catppuccin-frappe" style="background-color:#ffffff;--shiki-dark-bg:#303446;color:#393a34;--shiki-dark:#c6d0f5; overflow-x: auto;" tabindex="0" data-language="bash"><code><span class="line"><span style="color:#59873A;font-style:inherit;--shiki-dark:#8CAAEE;--shiki-dark-font-style:italic">apt-get</span><span style="color:#B56959;--shiki-dark:#A6D189"> install</span><span style="color:#B56959;--shiki-dark:#A6D189"> php</span></span></code></pre></div>
+<h2 id="安装-composer">安装 Composer<a class="anchor" href="#安装-composer"><span class="anchor-icon" data-pagefind-ignore="">#</span></a></h2>
+<div class="code-block"><div class="code-header"><span class="code-title hidden"></span><span class="code-language">bash</span><button class="code-copy" data-code="curl -s https://getcomposer.org/installer | php" onclick="navigator.clipboard.writeText(this.dataset.code ?? &#x22;Copy failed&#x22;);
+                  this.classList.add(&#x22;copied&#x22;); setTimeout(() => this.classList.remove(&#x22;copied&#x22;), 1000);"> </button></div><pre class="astro-code astro-code-themes vitesse-light catppuccin-frappe" style="background-color:#ffffff;--shiki-dark-bg:#303446;color:#393a34;--shiki-dark:#c6d0f5; overflow-x: auto;" tabindex="0" data-language="bash"><code><span class="line"><span style="color:#59873A;font-style:inherit;--shiki-dark:#8CAAEE;--shiki-dark-font-style:italic">curl</span><span style="color:#A65E2B;--shiki-dark:#A6D189"> -s</span><span style="color:#B56959;--shiki-dark:#A6D189"> https://getcomposer.org/installer</span><span style="color:#AB5959;--shiki-dark:#81C8BE"> |</span><span style="color:#59873A;font-style:inherit;--shiki-dark:#8CAAEE;--shiki-dark-font-style:italic"> php</span></span></code></pre></div>
+<p>命令执行完后会在当前目录下生成一个 composer.phar 的文件，将其移动到 <code>/usr/local/bin</code> 并添加一个软链接到 <code>/usr/local/bin/composer</code>：</p>
+<div class="code-block"><div class="code-header"><span class="code-title hidden"></span><span class="code-language">bash</span><button class="code-copy" data-code="mv composer.phar /usr/local/bin
+ln -s /usr/local/bin/composer.phar /usr/local/bin/composer" onclick="navigator.clipboard.writeText(this.dataset.code ?? &#x22;Copy failed&#x22;);
+                  this.classList.add(&#x22;copied&#x22;); setTimeout(() => this.classList.remove(&#x22;copied&#x22;), 1000);"> </button></div><pre class="astro-code astro-code-themes vitesse-light catppuccin-frappe" style="background-color:#ffffff;--shiki-dark-bg:#303446;color:#393a34;--shiki-dark:#c6d0f5; overflow-x: auto;" tabindex="0" data-language="bash"><code><span class="line"><span style="color:#59873A;font-style:inherit;--shiki-dark:#8CAAEE;--shiki-dark-font-style:italic">mv</span><span style="color:#B56959;--shiki-dark:#A6D189"> composer.phar</span><span style="color:#B56959;--shiki-dark:#A6D189"> /usr/local/bin</span></span>
+<span class="line"><span style="color:#59873A;font-style:inherit;--shiki-dark:#8CAAEE;--shiki-dark-font-style:italic">ln</span><span style="color:#A65E2B;--shiki-dark:#A6D189"> -s</span><span style="color:#B56959;--shiki-dark:#A6D189"> /usr/local/bin/composer.phar</span><span style="color:#B56959;--shiki-dark:#A6D189"> /usr/local/bin/composer</span></span></code></pre></div>
+<h2 id="安装-php-extensions">安装 php extensions<a class="anchor" href="#安装-php-extensions"><span class="anchor-icon" data-pagefind-ignore="">#</span></a></h2>
+<p>下面的 php7.0 要和自己的 php 版本对应</p>
+<div class="code-block"><div class="code-header"><span class="code-title hidden"></span><span class="code-language">bash</span><button class="code-copy" data-code="apt-get install php7.0-mysql php7.0-session php7.0-ctype php7.0-dom php7.0-hash php7.0-simplexml php7.0-json php7.0-gd php7.0-mbstring php7.0-xml php7.0-tidy php7.0-iconv php7.0-curl php7.0-gettext php7.0-tokenizer php7.0-bcmath" onclick="navigator.clipboard.writeText(this.dataset.code ?? &#x22;Copy failed&#x22;);
+                  this.classList.add(&#x22;copied&#x22;); setTimeout(() => this.classList.remove(&#x22;copied&#x22;), 1000);"> </button></div><pre class="astro-code astro-code-themes vitesse-light catppuccin-frappe" style="background-color:#ffffff;--shiki-dark-bg:#303446;color:#393a34;--shiki-dark:#c6d0f5; overflow-x: auto;" tabindex="0" data-language="bash"><code><span class="line"><span style="color:#59873A;font-style:inherit;--shiki-dark:#8CAAEE;--shiki-dark-font-style:italic">apt-get</span><span style="color:#B56959;--shiki-dark:#A6D189"> install</span><span style="color:#B56959;--shiki-dark:#A6D189"> php7.0-mysql</span><span style="color:#B56959;--shiki-dark:#A6D189"> php7.0-session</span><span style="color:#B56959;--shiki-dark:#A6D189"> php7.0-ctype</span><span style="color:#B56959;--shiki-dark:#A6D189"> php7.0-dom</span><span style="color:#B56959;--shiki-dark:#A6D189"> php7.0-hash</span><span style="color:#B56959;--shiki-dark:#A6D189"> php7.0-simplexml</span><span style="color:#B56959;--shiki-dark:#A6D189"> php7.0-json</span><span style="color:#B56959;--shiki-dark:#A6D189"> php7.0-gd</span><span style="color:#B56959;--shiki-dark:#A6D189"> php7.0-mbstring</span><span style="color:#B56959;--shiki-dark:#A6D189"> php7.0-xml</span><span style="color:#B56959;--shiki-dark:#A6D189"> php7.0-tidy</span><span style="color:#B56959;--shiki-dark:#A6D189"> php7.0-iconv</span><span style="color:#B56959;--shiki-dark:#A6D189"> php7.0-curl</span><span style="color:#B56959;--shiki-dark:#A6D189"> php7.0-gettext</span><span style="color:#B56959;--shiki-dark:#A6D189"> php7.0-tokenizer</span><span style="color:#B56959;--shiki-dark:#A6D189"> php7.0-bcmath</span></span></code></pre></div>
+<p>其中会有一部分的包会安装出错，显示找不到，因为有的 php 插件集成在 <code>php7.0-common</code> 里。可以使用命令 <code>php -m</code> 查看已启用的插件。所以上面的命令参数中只需要尚未安装的 php 插件。</p>
+<h2 id="安装-mysql-服务器">安装 Mysql 服务器<a class="anchor" href="#安装-mysql-服务器"><span class="anchor-icon" data-pagefind-ignore="">#</span></a></h2>
+<div class="code-block"><div class="code-header"><span class="code-title hidden"></span><span class="code-language">bash</span><button class="code-copy" data-code="apt-get install mysql-server # 安装 mysql 服务器" onclick="navigator.clipboard.writeText(this.dataset.code ?? &#x22;Copy failed&#x22;);
+                  this.classList.add(&#x22;copied&#x22;); setTimeout(() => this.classList.remove(&#x22;copied&#x22;), 1000);"> </button></div><pre class="astro-code astro-code-themes vitesse-light catppuccin-frappe" style="background-color:#ffffff;--shiki-dark-bg:#303446;color:#393a34;--shiki-dark:#c6d0f5; overflow-x: auto;" tabindex="0" data-language="bash"><code><span class="line"><span style="color:#59873A;font-style:inherit;--shiki-dark:#8CAAEE;--shiki-dark-font-style:italic">apt-get</span><span style="color:#B56959;--shiki-dark:#A6D189"> install</span><span style="color:#B56959;--shiki-dark:#A6D189"> mysql-server</span><span style="color:#A0ADA0;font-style:inherit;--shiki-dark:#737994;--shiki-dark-font-style:italic"> # 安装 mysql 服务器</span></span></code></pre></div>
+<p>详细配置可参考 <a href="https://www.digitalocean.com/community/tutorials/how-to-install-mysql-on-ubuntu-###-04" data-external="" rel="nofollow noopener noreferrer" target="_blank">How To Install MySQL on Ubuntu ###.04 | DigitalOcean</a></p>
+<h2 id="配置-mysql-服务器">配置 mysql 服务器<a class="anchor" href="#配置-mysql-服务器"><span class="anchor-icon" data-pagefind-ignore="">#</span></a></h2>
+<p>连接 mysql 服务器并为 wallabag 添加用户、创建数据库并添加权限</p>
+<p>连接数据库：</p>
+<div class="code-block"><div class="code-header"><span class="code-title hidden"></span><span class="code-language">bash</span><button class="code-copy" data-code="mysqld -u root -p" onclick="navigator.clipboard.writeText(this.dataset.code ?? &#x22;Copy failed&#x22;);
+                  this.classList.add(&#x22;copied&#x22;); setTimeout(() => this.classList.remove(&#x22;copied&#x22;), 1000);"> </button></div><pre class="astro-code astro-code-themes vitesse-light catppuccin-frappe" style="background-color:#ffffff;--shiki-dark-bg:#303446;color:#393a34;--shiki-dark:#c6d0f5; overflow-x: auto;" tabindex="0" data-language="bash"><code><span class="line"><span style="color:#59873A;font-style:inherit;--shiki-dark:#8CAAEE;--shiki-dark-font-style:italic">mysqld</span><span style="color:#A65E2B;--shiki-dark:#A6D189"> -u</span><span style="color:#B56959;--shiki-dark:#A6D189"> root</span><span style="color:#A65E2B;--shiki-dark:#A6D189"> -p</span></span></code></pre></div>
+<p>之后在数据库中执行以下命令：</p>
+<div class="code-block"><div class="code-header"><span class="code-title hidden"></span><span class="code-language">plaintext</span><button class="code-copy" data-code="CREATE DATABASE wallabag; -- 创建数据库 wallabag
+CREATE USER wallabag@localhost; -- 创建用户 wallabag 且只允许本地访问
+SET password FOR wallabag@localhost= PASSWORD(&#x22;your-password&#x22;); -- 修改 wallabag 用户的密码，将 your-password 换成需要的密码
+GRANT ALL PRIVILEGES ON wallabag.* TO wallabag@localhost IDENTIFIED BY &#x27;your-password&#x27;; -- 允许 wallabag 访问、修改数据库 wallabag 的权限
+FLUSH PRIVILEGES; -- 更新权限使之生效
+EXIT: -- 退出 mysql 数据库" onclick="navigator.clipboard.writeText(this.dataset.code ?? &#x22;Copy failed&#x22;);
+                  this.classList.add(&#x22;copied&#x22;); setTimeout(() => this.classList.remove(&#x22;copied&#x22;), 1000);"> </button></div><pre class="astro-code astro-code-themes vitesse-light catppuccin-frappe" style="background-color:#ffffff;--shiki-dark-bg:#303446;color:#393a34;--shiki-dark:#c6d0f5; overflow-x: auto;" tabindex="0" data-language="plaintext"><code><span class="line"><span>CREATE DATABASE wallabag; -- 创建数据库 wallabag</span></span>
+<span class="line"><span>CREATE USER wallabag@localhost; -- 创建用户 wallabag 且只允许本地访问</span></span>
+<span class="line"><span>SET password FOR wallabag@localhost= PASSWORD("your-password"); -- 修改 wallabag 用户的密码，将 your-password 换成需要的密码</span></span>
+<span class="line"><span>GRANT ALL PRIVILEGES ON wallabag.* TO wallabag@localhost IDENTIFIED BY 'your-password'; -- 允许 wallabag 访问、修改数据库 wallabag 的权限</span></span>
+<span class="line"><span>FLUSH PRIVILEGES; -- 更新权限使之生效</span></span>
+<span class="line"><span>EXIT: -- 退出 mysql 数据库</span></span></code></pre></div>
+<h2 id="安装-wallabag">安装 wallabag<a class="anchor" href="#安装-wallabag"><span class="anchor-icon" data-pagefind-ignore="">#</span></a></h2>
+<p>使用 git 获取 wallabag 代码：</p>
+<div class="code-block"><div class="code-header"><span class="code-title hidden"></span><span class="code-language">bash</span><button class="code-copy" data-code="git clone https://github.com/wallabag/wallabag.git" onclick="navigator.clipboard.writeText(this.dataset.code ?? &#x22;Copy failed&#x22;);
+                  this.classList.add(&#x22;copied&#x22;); setTimeout(() => this.classList.remove(&#x22;copied&#x22;), 1000);"> </button></div><pre class="astro-code astro-code-themes vitesse-light catppuccin-frappe" style="background-color:#ffffff;--shiki-dark-bg:#303446;color:#393a34;--shiki-dark:#c6d0f5; overflow-x: auto;" tabindex="0" data-language="bash"><code><span class="line"><span style="color:#59873A;font-style:inherit;--shiki-dark:#8CAAEE;--shiki-dark-font-style:italic">git</span><span style="color:#B56959;--shiki-dark:#A6D189"> clone</span><span style="color:#B56959;--shiki-dark:#A6D189"> https://github.com/wallabag/wallabag.git</span></span></code></pre></div>
+<p>不过考虑 GitHub 在国内网速较慢，可以考虑先将其导入到国内的代码仓库再从国内的代码托管平台上 clone 下来。下面的命令是从我的代码仓库克隆代码。</p>
+<div class="code-block"><div class="code-header"><span class="code-title hidden"></span><span class="code-language">bash</span><button class="code-copy" data-code="git clone https://gitee.com/gkzhb/wallabag.git" onclick="navigator.clipboard.writeText(this.dataset.code ?? &#x22;Copy failed&#x22;);
+                  this.classList.add(&#x22;copied&#x22;); setTimeout(() => this.classList.remove(&#x22;copied&#x22;), 1000);"> </button></div><pre class="astro-code astro-code-themes vitesse-light catppuccin-frappe" style="background-color:#ffffff;--shiki-dark-bg:#303446;color:#393a34;--shiki-dark:#c6d0f5; overflow-x: auto;" tabindex="0" data-language="bash"><code><span class="line"><span style="color:#59873A;font-style:inherit;--shiki-dark:#8CAAEE;--shiki-dark-font-style:italic">git</span><span style="color:#B56959;--shiki-dark:#A6D189"> clone</span><span style="color:#B56959;--shiki-dark:#A6D189"> https://gitee.com/gkzhb/wallabag.git</span></span></code></pre></div>
+<p>获取代码之后，进入目录并编译：</p>
+<div class="code-block"><div class="code-header"><span class="code-title hidden"></span><span class="code-language">bash</span><button class="code-copy" data-code="cd wallabag &#x26;&#x26; make install" onclick="navigator.clipboard.writeText(this.dataset.code ?? &#x22;Copy failed&#x22;);
+                  this.classList.add(&#x22;copied&#x22;); setTimeout(() => this.classList.remove(&#x22;copied&#x22;), 1000);"> </button></div><pre class="astro-code astro-code-themes vitesse-light catppuccin-frappe" style="background-color:#ffffff;--shiki-dark-bg:#303446;color:#393a34;--shiki-dark:#c6d0f5; overflow-x: auto;" tabindex="0" data-language="bash"><code><span class="line"><span style="color:#998418;font-style:inherit;--shiki-dark:#E78284;--shiki-dark-font-style:italic">cd</span><span style="color:#B56959;--shiki-dark:#A6D189"> wallabag</span><span style="color:#999999;--shiki-dark:#949CBB"> &#x26;&#x26;</span><span style="color:#59873A;font-style:inherit;--shiki-dark:#8CAAEE;--shiki-dark-font-style:italic"> make</span><span style="color:#B56959;--shiki-dark:#A6D189"> install</span></span></code></pre></div>
+<p>这一步，我在官网上和其他网站上看到的安装方式不同。<br>
+在 Linuxbabe 网站上，我看到的教程是执行以下命令，而非上面的 <code>make install</code> 命令：</p>
+<div class="code-block"><div class="code-header"><span class="code-title hidden"></span><span class="code-language">bash</span><button class="code-copy" data-code="SYMFONY_ENV=prod composer install --no-dev -o --prefer-dist" onclick="navigator.clipboard.writeText(this.dataset.code ?? &#x22;Copy failed&#x22;);
+                  this.classList.add(&#x22;copied&#x22;); setTimeout(() => this.classList.remove(&#x22;copied&#x22;), 1000);"> </button></div><pre class="astro-code astro-code-themes vitesse-light catppuccin-frappe" style="background-color:#ffffff;--shiki-dark-bg:#303446;color:#393a34;--shiki-dark:#c6d0f5; overflow-x: auto;" tabindex="0" data-language="bash"><code><span class="line"><span style="color:#B07D48;--shiki-dark:#C6D0F5">SYMFONY_ENV</span><span style="color:#999999;--shiki-dark:#81C8BE">=</span><span style="color:#B56959;--shiki-dark:#A6D189">prod</span><span style="color:#59873A;font-style:inherit;--shiki-dark:#8CAAEE;--shiki-dark-font-style:italic"> composer</span><span style="color:#B56959;--shiki-dark:#A6D189"> install</span><span style="color:#A65E2B;--shiki-dark:#A6D189"> --no-dev</span><span style="color:#A65E2B;--shiki-dark:#A6D189"> -o</span><span style="color:#A65E2B;--shiki-dark:#A6D189"> --prefer-dist</span></span></code></pre></div>
+<p>不过，不论执行哪一个命令，最后都会出现以下内容需要我们填写：</p>
+<div class="code-block"><div class="code-header"><span class="code-title hidden"></span><span class="code-language">plaintext</span><button class="code-copy" data-code="Creating the &#x22;app/config/parameters.yml&#x22; file
+ Some parameters are missing. Please provide them.
+ database_driver (pdo_sqlite): pdo_mysql
+ database_host (127.0.0.1): 127.0.0.1
+ database_port (null): 3306
+ database_name (symfony): wallabag
+ database_user (root): wallabag
+ database_password (null): your-password
+ database_path (&#x27;%kernel.root_dir%/../data/db/wallabag.sqlite&#x27;): /var/lib/mysql/wallabag
+ database_table_prefix (wallabag_): wallabag_
+ database_socket(null): Press Enter
+ domain_name (&#x27;https://your-wallabag-url-instance.com&#x27;): http://Your-Domain" onclick="navigator.clipboard.writeText(this.dataset.code ?? &#x22;Copy failed&#x22;);
+                  this.classList.add(&#x22;copied&#x22;); setTimeout(() => this.classList.remove(&#x22;copied&#x22;), 1000);"> </button></div><pre class="astro-code astro-code-themes vitesse-light catppuccin-frappe" style="background-color:#ffffff;--shiki-dark-bg:#303446;color:#393a34;--shiki-dark:#c6d0f5; overflow-x: auto;" tabindex="0" data-language="plaintext"><code><span class="line"><span>Creating the "app/config/parameters.yml" file</span></span>
+<span class="line"><span> Some parameters are missing. Please provide them.</span></span>
+<span class="line"><span> database_driver (pdo_sqlite): pdo_mysql</span></span>
+<span class="line"><span> database_host (127.0.0.1): 127.0.0.1</span></span>
+<span class="line"><span> database_port (null): 3306</span></span>
+<span class="line"><span> database_name (symfony): wallabag</span></span>
+<span class="line"><span> database_user (root): wallabag</span></span>
+<span class="line"><span> database_password (null): your-password</span></span>
+<span class="line"><span> database_path ('%kernel.root_dir%/../data/db/wallabag.sqlite'): /var/lib/mysql/wallabag</span></span>
+<span class="line"><span> database_table_prefix (wallabag_): wallabag_</span></span>
+<span class="line"><span> database_socket(null): Press Enter</span></span>
+<span class="line"><span> domain_name ('https://your-wallabag-url-instance.com'): http://Your-Domain</span></span></code></pre></div>
+<p>按照以上说明填写即可。<code>database_path</code> 我不太记得是填上面的内容还是只要填 <code>wallabag</code> 。注意如果搭建的 wallabag 网站使用的不是默认的 80 端口，需要在上面的 domain_name 上添加 <code>:[Port]</code> 也就是 <code>Your-Domain:[Port]</code>，将 <code>[Port]</code> 换成将要使用的端口。其它的设置可以默认直接 <code>Press Enter</code> 即直接按回车用默认值就好了。</p>
+<p>这里又出现了一个不同，如果按照官网的做法使用 <code>make install</code> 此时应该即将完成安装，请继续看下面的内容。而如果使用 Linuxbabe 文章的做法，还需要执行以下命令来生成网站资源：</p>
+<div class="code-block"><div class="code-header"><span class="code-title hidden"></span><span class="code-language">bash</span><button class="code-copy" data-code="php bin/console wallabag:install --env=prod" onclick="navigator.clipboard.writeText(this.dataset.code ?? &#x22;Copy failed&#x22;);
+                  this.classList.add(&#x22;copied&#x22;); setTimeout(() => this.classList.remove(&#x22;copied&#x22;), 1000);"> </button></div><pre class="astro-code astro-code-themes vitesse-light catppuccin-frappe" style="background-color:#ffffff;--shiki-dark-bg:#303446;color:#393a34;--shiki-dark:#c6d0f5; overflow-x: auto;" tabindex="0" data-language="bash"><code><span class="line"><span style="color:#59873A;font-style:inherit;--shiki-dark:#8CAAEE;--shiki-dark-font-style:italic">php</span><span style="color:#B56959;--shiki-dark:#A6D189"> bin/console</span><span style="color:#B56959;--shiki-dark:#A6D189"> wallabag:install</span><span style="color:#A65E2B;--shiki-dark:#A6D189"> --env=prod</span></span></code></pre></div>
+<p><code>--env=prod</code> 也可以换成 <code>-e prod</code> 表示编译生成生产环境。</p>
+<p>接着两种方法都会又遇到一个配置 wallabag 的界面：</p>
+<div class="code-block"><div class="code-header"><span class="code-title hidden"></span><span class="code-language">plaintext</span><button class="code-copy" data-code="Installing Wallabag...
+
+Step 1 of 5. Checking system requirements.
++-----------------+--------+----------------+
+| Checked         | Status | Recommendation |
++-----------------+--------+----------------+
+| PDO Driver      | OK!    |                |
+| curl_exec       | OK!    |                |
+| curl_multi_init | OK!    |                |
++-----------------+--------+----------------+
+Success! Your system can run Wallabag properly.
+
+Step 2 of 5. Setting up database.
+It appears that your database already exists. Would you like to reset it? (y/N)n
+Creating schema
+Clearing the cache
+
+Step 3 of 5. Administration setup.
+Would you like to create a new admin user (recommended) ? (Y/n)y
+Username (default: wallabag) : your-admin-username
+Password (default: wallabag) : admin-pasword-here
+Email: admin-email-here
+
+Step 4 of 5. Config setup.
+
+Step 5 of 5. Installing assets.
+
+Wallabag has been successfully installed.
+Just execute &#x60;php bin/console server:run --env=prod&#x60; for using wallabag: http://localhost:8000" onclick="navigator.clipboard.writeText(this.dataset.code ?? &#x22;Copy failed&#x22;);
+                  this.classList.add(&#x22;copied&#x22;); setTimeout(() => this.classList.remove(&#x22;copied&#x22;), 1000);"> </button></div><pre class="astro-code astro-code-themes vitesse-light catppuccin-frappe" style="background-color:#ffffff;--shiki-dark-bg:#303446;color:#393a34;--shiki-dark:#c6d0f5; overflow-x: auto;" tabindex="0" data-language="plaintext"><code><span class="line"><span>Installing Wallabag...</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>Step 1 of 5. Checking system requirements.</span></span>
+<span class="line"><span>+-----------------+--------+----------------+</span></span>
+<span class="line"><span>| Checked         | Status | Recommendation |</span></span>
+<span class="line"><span>+-----------------+--------+----------------+</span></span>
+<span class="line"><span>| PDO Driver      | OK!    |                |</span></span>
+<span class="line"><span>| curl_exec       | OK!    |                |</span></span>
+<span class="line"><span>| curl_multi_init | OK!    |                |</span></span>
+<span class="line"><span>+-----------------+--------+----------------+</span></span>
+<span class="line"><span>Success! Your system can run Wallabag properly.</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>Step 2 of 5. Setting up database.</span></span>
+<span class="line"><span>It appears that your database already exists. Would you like to reset it? (y/N)n</span></span>
+<span class="line"><span>Creating schema</span></span>
+<span class="line"><span>Clearing the cache</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>Step 3 of 5. Administration setup.</span></span>
+<span class="line"><span>Would you like to create a new admin user (recommended) ? (Y/n)y</span></span>
+<span class="line"><span>Username (default: wallabag) : your-admin-username</span></span>
+<span class="line"><span>Password (default: wallabag) : admin-pasword-here</span></span>
+<span class="line"><span>Email: admin-email-here</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>Step 4 of 5. Config setup.</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>Step 5 of 5. Installing assets.</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>Wallabag has been successfully installed.</span></span>
+<span class="line"><span>Just execute `php bin/console server:run --env=prod` for using wallabag: http://localhost:8000</span></span></code></pre></div>
+<p>输出内容可能有些不同，但是配置选项都是一样的。按照上面的提示输入 y 或 n 完成最后的安装。</p>
+<p>然后移动 wallabag 目录位置：</p>
+<div class="code-block"><div class="code-header"><span class="code-title hidden"></span><span class="code-language">bash</span><button class="code-copy" data-code=" mv ../wallabag/ /usr/share/nginx/" onclick="navigator.clipboard.writeText(this.dataset.code ?? &#x22;Copy failed&#x22;);
+                  this.classList.add(&#x22;copied&#x22;); setTimeout(() => this.classList.remove(&#x22;copied&#x22;), 1000);"> </button></div><pre class="astro-code astro-code-themes vitesse-light catppuccin-frappe" style="background-color:#ffffff;--shiki-dark-bg:#303446;color:#393a34;--shiki-dark:#c6d0f5; overflow-x: auto;" tabindex="0" data-language="bash"><code><span class="line"><span style="color:#59873A;font-style:inherit;--shiki-dark:#8CAAEE;--shiki-dark-font-style:italic"> mv</span><span style="color:#B56959;--shiki-dark:#A6D189"> ../wallabag/</span><span style="color:#B56959;--shiki-dark:#A6D189"> /usr/share/nginx/</span></span></code></pre></div>
+<h2 id="配置-nginx">配置 Nginx<a class="anchor" href="#配置-nginx"><span class="anchor-icon" data-pagefind-ignore="">#</span></a></h2>
+<p>这里我选择 Nginx 来运行 wallabag 网站，你也可以使用 Apache 之类的其它工具，在官网文档上有相关配置教程。</p>
+<p>编辑配置文件：</p>
+<div class="code-block"><div class="code-header"><span class="code-title hidden"></span><span class="code-language">bash</span><button class="code-copy" data-code="vim /etc/nginx/conf.d/wallabag.conf" onclick="navigator.clipboard.writeText(this.dataset.code ?? &#x22;Copy failed&#x22;);
+                  this.classList.add(&#x22;copied&#x22;); setTimeout(() => this.classList.remove(&#x22;copied&#x22;), 1000);"> </button></div><pre class="astro-code astro-code-themes vitesse-light catppuccin-frappe" style="background-color:#ffffff;--shiki-dark-bg:#303446;color:#393a34;--shiki-dark:#c6d0f5; overflow-x: auto;" tabindex="0" data-language="bash"><code><span class="line"><span style="color:#59873A;font-style:inherit;--shiki-dark:#8CAAEE;--shiki-dark-font-style:italic">vim</span><span style="color:#B56959;--shiki-dark:#A6D189"> /etc/nginx/conf.d/wallabag.conf</span></span></code></pre></div>
+<p>内容如下：</p>
+<div class="code-block"><div class="code-header"><span class="code-title hidden"></span><span class="code-language">plaintext</span><button class="code-copy" data-code="root@gkzhb:~/gitrep# cat /etc/nginx/conf.d/wallabag.conf
+server {
+    # listen 8081; # 监听端口，如果要修改网站端口将这一行开头的 # 去掉并修改端口数值
+    server_name example.com;
+    root /usr/share/nginx/wallabag/web;
+
+    location / {
+        # try to serve file directly, fallback to app.php
+        try_files $uri /app.php$is_args$args;
+    }
+    location ~ ^/app\.php(/|$) {
+        # if, for some reason, you are still using PHP 5,
+        # then replace /run/php/php7.0 by /var/run/php5
+        fastcgi_pass unix:/run/php/php7.0-fpm.sock;
+        fastcgi_split_path_info ^(.+\.php)(/.*)$;
+        include fastcgi_params;
+        # When you are using symlinks to link the document root to the
+        # current version of your application, you should pass the real
+        # application path instead of the path to the symlink to PHP
+        # FPM.
+        # Otherwise, PHP&#x27;s OPcache may not properly detect changes to
+        # your PHP files (see https://github.com/zendtech/ZendOptimizerPlus/issues/126
+        # for more information).
+        fastcgi_param  SCRIPT_FILENAME  $realpath_root$fastcgi_script_name;
+        fastcgi_param DOCUMENT_ROOT $realpath_root;
+        # Prevents URIs that include the front controller. This will 404:
+        # http://domain.tld/app.php/some-path
+        # Remove the internal directive to allow URIs like this
+        internal;
+    }
+
+    # return 404 for all other php files not matching the front controller
+    # this prevents access to other php files you don&#x27;t want to be accessible.
+    location ~ \.php$ {
+        return 404;
+    }
+
+    error_log /var/log/nginx/wallabag_error.log;
+    access_log /var/log/nginx/wallabag_access.log;
+}" onclick="navigator.clipboard.writeText(this.dataset.code ?? &#x22;Copy failed&#x22;);
+                  this.classList.add(&#x22;copied&#x22;); setTimeout(() => this.classList.remove(&#x22;copied&#x22;), 1000);"> </button></div><pre class="astro-code astro-code-themes vitesse-light catppuccin-frappe" style="background-color:#ffffff;--shiki-dark-bg:#303446;color:#393a34;--shiki-dark:#c6d0f5; overflow-x: auto;" tabindex="0" data-language="plaintext"><code><span class="line"><span>root@gkzhb:~/gitrep# cat /etc/nginx/conf.d/wallabag.conf</span></span>
+<span class="line"><span>server {</span></span>
+<span class="line"><span>    # listen 8081; # 监听端口，如果要修改网站端口将这一行开头的 # 去掉并修改端口数值</span></span>
+<span class="line"><span>    server_name example.com;</span></span>
+<span class="line"><span>    root /usr/share/nginx/wallabag/web;</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>    location / {</span></span>
+<span class="line"><span>        # try to serve file directly, fallback to app.php</span></span>
+<span class="line"><span>        try_files $uri /app.php$is_args$args;</span></span>
+<span class="line"><span>    }</span></span>
+<span class="line"><span>    location ~ ^/app\.php(/|$) {</span></span>
+<span class="line"><span>        # if, for some reason, you are still using PHP 5,</span></span>
+<span class="line"><span>        # then replace /run/php/php7.0 by /var/run/php5</span></span>
+<span class="line"><span>        fastcgi_pass unix:/run/php/php7.0-fpm.sock;</span></span>
+<span class="line"><span>        fastcgi_split_path_info ^(.+\.php)(/.*)$;</span></span>
+<span class="line"><span>        include fastcgi_params;</span></span>
+<span class="line"><span>        # When you are using symlinks to link the document root to the</span></span>
+<span class="line"><span>        # current version of your application, you should pass the real</span></span>
+<span class="line"><span>        # application path instead of the path to the symlink to PHP</span></span>
+<span class="line"><span>        # FPM.</span></span>
+<span class="line"><span>        # Otherwise, PHP's OPcache may not properly detect changes to</span></span>
+<span class="line"><span>        # your PHP files (see https://github.com/zendtech/ZendOptimizerPlus/issues/126</span></span>
+<span class="line"><span>        # for more information).</span></span>
+<span class="line"><span>        fastcgi_param  SCRIPT_FILENAME  $realpath_root$fastcgi_script_name;</span></span>
+<span class="line"><span>        fastcgi_param DOCUMENT_ROOT $realpath_root;</span></span>
+<span class="line"><span>        # Prevents URIs that include the front controller. This will 404:</span></span>
+<span class="line"><span>        # http://domain.tld/app.php/some-path</span></span>
+<span class="line"><span>        # Remove the internal directive to allow URIs like this</span></span>
+<span class="line"><span>        internal;</span></span>
+<span class="line"><span>    }</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>    # return 404 for all other php files not matching the front controller</span></span>
+<span class="line"><span>    # this prevents access to other php files you don't want to be accessible.</span></span>
+<span class="line"><span>    location ~ \.php$ {</span></span>
+<span class="line"><span>        return 404;</span></span>
+<span class="line"><span>    }</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>    error_log /var/log/nginx/wallabag_error.log;</span></span>
+<span class="line"><span>    access_log /var/log/nginx/wallabag_access.log;</span></span>
+<span class="line"><span>}</span></span></code></pre></div>
+<p>这里的配置我大部份摘录自 <a href="https://doc.wallabag.org/en/admin/installation/virtualhosts.html" data-external="" rel="nofollow noopener noreferrer" target="_blank">wallabag doc</a></p>
+<p>修改完成后执行命令重启 Nginx 服务：</p>
+<div class="code-block"><div class="code-header"><span class="code-title hidden"></span><span class="code-language">bash</span><button class="code-copy" data-code="systemctl restart nginx" onclick="navigator.clipboard.writeText(this.dataset.code ?? &#x22;Copy failed&#x22;);
+                  this.classList.add(&#x22;copied&#x22;); setTimeout(() => this.classList.remove(&#x22;copied&#x22;), 1000);"> </button></div><pre class="astro-code astro-code-themes vitesse-light catppuccin-frappe" style="background-color:#ffffff;--shiki-dark-bg:#303446;color:#393a34;--shiki-dark:#c6d0f5; overflow-x: auto;" tabindex="0" data-language="bash"><code><span class="line"><span style="color:#59873A;font-style:inherit;--shiki-dark:#8CAAEE;--shiki-dark-font-style:italic">systemctl</span><span style="color:#B56959;--shiki-dark:#A6D189"> restart</span><span style="color:#B56959;--shiki-dark:#A6D189"> nginx</span></span></code></pre></div>
+<p>之后可以在浏览器上访问 wallabag 网站了。</p>
+<h2 id="用户管理">用户管理<a class="anchor" href="#用户管理"><span class="anchor-icon" data-pagefind-ignore="">#</span></a></h2>
+<p>未完待续…</p>
+<h1 id="参考">参考<a class="anchor" href="#参考"><span class="anchor-icon" data-pagefind-ignore="">#</span></a></h1>
+<ul>
+<li><a href="https://sspai.com/post/25336" data-external="" rel="nofollow noopener noreferrer" target="_blank">改变你的阅读方式：认识「稍后读」 - 少数派</a></li>
+<li><a href="https://www.linuxbabe.com/arch/install-wallabag-arch-linux-server-nginx-mariadb-php7" data-external="" rel="nofollow noopener noreferrer" target="_blank">How to Install Wallabag on Arch Linux VPS with LEMP Stack - Linuxbabe</a></li>
+<li><a href="https://stackoverflow.com/questions/24351260/how-to-check-which-php-extensions-have-been-enabled-disabled-in-ubuntu-linux-12" data-external="" rel="nofollow noopener noreferrer" target="_blank">How to check which PHP extensions have been enabled/disabled in Ubuntu Linux 12.04 LTS? - Stack Overflow</a></li>
+<li><a href="https://stackoverflow.com/questions/13375061/installing-pdo-driver-on-mysql-linux-server" data-external="" rel="nofollow noopener noreferrer" target="_blank">php - Installing PDO driver on MySQL Linux server - Stack Overflow</a></li>
+</ul>  <footer data-pagefind-ignore data-astro-cid-vj2535pe>  <div class="admonition notice"> <span>Shared With License: CC-BY-4.0</span> <p> <span>Creative Commons Attribution 4.0 International</span> <a href="https://creativecommons.org/licenses/by/4.0/legalcode" target="_blank" rel="noopener noreferrer nofollow" class="license-link"> <span>view</span> </a> </p> </div>  </footer>  </article>   </div>   </main> </body></html>
