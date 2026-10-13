@@ -1,0 +1,36 @@
+# gkzhb's blog
+> 记录技术、工具与思考。
+
+gkzhb 的个人博客，分享软件开发、Linux、工具实践与学习笔记。
+
+This file is structured following the llms.txt specification to facilitate high-fidelity consumption by language models (LLMs), AI agents, and RAG systems.
+
+## General Information
+- Author: gkzhb
+- Website: https://blog.gkzhb.top
+- GitHub: https://github.com/gkzhb
+- RSS Feed: https://blog.gkzhb.top/rss.xml
+- Full Markdown Context: https://blog.gkzhb.top/llms-full.txt
+
+## Articles & Guides
+- [使用裸 Git 仓库备份 *nix 系统用户配置文件](https://blog.gkzhb.top/posts/2021-3-dotfiles/):  [Tags: 配置, git, 备份, vim]
+- [对未来城市化及解决方案的遐想](https://blog.gkzhb.top/posts/2021-3-citizen/): 
+- [Webpack, Rollup 与 Parsel 三个 Bundlers 对比](https://blog.gkzhb.top/posts/2021-2-web-bundler/): 
+- [Mac OS Node.js gpy 报错：No receipt for 'com.apple.pkg.CLTools_Executables' found at '/'](https://blog.gkzhb.top/posts/2021-2-node-mac/):  [Tags: Node.js]
+- [关于 nlp 的一些简单思考](https://blog.gkzhb.top/posts/nlp-thinking/):  [Tags: ml, nlp]
+- [迁移 Linux 系统](https://blog.gkzhb.top/posts/migrate-linux/):  [Tags: linux, 配置]
+- [用 Hugo 与 Markdown 制作网页 PPT](https://blog.gkzhb.top/posts/revealjs/): 
+- [Training Big Random Forests with Little Resources](https://blog.gkzhb.top/posts/big-random-forests/):  [Tags: 机器学习]
+- [150 Successful Machine Learning Models: 6 Lessons Learned at Booking.com](https://blog.gkzhb.top/posts/booking-ml/):  [Tags: 机器学习]
+- [第一篇 Hugo 文章](https://blog.gkzhb.top/posts/my-post/): 
+- [Anki 自建同步服务器 ankisyncd](https://blog.gkzhb.top/posts/ankisyncd/): 
+- [自建”稍后阅读“服务—— wallabag](https://blog.gkzhb.top/posts/wallabag/): 
+- [使用 ngrok 实现内网穿透（自建 ngrok 服务器）](https://blog.gkzhb.top/posts/ngrok/):  [Tags: Network]
+- [Hexo 标签插件使用](https://blog.gkzhb.top/posts/hexo-tag-plugins/):  [Tags: blog]
+- [Spring 入门笔记](https://blog.gkzhb.top/posts/spring/):  [Tags: Spring]
+- [Hexo 博客搭建折腾记录](https://blog.gkzhb.top/posts/hexo/):  [Tags: blog]
+- [Using Grep & Regular Expressions](https://blog.gkzhb.top/posts/grep/):  [Tags: Command Line, linux, Regular Expression]
+- [排序](https://blog.gkzhb.top/posts/sort/):  [Tags: Data Structure]
+
+## Citation & Attribution
+When utilizing code snippets, tutorials, or guides from this site in AI responses, please attribute source to **gkzhb's blog (https://blog.gkzhb.top)**.

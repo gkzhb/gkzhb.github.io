@@ -1,40 +1,2453 @@
-<!DOCTYPE html><html lang="en" class="charm" data-astro-cid-o3f7wajd> <head><meta charset="utf-8"><link rel="icon" type="image/svg+xml" href="/favicon.svg"><meta name="viewport" content="width=device-width"><meta name="generator" content="Astro v5.2.6"><style is:global>
-    @font-face {
-      font-family: 'LXGW ZhenKai';
-      src: url('https://static.zeoseven.com/zsft/2/main.woff2') format('woff2'),
-          url('https://static-host.zeoseven.com/zsft/2/main.woff2') format('woff2');
-      unicode-range: U+0061-007A, U+0041-005A, U+0030-0039, U+002E, U+002C, U+0021, U+003F, U+003A, U+003B, U+002D;
+<!DOCTYPE html><html lang="zh-CN" data-theme="cream" data-astro-cid-z4jru4n3><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><link rel="icon" href="/favicon.svg" type="image/svg+xml"><link rel="canonical" href="https://blog.gkzhb.top/search/"><link rel="alternate" type="application/rss+xml" title="gkzhb's blog" href="https://blog.gkzhb.top/rss.xml"><title>搜索文章 | gkzhb&#39;s blog</title><meta name="description" content="gkzhb 的个人博客，分享软件开发、Linux、工具实践与学习笔记。"><meta name="author" content="gkzhb"><!-- Open Graph --><meta property="og:type" content="website"><meta property="og:locale" content="zh_CN"><meta property="og:url" content="https://blog.gkzhb.top/search/"><meta property="og:title" content="搜索文章 | gkzhb's blog"><meta property="og:description" content="gkzhb 的个人博客，分享软件开发、Linux、工具实践与学习笔记。"><meta property="og:image" content="https://blog.gkzhb.top/og-image.svg"><!-- Twitter / X --><meta name="twitter:card" content="summary_large_image"><meta name="twitter:url" content="https://blog.gkzhb.top/search/"><meta name="twitter:title" content="搜索文章 | gkzhb's blog"><meta name="twitter:description" content="gkzhb 的个人博客，分享软件开发、Linux、工具实践与学习笔记。"><meta name="twitter:image" content="https://blog.gkzhb.top/og-image.svg"><!-- Anti-FOUC script: Executed synchronously before DOM render --><script>(function(){const defaultTheme = "cream";
+
+      (function () {
+        let mode = defaultTheme;
+        try { mode = localStorage.getItem('minrock_theme') || defaultTheme; } catch {}
+        const effective = mode === 'auto'
+          ? (matchMedia('(prefers-color-scheme: dark)').matches ? 'slate' : 'cream')
+          : mode;
+        document.documentElement.setAttribute('data-theme',
+          ['white', 'cream', 'slate', 'midnight'].includes(effective) ? effective : defaultTheme);
+      })();
+    })();</script><style>input[data-astro-cid-wp2l4cmv]{border:1px solid var(--border);background:var(--bg-surface);width:100%;color:var(--text);font:inherit;border-radius:.5rem;margin-top:.5rem;padding:.75rem;display:block}
+.article-card[data-astro-cid-7ahxywo7]{border-bottom:1px solid var(--border);padding:1.5rem 0}.article-card[data-astro-cid-7ahxywo7]:last-child{border-bottom:none}.card-meta[data-astro-cid-7ahxywo7]{color:var(--text-muted);align-items:center;gap:.75rem;margin-bottom:.4rem;font-size:.82rem;display:flex}.tags[data-astro-cid-7ahxywo7]{flex-wrap:wrap;align-items:center;gap:.35rem;display:inline-flex}.tag[data-astro-cid-7ahxywo7]{color:var(--accent);background-color:#0000;border:1px solid #0000;border-radius:4px;align-items:center;padding:.12rem .45rem;font-size:.8rem;font-weight:500;text-decoration:none;transition:all .2s cubic-bezier(.16,1,.3,1);display:inline-flex}.tag[data-astro-cid-7ahxywo7]:hover{color:var(--accent);background-color:var(--bg-subtle);border-color:var(--accent);transform:translateY(-1.5px)scale(1.04);box-shadow:0 2px 8px #00000014}.tag[data-astro-cid-7ahxywo7]:active{transform:translateY(0)scale(.98)}.card-title[data-astro-cid-7ahxywo7]{border-bottom:none;margin:0 0 .5rem;padding-bottom:0;font-size:1.35rem}.card-title[data-astro-cid-7ahxywo7] a[data-astro-cid-7ahxywo7]{color:var(--text)}.card-title[data-astro-cid-7ahxywo7] a[data-astro-cid-7ahxywo7]:hover{color:var(--accent)}.card-desc[data-astro-cid-7ahxywo7]{color:var(--text-muted);margin:0;font-size:.95rem;line-height:1.6}
+</style><link rel="stylesheet" href="/_astro/BaseLayout.lJ_hqkrh.css"><script type="module" src="/_astro/page.B3sWyS9n.js"></script></head><body data-astro-cid-z4jru4n3><a href="#main-content" class="skip-to-content" data-astro-cid-z4jru4n3>跳转到正文</a><header class="site-header" data-astro-cid-nen7h5rs><div class="container-wide header-inner" data-astro-cid-nen7h5rs><!-- Brand --><a href="/" class="brand" aria-label="gkzhb's blog 首页" data-astro-cid-nen7h5rs><span class="brand-rock" data-astro-cid-nen7h5rs>🪨</span><span class="brand-title" data-astro-cid-nen7h5rs>gkzhb&#39;s blog</span></a><!-- Main Nav --><nav class="nav" aria-label="Main Navigation" data-astro-cid-nen7h5rs><a href="/" class="nav-link" data-astro-cid-nen7h5rs>首页</a><a href="/posts/" class="nav-link" data-astro-cid-nen7h5rs>文章</a><a href="/categories/" class="nav-link" data-astro-cid-nen7h5rs>分类</a><a href="/tags/" class="nav-link" data-astro-cid-nen7h5rs>标签</a><a href="/about/" class="nav-link" data-astro-cid-nen7h5rs>关于</a></nav><!-- Header Actions --><div class="header-actions" data-astro-cid-nen7h5rs><!-- Search Trigger (Desktop) --><button id="header-search-btn" class="search-trigger desktop-only" type="button" aria-label="Search (Ctrl + K)" title="Search (Ctrl + K)" data-astro-cid-nen7h5rs><div class="search-trigger-inner" data-astro-cid-nen7h5rs><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" data-astro-cid-nen7h5rs><circle cx="11" cy="11" r="8" data-astro-cid-nen7h5rs></circle><path d="m21 21-4.3-4.3" data-astro-cid-nen7h5rs></path></svg><span class="search-trigger-text" data-astro-cid-nen7h5rs>搜索文章…</span></div><kbd class="search-trigger-kbd" data-astro-cid-nen7h5rs>Ctrl K</kbd></button><!-- Mobile Search Button --><button id="mobile-search-btn" class="icon-btn mobile-only" type="button" aria-label="Search" title="Search" data-astro-cid-nen7h5rs><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" data-astro-cid-nen7h5rs><circle cx="11" cy="11" r="8" data-astro-cid-nen7h5rs></circle><path d="m21 21-4.3-4.3" data-astro-cid-nen7h5rs></path></svg></button><!-- Minrock social and theme controls; translation is intentionally disabled. --><div class="header-controls" data-astro-cid-nen7h5rs><div class="social-dropdown-container" id="social-dropdown-container" data-astro-cid-nfwclza7><button id="social-menu-btn" class="social-btn-trigger" aria-label="Connect and social links" aria-haspopup="true" aria-expanded="false" title="Connect / Redes e Contato" data-astro-cid-nfwclza7><!-- Social / At icon --><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" data-astro-cid-nfwclza7><circle cx="12" cy="12" r="4" data-astro-cid-nfwclza7></circle><path d="M16 8v5a3 3 0 0 0 6 0v-1a10 10 0 1 0-4 8" data-astro-cid-nfwclza7></path></svg><svg class="social-chevron" width="9" height="9" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" data-astro-cid-nfwclza7><polyline points="6 9 12 15 18 9" data-astro-cid-nfwclza7></polyline></svg></button><!-- Floating Social Dropdown --><div id="social-dropdown-menu" class="social-dropdown-menu" role="menu" aria-label="Social and contact options" data-astro-cid-nfwclza7><div class="social-dropdown-header" data-astro-cid-nfwclza7>CONNECT</div><a href="https://github.com/gkzhb" target="_blank" rel="noopener noreferrer" class="social-menu-item" role="menuitem" data-astro-cid-nfwclza7><span class="social-item-icon" data-astro-cid-nfwclza7><svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" data-astro-cid-nfwclza7><path d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0 1 12 6.844a9.59 9.59 0 0 1 2.504.337c1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0 0 22 12.017C22 6.484 17.522 2 12 2z" data-astro-cid-nfwclza7></path></svg></span><div class="social-item-info" data-astro-cid-nfwclza7><span class="social-item-name" data-astro-cid-nfwclza7>GitHub</span><span class="social-item-handle" data-astro-cid-nfwclza7>↗ Repository</span></div></a></div></div><script type="module">function e(){let e=document.getElementById(`social-menu-btn`),t=document.getElementById(`social-dropdown-menu`),n=document.getElementById(`social-dropdown-container`);function r(){if(t){if(window.innerWidth<=768){t.style.left=`50%`,t.style.right=`auto`,t.style.transform=`translateX(-50%)`;let e=t.getBoundingClientRect();if(e.left<12){let n=12-e.left;t.style.transform=`translateX(calc(-50% + ${n}px))`}else if(e.right>window.innerWidth-12){let n=e.right-(window.innerWidth-12);t.style.transform=`translateX(calc(-50% - ${n}px))`}}else t.style.left=``,t.style.right=``,t.style.transform=``}}e?.addEventListener(`click`,n=>{n.stopPropagation(),document.querySelectorAll(`.lang-dropdown.open, .theme-dropdown.open`).forEach(e=>e.classList.remove(`open`)),document.querySelectorAll(`#lang-btn, #theme-toggle-btn`).forEach(e=>e.setAttribute(`aria-expanded`,`false`));let i=t?.classList.toggle(`open`);e.setAttribute(`aria-expanded`,String(!!i)),i&&r()}),window.addEventListener(`resize`,()=>{t?.classList.contains(`open`)&&r()}),document.addEventListener(`click`,r=>{n?.contains(r.target)||(t?.classList.remove(`open`),e?.setAttribute(`aria-expanded`,`false`))}),document.addEventListener(`keydown`,n=>{n.key===`Escape`&&t?.classList.contains(`open`)&&(t.classList.remove(`open`),e?.setAttribute(`aria-expanded`,`false`),e?.focus())})}e(),document.addEventListener(`astro:after-swap`,e);</script><div class="theme-selector" id="theme-selector" data-astro-cid-l6lhmie6><button id="theme-toggle-btn" class="theme-btn-trigger" aria-label="Select color theme" aria-haspopup="true" aria-expanded="false" title="Color theme / Tema visual" data-astro-cid-l6lhmie6><span id="theme-active-icon" class="theme-active-icon" data-astro-cid-l6lhmie6>📜</span><svg class="theme-chevron" width="9" height="9" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" data-astro-cid-l6lhmie6><polyline points="6 9 12 15 18 9" data-astro-cid-l6lhmie6></polyline></svg></button><!-- Floating Theme Dropdown --><div id="theme-dropdown" class="theme-dropdown" role="menu" aria-label="Available themes" data-astro-cid-l6lhmie6><div class="theme-dropdown-header" data-astro-cid-l6lhmie6>THEME</div><button class="theme-option" data-theme-val="white" role="menuitem" data-astro-cid-l6lhmie6><span class="theme-opt-left" data-astro-cid-l6lhmie6><span class="theme-emoji" data-astro-cid-l6lhmie6>☀️</span><span class="theme-label" data-astro-cid-l6lhmie6>Clean White</span></span><svg class="theme-check" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" data-astro-cid-l6lhmie6><polyline points="20 6 9 17 4 12" data-astro-cid-l6lhmie6></polyline></svg></button><button class="theme-option" data-theme-val="cream" role="menuitem" data-astro-cid-l6lhmie6><span class="theme-opt-left" data-astro-cid-l6lhmie6><span class="theme-emoji" data-astro-cid-l6lhmie6>📜</span><span class="theme-label" data-astro-cid-l6lhmie6>Warm Paper</span></span><svg class="theme-check" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" data-astro-cid-l6lhmie6><polyline points="20 6 9 17 4 12" data-astro-cid-l6lhmie6></polyline></svg></button><button class="theme-option" data-theme-val="slate" role="menuitem" data-astro-cid-l6lhmie6><span class="theme-opt-left" data-astro-cid-l6lhmie6><span class="theme-emoji" data-astro-cid-l6lhmie6>⚓</span><span class="theme-label" data-astro-cid-l6lhmie6>Slate Navy</span></span><svg class="theme-check" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" data-astro-cid-l6lhmie6><polyline points="20 6 9 17 4 12" data-astro-cid-l6lhmie6></polyline></svg></button><button class="theme-option" data-theme-val="midnight" role="menuitem" data-astro-cid-l6lhmie6><span class="theme-opt-left" data-astro-cid-l6lhmie6><span class="theme-emoji" data-astro-cid-l6lhmie6>🌌</span><span class="theme-label" data-astro-cid-l6lhmie6>Midnight OLED</span></span><svg class="theme-check" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" data-astro-cid-l6lhmie6><polyline points="20 6 9 17 4 12" data-astro-cid-l6lhmie6></polyline></svg></button><div class="theme-divider" data-astro-cid-l6lhmie6></div><button class="theme-option" data-theme-val="auto" role="menuitem" data-astro-cid-l6lhmie6><span class="theme-opt-left" data-astro-cid-l6lhmie6><span class="theme-emoji" data-astro-cid-l6lhmie6>💻</span><span class="theme-label" data-astro-cid-l6lhmie6>System Auto</span></span><svg class="theme-check" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" data-astro-cid-l6lhmie6><polyline points="20 6 9 17 4 12" data-astro-cid-l6lhmie6></polyline></svg></button></div></div><script type="module">function e(){let e=document.getElementById(`theme-toggle-btn`),t=document.getElementById(`theme-dropdown`),n=document.getElementById(`theme-selector`),r=document.getElementById(`theme-active-icon`),i={white:`☀️`,cream:`📜`,slate:`⚓`,midnight:`🌌`,auto:`💻`};function a(e){return e===`auto`?window.matchMedia(`(prefers-color-scheme: dark)`).matches?`slate`:`cream`:e}function o(e){let t=a(e);r&&(r.textContent=e===`auto`?`💻`:i[t]||`📜`),document.querySelectorAll(`.theme-option`).forEach(t=>{t.getAttribute(`data-theme-val`)===e?(t.classList.add(`active`),t.setAttribute(`aria-selected`,`true`)):(t.classList.remove(`active`),t.removeAttribute(`aria-selected`))})}function s(e){try{localStorage.setItem(`minrock_theme`,e)}catch{}let t=a(e);document.documentElement.setAttribute(`data-theme`,t),o(e),window.dispatchEvent(new CustomEvent(`minrock-theme-change`,{detail:{theme:t,mode:e}}))}function c(){if(t){if(window.innerWidth<=768){t.style.left=`50%`,t.style.right=`auto`,t.style.transform=`translateX(-50%)`;let e=t.getBoundingClientRect();if(e.left<12){let n=12-e.left;t.style.transform=`translateX(calc(-50% + ${n}px))`}else if(e.right>window.innerWidth-12){let n=e.right-(window.innerWidth-12);t.style.transform=`translateX(calc(-50% - ${n}px))`}}else t.style.left=``,t.style.right=``,t.style.transform=``}}let l=document.documentElement.getAttribute(`data-theme`)||`cream`;function u(){try{return localStorage.getItem(`minrock_theme`)||l}catch{return l}}o(u()),e?.addEventListener(`click`,n=>{n.stopPropagation(),document.querySelectorAll(`.lang-dropdown.open, .social-dropdown-menu.open`).forEach(e=>e.classList.remove(`open`)),document.querySelectorAll(`#lang-btn, #social-menu-btn`).forEach(e=>e.setAttribute(`aria-expanded`,`false`));let r=t?.classList.toggle(`open`);e.setAttribute(`aria-expanded`,String(!!r)),r&&c()}),window.addEventListener(`resize`,()=>{t?.classList.contains(`open`)&&c()}),document.querySelectorAll(`.theme-option`).forEach(n=>{n.addEventListener(`click`,()=>{let r=n.getAttribute(`data-theme-val`);r&&(t?.classList.remove(`open`),e?.setAttribute(`aria-expanded`,`false`),s(r))})}),document.addEventListener(`click`,r=>{n?.contains(r.target)||(t?.classList.remove(`open`),e?.setAttribute(`aria-expanded`,`false`))}),document.addEventListener(`keydown`,n=>{n.key===`Escape`&&t?.classList.contains(`open`)&&(t.classList.remove(`open`),e?.setAttribute(`aria-expanded`,`false`),e?.focus())}),window.matchMedia(`(prefers-color-scheme: dark)`).addEventListener(`change`,()=>{u()===`auto`&&s(`auto`)})}e(),document.addEventListener(`astro:after-swap`,e);</script></div></div></div></header><main id="main-content" class="main-content container" data-astro-cid-z4jru4n3><h1 data-astro-cid-wp2l4cmv>搜索文章</h1><p data-astro-cid-wp2l4cmv>使用页面顶部搜索按钮或 Ctrl / ⌘ + K，可搜索文章正文与标签。</p><label for="search-page-input" data-astro-cid-wp2l4cmv>筛选标题与正文</label><input id="search-page-input" type="search" placeholder="输入关键词…" autocomplete="off" data-astro-cid-wp2l4cmv><p id="search-page-status" role="status" data-astro-cid-wp2l4cmv></p><div id="search-page-results" data-astro-cid-wp2l4cmv><div data-search-text="使用裸 git 仓库备份 *nix 系统用户配置文件 之前一直比较头疼配置文件在多台设备上的备份与共享，最近 google 到了一个简单方便的终极方法，这个方法只需要使用 git。
+
+> 此方法需要读者了解如何使用 git，若不了解 git 请先学习 [git 基本操作](https://www.liaoxuefeng.com/wiki/896043488029600/896827951938304)。
+
+<!--more-->
+
+## 简介
+
+本方法主要思想是使用 git 仓库管理配置文件，在 home 目录下保存一个 git 版本库，并将 home 目录设置为工作区，将需要备份的配置文件添加到 git 仓库中，而无需手动复制配置文件。在不同主机上如果使用不同的配置文件，可以使用不同的分支加以区分，并在 master 分支上保存公共的配置文件。这样我们可以充分利用 git 的 checkout、merge、rebase 等各种功能来管理我们的配置文件。
+
+## 创建配置仓库
+
+第一次备份配置时，需要创建一个 git 仓库到 home 目录下：
+
+```bash
+git init --bare $home/.dotfiles
+```
+
+以上命令创建了一个裸 git 仓库，没有工作区。也就是说 `.dotfiles` 相当于普通 git 仓库下的 `.git` 文件夹，里面存放 git 仓库的历史记录及配置信息。
+
+接着我们在 shell 的配置文件中定义一个别名 alias：
+
+```bash
+alias config='git --git-dir=$home/.dotfiles --work-tree=$home'
+```
+
+将以上内容添加到 shell 的配置文件中，可以使用下面的命令。shell 配置文件路径比如 bash 是 `~/.bashrc`，zsh 是 `~/.zshrc`，fish 是 `~/.config/fish/config.fish`。之后我们都通过 `config` 命令来操作配置仓库。而且只要把 `config` 当成 `git` 命令来使用即可。
+
+```bash
+echo &quot;alias config='/usr/bin/git --git-dir=$home/.dotfiles --work-tree=$home'&quot; >> $home/.bashrc
+```
+
+添加完后执行 `exec bash` 让配置生效，使用其它 shell 对应地替换掉 `bash` 即可。
+
+现在通过以下命令我们可以看到当前配置仓库的状态：
+
+```bash
+config status
+```
+
+但是这样有个问题，home 目录下所有文件都被标记为 untracked，很影响仓库状态的查看，所以配置 git 仓库不显示未被追踪的文件：
+
+```bash
+config config --local status.showuntrackedfiles no
+```
+
+另外，为了避免今后在其它地方通过 git 获取备份的配置时出现奇怪的回溯问题，在 home 目录下创建 `.gitignore` 文件，并将以下内容添加到该文件中。
+
+```text
+.dotfiles
+```
+
+之后我们就可以通过 git add 和 git commit 命令将需要备份的配置文件添加到 git 仓库中，也可以通过 git remote add 添加远程 git 仓库。当然需要使用 `config` 替换 `git`。
+
+## 在其他设备上获取配置
+
+从远程仓库获取你的配置仓库，将 `<git-repo-url>` 换成实际远程仓库地址：
+
+```bash
+git clone --bare <git-repo-url> $home/.dotfiles
+```
+
+和之前一样，在 shell 中定义别名，如果备份的配置中已经定义了别名，现在可以直接在 shell 中执行以下命令，临时添加别名：
+
+```bash
+alias config='git --git-dir=$home/.dotfiles --work-tree=$home'
+```
+
+接着我们来从仓库中检出之前备份的配置文件：
+
+```bash
+config checkout
+```
+
+在这一步可能会发生冲突导致检出失败，比如出现类似下面的输出：
+
+```text
+error: the following untracked working tree files would be overwritten by checkout:
+    .bashrc
+    .gitignore
+please move or remove them before you can switch branches.
+aborting
+```
+
+这时我建议将出现冲突的本地文件重命名，加上 `.bak` 后缀再执行之前的检出命令。
+
+检出成功执行后，所有的配置文件就都出现在其原本的位置。
+
+最后和之前创建仓库时一样，需要设置仓库不显示未被追踪的文件：
+
+```bash
+config config --local status.showuntrackedfiles no
+```
+
+## 与 vim-fugitive 结合使用
+
+vim-fugitive 是 vim 上一个与 git 深度结合的插件，通过它可以方便快捷地操作暂存区以及查看 git 历史。要将该插件用于本文的配置仓库中，需要对仓库进行一些额外的配置。
+
+因为 fugitive 根据 git 仓库的 `core.worktree` 属性确定工作区位置，所以需要配置仓库的这个属性：
+
+```bash
+config config --local core.worktree $home
+```
+
+为了检查确认设置正确可以运行不加参数的命令，如果输出是实际的 home 路径就没问题：
+
+```bash
+config config --local core.worktree
+```
+
+另外，因为我们通过 `--bare` 命令初始化仓库，在查看仓库状态时会遇到 `warning: core.bare and core.worktree do not make sense` 的问题，解决方法是去掉仓库 `core.bare` 属性或将它的值改成 `false` ，这里选择前者：
+
+```bash
+config config --unset core.bare
+```
+
+最后我们在启动 (neo)vim 时，添加环境变量 `git_dir=$home/.dotfiles` 即可让 fugitive 获取配置仓库的位置
+
+```bash
+git_dir=$home/.dotfiles vim
+```
+
+我使用的是 fish shell，所以使用以下命令：
+
+```bash
+env git_dir=$home/.dotfiles vim
+```
+
+最后在 shell 配置文件中，可以将运行命令定义成一个别名 alias 方便使用（dv: dotfiles vim）：
+
+```bash
+alias dv='git_dir=$home/.dotfiles vim'
+```
+
+另外补充一点，使用这种方法，fugitive 只能在 home 目录或子目录下正常使用，否则会出现 `fugitive: working directory does not belong to a git repository` 的错误。所以如果在 home 中有软链接链接到其它地方，在其中 fugitive 会无法使用。
+
+## refs
+
+* [github does dotfiles - dotfiles.github.io](https://dotfiles.github.io/)
+* [dotfiles - archwiki](https://wiki.archlinux.org/index.php/dotfiles)
+* 本文内容基本来自此文章：[how to store dotfiles | atlassian git tutorial](https://www.atlassian.com/git/tutorials/dotfiles)
+* [handle $git_dir and $git_work_tree · issue #415 · tpope/vim-fugitive · github](https://github.com/tpope/vim-fugitive/issues/415#issuecomment-37855823)
+* vim-fugitive 参考 [how to use vim-fugitive with a git bare repository? - stack overflow](https://stackoverflow.com/questions/65021175/how-to-use-vim-fugitive-with-a-git-bare-repository) okket 的回答，并根据我自己（gkzhb）的实践补充了额外需要的配置写了一条更完整回答。 配置 git 备份 vim" data-astro-cid-wp2l4cmv><article class="article-card" data-astro-cid-7ahxywo7><div class="card-meta" data-astro-cid-7ahxywo7><time datetime="2021-03-28T15:36:09.000Z" data-astro-cid-7ahxywo7>2021年3月28日</time><span class="tags" data-astro-cid-7ahxywo7><a href="/tags/%E9%85%8D%E7%BD%AE/" class="tag" data-astro-cid-7ahxywo7>#配置</a><a href="/tags/git/" class="tag" data-astro-cid-7ahxywo7>#git</a><a href="/tags/%E5%A4%87%E4%BB%BD/" class="tag" data-astro-cid-7ahxywo7>#备份</a><a href="/tags/vim/" class="tag" data-astro-cid-7ahxywo7>#vim</a></span></div><h2 class="card-title" data-astro-cid-7ahxywo7><a href="/posts/2021-3-dotfiles/" data-astro-cid-7ahxywo7>使用裸 Git 仓库备份 *nix 系统用户配置文件</a></h2><p class="card-desc" data-astro-cid-7ahxywo7></p></article></div><div data-search-text="对未来城市化及解决方案的遐想 从 [日本城市化的最后一步：留在农村的人都死掉【嵩问02】_哔哩哔哩 (゜-゜)つロ 干杯~-bilibili](https://www.bilibili.com/video/bv15f4y1t7wv) 看到 [为何难以精准地预测未来，缺少了哪个环节？阿西莫夫作品《电梯效应》_哔哩哔哩 (゜-゜)つロ 干杯~-bilibili](https://www.bilibili.com/video/bv1xz4y1w7xe)，不免有些想法。特此记录一下。
+
+<!--more-->
+
+前一个视频我没有看内容，只是看了看评论，感觉可能不想看内容。因为光是看到标题就很那个的感觉，有点反智。
+
+先大致罗列一下我之后的思想出发点，以免写到后面忘记：
+* 目前城市人口集中，我认为的几点关键原因：
+  1. 城市提供优质的教育资源、医疗资源及各种社会福利政策
+  1. 城市的交通更加便利，物流也更加高效
+  1. 当前社会上的公司因为各种原因的限制，让员工必须聚集在一起工作，如
+    * 面对面方便交接物理上的资料文件
+    * 面对面开会比网络会议更加**高效**
+      * 网络会议面临网络带宽、延迟的问题，以及多人视频（甚至 vr）会议可能导致 pc 计算资源不足（目前技术条件下）
+      * 线下会议能够有更多的物理接触（可以提醒他人等），也更容易传达更多肢体信息
+    * 为了避免使用外部网络泄露公司内部信息（存在人为失误的可能性，技术上可以避免，但也存在被攻击的风险）
+  4. 城市与城市以及城市与乡村之间的基础设施规划存在差异，与城市规划管理人员的能力以及城市历史有关
+* 过度城市化的危害：
+  1. 人口集中于城市，加剧各方面资源的竞争，如
+    * 空间上，住房、交通
+    * 社会资源方面，医疗、教育、社会工作
+      结果导致人均占有的资源减少，且可能部分人无法获得某些资源（如工作、住房）。竞争的加剧将增大人们的生活压力，影响人民的身心健康，并且导致结婚率、生育率的下降。因为结婚意味着组件家庭，需要有住房支持，而生育的结果是需要付出大量额外的资金用于教育（甚至需要购买昂贵的学区房），这两项或许就是影响生育率的主导原因。
+* 从这些原因出发可以想到一些对应的解决方案：
+  1. 同步各地的社会政策，或者让不同城市的人能享受到同等的待遇，如医保全国统一，且允许跨城市使用。
+  1. 教育方面，可以通过普及提高线上教育地位，降低线下教育的地位来让学区房从历史的舞台上消失。同时线上教育便于传播与复制有利于降低教育的成本。但是目前来看实现很有难度。原因类似上面的线下会议更加高效，且儿童需要有一定的管教措施。
+  1. 为了实现线上办公，需要将各种材料手续过程全部转移到线上通过电子资料的方式传输
+  1. 线上会议的不足，需要技术方面的进一步发展以及互联网的网络基础设施的升级进步，提高网络很很带宽降低延迟。另外 ipv6 的广泛普及也有助于解决很多问题（如不同设备间数据传输，可直接通过 ipv6 直传；p2p 通信也更加方便直接，可以避免 cs 通信对服务端带宽、计算资源需求的缺陷）；同时也需要表现力强于视频的通信方式普及，如 ar，vr 或者三维全系投影等。
+* 从这些解决方案上，可以推测未来人类或者说政府为了避免城市化的危害，提高生育率可能采取的行为，不过也有可能是由自由市场上的企业逐利而开辟出来的道路。以下也包含我对未来的推测猜想：
+  1. 为减少物流中的人力成本，且由于自动驾驶仍无法完全替代人工。未来可能开设专门的自动驾驶路线。这些道路禁止人类或动物进入，只能由自动驾驶车辆使用。这些路线使用一些技术手段为自动驾驶车辆提供交通信息，如道路上的二维码，或路面上的电磁感应装置，nfc 技术甚至通过激光反射提供信息等。自动驾驶车辆之间也会有更高效的近距离通信手段进行快速且必要的数据通信。
+  1. 若能解决吸引人口城市化的问题，今后人员会往郊区迁移，因为有更好的居住环境 " data-astro-cid-wp2l4cmv><article class="article-card" data-astro-cid-7ahxywo7><div class="card-meta" data-astro-cid-7ahxywo7><time datetime="2021-03-17T13:54:56.000Z" data-astro-cid-7ahxywo7>2021年3月17日</time></div><h2 class="card-title" data-astro-cid-7ahxywo7><a href="/posts/2021-3-citizen/" data-astro-cid-7ahxywo7>对未来城市化及解决方案的遐想</a></h2><p class="card-desc" data-astro-cid-7ahxywo7></p></article></div><div data-search-text="webpack, rollup 与 parsel 三个 bundlers 对比 前端网页打包通常会使用一些工具，如 webpack，rollup.js 及 parsel。这些打包工具可以为前端进行浏览器兼容的处理（es6 转 es5）、精简代码（minify code）、动态编译（热重载 live reload）、代码拆分（code splitting）、通过 tree shaking 减小打包后的大小等等。这些工具称为 bundlers。
+
+<!--more-->
+
+通过对 [rollup vs. parcel vs. webpack: which is the best bundler? | by manisha sharma | better programming | medium](https://medium.com/better-programming/the-battle-of-bundlers-6333a4e3eda9) 这篇文章的阅读我对几个 bundles 的优缺点进行简单小结。
+
+## 配置
+
+* parcel 无需配置文件
+* rollup 需要配置文件，支持相对路径
+* webpack 需要配置文件，支持第三方引入
+
+## 死码删除 dead code elimination
+
+通过 tree shaking 和其它静态分析方法分析运行时不会用到的代码片段进行移除。
+
+* parcel 最好，它的 tree shaking 支持 es6 和 commonjs 模块。另外 tree shaking 支持并行操作从而带来快速的构建体验，同时文件系统 的缓存机制让动态更新也及其迅速。
+* rollup 其次，无需配置即可优化
+* webpack 需要额外手动配置：
+  * 使用 es6 语法
+  * 在 `package.json` 中设置 `sideeffects` 标志
+  * 引入最小化代码的工具插件
+
+## 代码拆分 code splitting
+
+* webpack 最快也最方便
+* rollup 其次
+* parcel 最慢，但是无需额外配置
+
+## 动态更新 live reload
+
+开发时 bundlers 可以提供一个开发服务器，在本地代码变动时自动同步构建。
+
+* parcel 提供，但对 http logging，hoooks 和 middleware 可能存在问题
+* rollup 需要安装配置 `rollup-plugin-serve` 及 `rollup-plugin-livereload`
+* webpack 需要一个插件 `webpack-dev-server`，支持 hooks 配置，选择使用的（served）文件等，定制化程度更高
+
+## 热模块更新 hot module replacement（hmr）
+
+更新模块后在浏览器运行环境自动更新模块，而无需整个网页刷新。它可以保持应用当前的运行状态，live reload 会重新进行路由等操作。
+
+* webpack 在 `webpack-dev-server` 中包含 hmr 功能，相比另外两个功能更稳定
+* parcel 已有内置支持
+* rollup 需要 `rollup-plugin-hotreload` 插件
+
+## 模块转换器 module transformers
+
+bundlers 通常只知道如何读取 js 文件。transformers 告诉 bundler 如何处理其它格式的文件并打包。
+
+* parcel 内置，自动读取各种配置文件如 `.babelrc` 等
+* rollup 与 webpack 都需要自行配置
+
+## 小结
+
+* 构建简单应用并快速启动项目并运行：parcel
+* 构建一个最小化第三方引入的库：rollup
+* 需要很多第三方集成工具的复杂应用；需要 code splitting，静态资源、commonjs 依赖：webpack
+
+## refs
+
+  * [rollup vs. parcel vs. webpack: which is the best bundler? | by manisha sharma | better programming | medium](https://medium.com/better-programming/the-battle-of-bundlers-6333a4e3eda9) " data-astro-cid-wp2l4cmv><article class="article-card" data-astro-cid-7ahxywo7><div class="card-meta" data-astro-cid-7ahxywo7><time datetime="2021-02-07T09:16:37.000Z" data-astro-cid-7ahxywo7>2021年2月7日</time></div><h2 class="card-title" data-astro-cid-7ahxywo7><a href="/posts/2021-2-web-bundler/" data-astro-cid-7ahxywo7>Webpack, Rollup 与 Parsel 三个 Bundlers 对比</a></h2><p class="card-desc" data-astro-cid-7ahxywo7></p></article></div><div data-search-text="mac os node.js gpy 报错：no receipt for 'com.apple.pkg.cltools_executables' found at '/' <!--more-->
+
+在 mac 上使用 yarn 安装依赖包时，gpy 遇到以下问题出错：
+```
+no receipt for 'com.apple.pkg.cltools_executables' found at '/'.
+
+no receipt for 'com.apple.pkg.developertoolsclileo' found at '/'.
+
+no receipt for 'com.apple.pkg.developertoolscli' found at '/'.
+```
+
+之后搜索找到 [is this an issue with macos catalina? · issue #1927 · nodejs/node-gyp](https://github.com/nodejs/node-gyp/issues/1927)
+
+在终端运行 `xcodebuild` 命令得到同样报错：
+```
+xcode-select: error: tool 'xcodebuild' requires xcode, but active developer directory '/library/developer/commandlinetools' is a command line tools instance
+```
+
+之后根据 [此回复](https://github.com/nodejs/node-gyp/issues/1927#issuecomment-542935181) 找到 [xcode-select: error: tool 'xcodebuild' requires xcode, but active developer directory '/library/developer/commandlinetools' is a command line tools instance · issue #569 · nodejs/node-gyp](https://github.com/nodejs/node-gyp/issues/569)
+
+解决方法是执行命令：
+```
+sudo xcode-select -s /applications/xcode.app/contents/developer
+``` node.js" data-astro-cid-wp2l4cmv><article class="article-card" data-astro-cid-7ahxywo7><div class="card-meta" data-astro-cid-7ahxywo7><time datetime="2021-02-05T07:20:49.000Z" data-astro-cid-7ahxywo7>2021年2月5日</time><span class="tags" data-astro-cid-7ahxywo7><a href="/tags/Node.js/" class="tag" data-astro-cid-7ahxywo7>#Node.js</a></span></div><h2 class="card-title" data-astro-cid-7ahxywo7><a href="/posts/2021-2-node-mac/" data-astro-cid-7ahxywo7>Mac OS Node.js gpy 报错：No receipt for &#39;com.apple.pkg.CLTools_Executables&#39; found at &#39;/&#39;</a></h2><p class="card-desc" data-astro-cid-7ahxywo7></p></article></div><div data-search-text="关于 nlp 的一些简单思考 在读 [一文看懂自然语言处理nlp（4个应用+5个难点+6个实现步骤）](https://easyai.tech/ai-definition/nlp/) 的过程中，结合这学期的 nlp 课程，有了一些些简单的想法，在此记录一下。
+
+<!--more-->
+
+nlp 的最终目的粗略来说有两个：一个是理解自然语言，另一个是用自然语言进行表达。
+
+## &quot;中间语言&quot;的定义
+
+理解自然语言，我觉得最理想的结果是将某种语言翻译成某种&quot;自然语言无关&quot;的语言，姑且称它为&quot;中间语言&quot;。这种语言是人能够看懂理解的（仔细想来这一点性质可能是有待商榷的），比如像汇编语言那样，而不是像 embedding 向量那样人无法理解或难以解释的。通过这种语言可以完备且唯一地表达含义。完备指能表达任何自然语言希望表达的**某一种**含义，唯一指给定该语言的一个句子，最多有且只有一种理解方式。对于这样的语言，我认为是可以对其进行逻辑分析处理的。当然，因为每个句子只能表达一种确定的含义，对于自然语言中可能存在歧义理解的一句话，是无法将其翻译为一句该语言的句子，而是会存在多种翻译的句子。
+
+在这学期的 nlp 课程上，了解了像使用 transformer 进行语言翻译这样的手段，transformer 将源语言转换到一种中间表示 intermediate representation，这个过程为编码 encode，第二步是将这个中间表示转换成目标语言，这步是解码 decode。所以通过上面定义的&quot;中间语言&quot;，理论上是可以实现不同语言的翻译工作。不过肯定会存在一些问题，比如语言风格在中间语言会被大量抹去，这样翻译出来的句子风格无法还原原文。文风或许可以再从原文中训练获取，再应用到译文中。再比如如何定义这种&quot;中间语言&quot;。
+
+对于语言理解模型的训练，包含自然语言到&quot;中间语言&quot;的翻译以及&quot;中间语言&quot;的构建，我认为可以模仿人类学习语言的方式。开始时学习最基础的词汇，然后通过词典学习更多的词汇扩充词汇量。对于词典中没有的生僻的或仅仅是陌生的（训练中未遇见过的）词汇，可以学习人的方式通过上下文语境分析推理出词汇含义。
+
+在以上的基础上，我还能想到的一个问题是一个词汇表达的含义不止一种，以及词汇有多种不同的含义。这两种是有区别。前一种是词汇在句子中同时包含多种含义，后一种是在不同句子中词汇表达不同 的含义。前者比如一个描述情感词汇可能包含多种不同的基本情感。后者可简单认为是多义词。对于前一种，可以为多个含义分别构建出一个句子（当然实现中并不一定要完整写出多个句子），然后可以对每个句子给个权重表示&quot;含量&quot;。对后一种也可以分别构建不同的句子，给各个句子一个概率值或权重表示采用这种含义的概率。
+
+### 语境
+
+我们阅读的时候通常会有语境，比如人称代词指代，使用简单的名词指代之前所说的某物等，这些都需要语境才能理解。所以上面的模型当然也需要某种记录语境的机制。对此我联想到的编译中的各种 tables，对已定义的变量进行记录，之后查表可得知变量的相关信息。
+
+## 应用
+
+### 英语做题
+
+如果真能做出这样的语言理解模型，我最想做的是对比人和该模型之间的区别。所以应用方面，我想到了英语的完型填空。然后我觉得模型开始阅读时初始的语境也会影响模型的理解，所以给定不同初始状态，模型的表现可能不同，理解的内容可能也有不同？就像是&quot;一万个读者心中有一万个哈姆雷特&quot;一样。如果让模型多次阅读完形填空文章是否会得到更好的性能结果？英语阅读理解可能也是一样，初始状态影响理解程度。
+
+说道初始状态发现前面忘记提语境了，在上一部份补上 lol。
+
+补完之后又在想初始语境是啥？？我想表达的含义大概就是比如做英语阅读理解时，如果你对文章内容抱有某方面主题内容的预测，这会影响你对文章内容的理解，可能会把你的理解方向带偏，或者你能通过预测脑补出没看懂的部份或文章介绍得不完整的部份。
+
+所以初始语境可能对开头的理解有影响吧，开头遇到的多义词影响理解的准确性，如果能通过初始语境正确判断开头多义词的含义，或许能提高开头内容的理解准确性。
+
+### 更深入的应用
+
+在有了这个中间语言之后，因为它的句子理解是唯一的，所以能够进行各种计算机非常擅长的严谨逻辑分析。啊，突然发现这可能也要包含在之前的模型里，通过逻辑分析推测真实语义以及语境，这也是人脑阅读文章时有时需要进行的一个步骤。
+
+在理解语言内容的基础上，可以对理解出来的语义进行统计分析，如分析各种情感成分占比或强度，也可以去做一些创造性的事情，比如 nlp 中的内容总结概述。可以做一些漏洞检测方面的，如语言中的逻辑分析有没有漏洞，语言表述存在问题，想表达的意思与句子表达出的不同，以及 typos 各种笔误的检测。甚至可以从内容出发向外拓展推理出新的内容。
+
+想了想感觉这样的模型甚至可以和人对话交流了（不过需要补充上中间语言到自然语言的翻译过程）。机器通过与用户不断交流从而不断地补充语境了解到用户的实际需求，这样或许能让现在的智障语音助手真正变得智能吧。
+
+
+## 小感想
+
+记录想法的时候，在不断对各种细节进行补充思考，所以想法的内容在不断增加，或许不能再说是简单的想法了。总之最后就变成本文看到的样子。 ml nlp" data-astro-cid-wp2l4cmv><article class="article-card" data-astro-cid-7ahxywo7><div class="card-meta" data-astro-cid-7ahxywo7><time datetime="2021-01-11T14:28:16.000Z" data-astro-cid-7ahxywo7>2021年1月11日</time><span class="tags" data-astro-cid-7ahxywo7><a href="/tags/ml/" class="tag" data-astro-cid-7ahxywo7>#ml</a><a href="/tags/nlp/" class="tag" data-astro-cid-7ahxywo7>#nlp</a></span></div><h2 class="card-title" data-astro-cid-7ahxywo7><a href="/posts/nlp-thinking/" data-astro-cid-7ahxywo7>关于 nlp 的一些简单思考</a></h2><p class="card-desc" data-astro-cid-7ahxywo7></p></article></div><div data-search-text="迁移 linux 系统 最近入了一块 1tb 的固态，然后把原来安装在 256gb pm981 上的 manjaro 系统迁移到了新的固态上。此文记录一下大致的迁移过程。
+
+<!--more-->
+
+## 流程
+
+> 本篇中我使用的是 uefi 引导 + gpt 分区
+
+1. 在新的硬盘上创建好分区
+1. 在 linux 系统中挂载创建的分区
+1. 使用 `rsync` 命令将 linux 根目录同步到新分区中
+1. 修改 `/etc/fstab` 中分区对应的 uuid
+1. 为新硬盘安装 grub 引导
+1. 若 bios 中没有显示对应的启动项，需要通过 `efibootmgr` 命令手动添加 efi 启动项
+
+## 创建分区
+
+初始空硬盘格式化为 gpt 格式。之后在硬盘中依次创建 efi 分区、linux swap 分区和 ext4 分区。
+
+我使用的软件是 linux 上的 gparted，在 win 上有很多磁盘管理软件，如 disk genius 等。
+
+* efi 分区：文件系统格式为 fat32，我分配了 550mb 空间，分区的标志位（flags）设置 `boot` 和 `esp`
+* linux swap 分区：我设置成运行内存的大小 16gb
+* ext4 分区：linux 系统根目录挂载的分区，根据需要划分大小
+
+## 复制 linux 系统根目录到新分区
+
+### 挂载新分区
+
+在 linux 上，挂载（需要 root 权限）新的 ext4 分区到某个目录（`/mnt/ssd`）中：
+```bash
+mount /dev/nvme1n1p3 /mnt/ssd
+```
+
+需要查看分区设备号（`/dev/xxxpx`），可以用以下命令（同样需要 root 权限）：
+```bash
+fdisk -l
+```
+
+### 使用 rsync 复制分区
+
+使用 `rsync` 复制 linux 系统到新分区上（同样需要 root 权限）：
+```bash
+rsync -a -x / /mnt/ssd
+```
+
+这个过程时间可能会比较长，请耐心等待。要说明的一点是，命令中 `-x` 参数让 `rsync` 只会复制根目录对应的分区中的文件内容，即根目录下挂载的其它分区不会被复制。而且像 `/proc`、`/sys` 这些运行时产生的文件系统和如 `/tmp`，`/dev/shm` 等内存中的文件系统也不会被复制。
+
+所以如果 linux 系统有不止一个分区需要迁移，需要对其它分区也做 `rsync` 复制，否则它们是不会被复制到新分区中的。
+
+关于 `-x` 参数的具体解释说明可以查看这个链接：[backup - meaning of crossing filesystem boundaries, --one-file-system, etc - unix &amp; linux stack exchange](https://unix.stackexchange.com/questions/107113/meaning-of-crossing-filesystem-boundaries-one-file-system-etc)
+
+## 修改 /etc/fstab 和 /etc/default/grub
+
+在 `/etc/fstab` 文件中（挂载分区中对应 `/mnt/ssd/etc/fstab`），记录了各个路径点对应的挂载分区，一般使用 uuid 识别某个分区。
+
+使用以下命令（需要 root 权限）查看分区对应的 uuid：
+```bash
+lsblk -o+uuid
+```
+
+分区|挂载点
+:-:|---
+efi 分区|`/boot/efi`
+linux swap|`swap`
+ext4 分区|`/`
+
+只要将**新分区**中的 fstab 文件中 `uuid=` 后面的 uuid 进行替换即可，挂载点不用修改。
+
+另外，在 `/etc/default/grub` 文件中，需要修改 `grub_cmdline_linux_default` 的值：`resume=uuid=xxx` uuid 的值改为新 swap 分区的 uuid，之后更新 grub 引导（继续后面的步骤）。
+
+## 安装 grub 引导
+
+首先将新硬盘中的 efi 分区挂载到 `/mnt/ssd/boot/efi` 路径点上，然后使用 `chroot` 命令（root 权限）切换根目录到新硬盘中：
+```
+chroot /mnt/ssd
+```
+
+然后使用命令更新 grub 引导：
+```
+update-grub
+```
+
+之后如果重启能够在 bios 中找到 efi 启动项并成功启动就没问题了（当然我并没有这么幸运）。如果不行可以尝试安装 grub：
+```bash
+grub-install /dev/nvme1n1
+```
+
+这里参数为**新硬盘的设备号**而不是分区的。
+
+这个方法对我也行不通。所以我需要通过 `efibootmgr` 手动添加 efi 启动项。
+
+## efibootmgr 添加 efi 启动项
+
+efibootmgr 的使用推荐大家去看 [gentoo wiki](https://wiki.gentoo.org/wiki/efibootmgr)。
+
+efibootmgr 命令也需要 root 权限。
+
+### 查看当前启动项序列
+
+使用 `-v` 参数查看当前启动项序列：
+```bash
+efibootmgr -v
+```
+
+你可以看看当前 linux 系统启动项的 efi 启动文件路径。比如我的显示如下：
+```
+boot0001* manjaro       hd(1,gpt,d0c6347f-32c0-441b-a898-b6498069b46c,0x3f,0x967c1)/file(\efi\manjaro\grubx64.efi)
+```
+
+只需要关心 `file` 后面的路径（这里路径分隔符使用**反斜线** `\` 而不是普通的斜线 `/` 请注意），之后创建 efi 启动项的时候会用到。另外这个路径不区分大小写（fat32 分区的锅），所以写成全大写或全小写应该也是没问题的。
+
+### 修改 efi 启动项时遇到的问题
+
+之后修改 efi 配置的时候，我遇到个问题：每次设置完用 efibootmgr 命令查看显示成功，但是重启进入 bios 却没有。之后找到[这个解决方案](https://superuser.com/questions/1166398/efi-settings-set-via-efibootmgr-are-ignored-after-reboot)（最后一个回答，被人踩了但确实解决了我的问题）。解决方法是重新挂载 efivarfs 分区（在 [gentoo wiki](https://wiki.gentoo.org/wiki/efibootmgr) 中有提到）：
+```bash
+mount -o remount,rw -t efivarfs efivarfs /sys/firmware/efi/efivars
+```
+
+所以在修改 efi 配置之前建议先执行上面的命令。
+
+### 添加 efi 启动项
+
+创建 efi 启动项：
+```bash
+efibootmgr -c -d /dev/nvme1n1 -p 1 -l &quot;manjaro&quot; -l &quot;\efi\manjaro\grubx64.efi&quot;
+```
+
+上面命令中
+* `-c` 表示创建 efi 启动项
+* `-d` 提供硬盘设备号，`-p` 提供 efi 分区在硬盘的第几个分区，如 efi 对应设备号为 `/dev/nvme1n1p1` 最后一个数字 `1` 就对应分区数（计数从 1 开始不是从 0 开始）
+* `-l` 提供 efi 启动项的标识文字，即在 bios 中看到的启动项名称
+* `-l` 指定启动项执行的文件，就是之前记录的那个路径。可以去检查一下这个文件是否存在，如我的文件路径为 `.../boot/efi/efi/manjaro/grubx64.efi`
+
+成功执行之后应该会输出添加后的所有 efi 启动项。
+
+### 删除 efi 启动项
+
+> 确定成功启动之前请务必不要删除原来的 efi 启动项
+
+删除使用 `-b` 参数：
+```bash
+efibootmgr -b 2 -b
+```
+
+`-b` 表示要删除的启动项的编号，即通过 `-v` 参数看到的，如 `boot0001` 编号就是 1。这个编号是十六进制的，按照 `boot` 后面的内容输入即可。
+
+## 总结
+
+最后说些题外话，曾经我也尝试用 efibootmgr 修复 efi 引导成功过，而且当时似乎也遇到过同样地问题，但是现在不记得以前的步骤了。当初可能是碰对的感觉，现在又踩了一遍坑。
+
+总结下经验：
+1. 这些莫名其妙的 bug 还是要弄清楚为好，不然之后碰到还要浪费时间
+1. 踩过的坑最好能记录下解决方法，之后可以参考
+
+## 参考
+
+* [backup - moving entire linux installation to another drive - ask ubuntu](https://askubuntu.com/questions/741723/moving-entire-linux-installation-to-another-drive)
+* [dual boot - how can i repair grub? (how to get ubuntu back after installing windows?) - ask ubuntu](https://askubuntu.com/questions/88384/how-can-i-repair-grub-how-to-get-ubuntu-back-after-installing-windows/88432#88432)
+* [efibootmgr - gentoo wiki](https://wiki.gentoo.org/wiki/efibootmgr)
+* [linux - how do i fix manjaro error hibernation device not found on boot? - super user](https://superuser.com/questions/1014212/how-do-i-fix-manjaro-error-hibernation-device-not-found-on-boot) linux 配置" data-astro-cid-wp2l4cmv><article class="article-card" data-astro-cid-7ahxywo7><div class="card-meta" data-astro-cid-7ahxywo7><time datetime="2020-12-13T14:52:28.000Z" data-astro-cid-7ahxywo7>2020年12月13日</time><span class="tags" data-astro-cid-7ahxywo7><a href="/tags/linux/" class="tag" data-astro-cid-7ahxywo7>#linux</a><a href="/tags/%E9%85%8D%E7%BD%AE/" class="tag" data-astro-cid-7ahxywo7>#配置</a></span></div><h2 class="card-title" data-astro-cid-7ahxywo7><a href="/posts/migrate-linux/" data-astro-cid-7ahxywo7>迁移 Linux 系统</a></h2><p class="card-desc" data-astro-cid-7ahxywo7></p></article></div><div data-search-text="用 hugo 与 markdown 制作网页 ppt 很久以前就在知乎上看到可以用 [reveal.js](https://github.com/hakimel/reveal.js/) 在网页上制作 ppt。但是一直没有用过，直到最近课堂展示上看到有人用 hackmd 做网页端 slides 才又有了兴致。hackmd 提供网页端服务，通过 markdown 排版 slides。看起来也是用的 reveal.js，可惜网络不(bei)好(qiang)，在公用电脑上不方便进行展示。于是我在网上寻找类似的功能，发现有 [reveal.js 的 hugo 主题](https://github.com/dzello/reveal-hugo) 可以较好地实现。这里有一个该[hugo 主题的 demo](https://themes.gohugo.io/theme/reveal-hugo)和我自己的[简单的 demo](https://gkzhb.gitee.io/slides)。
+
+<!--more-->
+
+## 安装
+
+hugo 必装，git 推荐安装。hugo 在 windows 下的安装参考[hugo 安装中文文档](https://www.gohugo.org/doc/tutorials/installing-on-windows/)，简单来说以下几步：
+
+1. 在 [latest release · gohugoio/hugo](https://github.com/gohugoio/hugo/releases/latest) 下载最新版 `hugo_0.61.0_windows-64bit.zip` 或 `hugo_extended_0.61.0_windows-64bit.zip` （32位电脑请自觉用 32bit）
+1. 解压安装包，将 `hugo_*.exe` 文件重命名为 `hugo.exe` ，并添加该文件所在目录到 path 环境变量中，方便命令行访问
+1. 输入 `hugo help` 来验证配置是否成功，成功时输出会包括以下内容：
+
+```text
+hugo is a fast and flexible static site generator
+built with love by spf13 and friends in go.
+```
+
+## 制作第一个 slide 网页
+
+### 新建 hugo 网站
+
+在命令行中输入命令创建一个 hugo 网站，并进入该新建的文件夹：
+
+```bash
+hugo new site my-presentation
+cd my-presentation
+```
+
+如果安装了 git 可以使用 git 安装主题：
+
+```bash
+git init
+git submodule add git@github.com:dzello/reveal-hugo.git themes/reveal-hugo
+```
+
+否则需要在 [dzello/reveal-hugos](https://github.com/dzello/reveal-hugo/archive/master.zip) 下载 zip 文件，解压到 `my-presentation/themes/` 并确保解压出的文件夹名称是 `reveal-hugo`
+
+### 配置主题
+
+修改 `my-presentation` 文件夹中的 `config.toml` 添加以下内容：
+
+```toml
+theme = &quot;reveal-hugo&quot;
+relativeurls = true
+canonifyurls = true
+
+[markup]
+defaultmarkdownhandler = &quot;blackfriday&quot;
+
+[outputformats.reveal]
+basename = &quot;index&quot;
+mediatype = &quot;text/html&quot;
+ishtml = true
+```
+
+最后，在 `content` 文件夹下，创建 `_index.md` 文件：
+
+```markdown
++++
+title = &quot;my presentation&quot;
+outputs = [&quot;reveal&quot;]
++++
+
+# hello world!
+
+this is my first slide.
+
+---
+
+# hello mars!
+
+this is my second slide.
+```
+
+上面 `+++` 框起来的区域用来写网页相关配置头部信息。后面开始是正文内容。
+
+生成静态网站，只需在 `my-presentation` 目录下执行 `hugo` 命令。所有生成的静态网站数据在 `public` 文件夹下，打开 `index.html` 来查看网站内容。
+
+要实时预览，执行 `hugo server` 命令，会有类似以下输出（不要关闭这个窗口）：
+
+```text
+web server is available at http://localhost:1313/ (bind address 127.0.0.1)
+```
+
+这时可以打开 `http://localhost:1313/` 即可实时预览，当文件有改动时，网页会自动刷新。
+
+## 网站结构
+
+```markdown
+- content
+  - home # 特殊目录，用于添加内容到网站首页 ppt 之后
+    - body.md # 添加到首页 ppt 后
+    - conclusion.md # 添加到首页 ppt 后
+  - _index.md # 网站首页 ppt
+  - ted-talk
+    - _index.md # ted talk ppt 的开头
+    - body.md # 添加到 ted talk ppt 后
+    - conclusion.md # 添加到 ted talk ppt 后
+```
+
+在这个目录结构中，最后会生成两个 ppt，一个是根目录的 ppt，一个是 `/ted-talk` 路径下的 ppt。在文件夹中的补充 markdown 文件会按照其中配置头部信息中的 `weight` 属性排序。如：
+
+```markdown
++++
+weight = 10
++++
+
+# slide 3
+
+---
+
+# slide 4
+```
+
+## 基本语法介绍
+
+### slide 分页
+
+```text
+
+---
+
+```
+
+空行隔开的 `---` 表示分隔到下一页 slide。
+
+### hugo shortcodes 功能
+
+hugo 提供了 shortcodes 功能方便 markdown 书写而无需输入大量的 html 代码。
+
+#### section
+
+reveal.js 提供了纵向的导航方式，可以用来将一个章节部份的内容放到一个纵列中，从而实现在章节之间通过左右快速跳转。
+
+一个纵列中的 slides 如下图所示：
+
+```markdown
+{{%/* section */%}}
+
+# vertical slide 1
+
+---
+
+# vertical slide 2
+
+{{%/* /section */%}}
+```
+
+#### fragment
+
+```markdown
+{{%/* fragment */%}} one {{%/* /fragment */%}}
+{{%/* fragment */%}} two {{%/* /fragment */%}}
+{{%/* fragment */%}} three {{%/* /fragment */%}}
+```
+
+可以实现增量显示，即开始不显示，每次操作顺次出现。
+
+单行显示 `{{%/* frag c=&quot;one&quot; */%}}` 通过 `c` 属性确定内容，同上面的第一行。
+
+另外可以添加 `index` 属性来指定显示的顺序，如 `{{%/* fragment index=2 */%}} one {{%/* /fragment */%}}`。生成的 html 如下：
+
+```html
+<span class='fragment' data-fragment-index=2> one </span>
+```
+
+`data-fragment-index` 属性指定显示顺序，从小到大依次显示，数值一样则同时显示。对于行内文字用 `<span>` 包裹，而段(`block`)内容（如代码块、图片）用 `<div>` 包裹。主题默认没有提供 `<div>` 类型的 shortcode，可以自己将 `themes/reveal-hugo/layouts/shortcodes/fragment.html` 复制到 `layouts/shortcodes/bfragment.html` 文件中，将其中的两个 `span` 换成 `div`。之后用 `{{%/* bfragment */%}}` 可以使段内容增量显示，而且同样可以用 `index` 指定显示顺序。
+
+#### slide
+
+```markdown
+---
+
+{{</* slide id=&quot;custom-slide&quot; */>}}
+
+## custom slide
+
+---
+```
+
+`id` 属性用来链接引用。如 `[try the link](#custom-slide)` 会生成一个链接到对应 `id` 的 slide 的链接。
+
+#### note
+
+使用 `{{%/* note */%}}` 可以添加演讲者注释信息，在网页端按 `s` 键可以打开演讲者界面。
+
+## 添加 reveal.js 插件
+
+在 `static` 目录下创建 `plugin` 文件夹，将 reveal.js 的插件放入其中。在需要使用插件的 markdown 文件头部添加：
+
+```text
+[reveal_hugo]
+plugins = [&quot;plugin/math-katex/math-katex.js&quot;]
+slide_number = true
+```
+
+路径要对应实际的 js 文件。顺便说一句，最后一行的 `slide_number` 为可选设置，它可以设置是否显示 slide 页码，取值 `true` 或 `false`。
+
+对于需要添加 css 的插件，还需要将 css 信息添加到页面样式中：
+
+在 `layouts/partials/<path-to-slide>/reveal-hugo` 目录下添加 `head.html` 文件，加上引用所需 css 的 html 代码。
+
+教程参考 [plugin example](https://themes.gohugo.io/theme/reveal-hugo/plugin-example)，对应 css 配置见 [reveal-hugo/head.html at master · dzello/reveal-hugo](https://github.com/dzello/reveal-hugo/blob/master/examplesite/layouts/partials/plugin-example/reveal-hugo/head.html)。
+
+## 小功能
+
+### 快捷键
+
+* 上下左右控制 slide 移动方向
+* `s` 进入演讲者模式
+* `o` 进入概览模式
+* `f` 进入全屏模式
+
+### 导出为 pdf
+
+reveal.js 支持用 chrome 浏览器导出为 pdf 文件，只需要在原来的网页地址后加上 `?print-pdf`，如 `https://gkzhb.gitee.io/slides/?print-pdf`，然后使用 chrome 的打印功能即可导出为 pdf。
+
+## 更多
+
+参看[官方 demo](https://themes.gohugo.io/theme/reveal-hugo)
+
+* 每张 slide 可单独设置背景颜色、出现的变换效果及快慢等。
+* 通过修改 markdown 文件头部信息可以修改网页设置，如添加插件。
+* 使用 reveal.js 的 markdown 语法渲染 slide `{{</* markdown */>}}`与用 html 渲染 slide `<section data-noprocess> ... </section>`
+
+在 github 项目 `examplesite/content` 目录下可以看到演示 demo 的源 markdown 文件，可以作为参考样例。
+
+hugo 也提供了添加自定义样式或 html 结构到特定网页的功能，感兴趣的也可以自行探索，当然也欢迎大家一起讨论。
+
+## 总结
+
+我个人觉得这个 slide 最大的优点就是便携性与兼容性。  
+
+* 我们可以将 slides 部署到网上，方便在任何有网的地方进行访问，也可以将整个 `public` 文件夹放到 u 盘通过浏览器打开。简单的部署可以选择 github 或码云（国内推荐，网速更快）的静态网站托管服务。  
+* 相比于 ppt 来说兼容性比较不错，只是浏览器不能过于老旧（吐槽一下我们学校图书馆中居然还有用 xp 系统并且默认浏览器不支持 https 的电脑）。  
+* 而且相比 pdf beamer 不需要安装庞大的 latex 环境，却又能提供简单的动画效果及 hugo 提供的实时预览功能。当然如果够大佬的话，也可以充分利用浏览器环境进行各种刁炸天的骚操作。 " data-astro-cid-wp2l4cmv><article class="article-card" data-astro-cid-7ahxywo7><div class="card-meta" data-astro-cid-7ahxywo7><time datetime="2019-12-18T10:33:44.000Z" data-astro-cid-7ahxywo7>2019年12月18日</time></div><h2 class="card-title" data-astro-cid-7ahxywo7><a href="/posts/revealjs/" data-astro-cid-7ahxywo7>用 Hugo 与 Markdown 制作网页 PPT</a></h2><p class="card-desc" data-astro-cid-7ahxywo7></p></article></div><div data-search-text="training big random forests with little resources ## abstract
+
+对大量数据实例使用随机森林一般需要大型计算集群来进行训练。这篇论文提出了一种简单有效的分层构造框架来提高训练的速度。其基本思路是一个多级构造方案：用数据的少量随机子集来构建顶层树，之后将所有训练实例通过顶层树分散到各个叶子节点后进行后续的处理。
+
+<!--more-->
+
+## 1 introduction
+
+## 2 background
+
+> 介绍标准随机森林
+
+$t$ 表示一组训练模式，$t_i$ 表示第i棵树，而 $f_i(x)$ 表示第i棵树的预测函数。公式1表示随机森林预测结果的表达式，其中函数c表示从b棵树的预测结果得到最终预测结果的函数。在回归模型中通常取平均值，而分类模型通常取最大分类结果数。
+
+一棵树从根节点开始递归地构造，而且使用训练数据的一个子集来训练节点。每个节点将数据分为两个子集，这两个子集被分别用来构造该节点下的两棵子树。当训练节点的数据子集只有一种分类结果时或满足其它条件（如达到设定最大深度）时，该节点成为叶子节点。在图 1 中给出了一个简单的示例，对于一个与训练实例的子集 $s\subseteq t'$ 相对应的内部节点，搜索一个分裂维度 i 和一个使信息增益最大化的阈值 $\theta$ 。信息增益见公式 2 。l和r两个s的子集是根据 $x_i$ 与 $\theta$ 的关系确定的。q是一个度量集合中杂质的函数，如公式3和4分别对应回归和分类问题，公式 3 中 $\hat{y}$ 可能是打错了应该是 $\bar{y}$，是 y 的均值。
+
+随机森林的总体结构在算法 1 中进行了概述。对每颗树从集合 t 中随机提取样本 t' 构建树。算法 2 中描述了构造树的方法。
+
+### 2.1 large-scale construction
+
+> 这一部份探讨对于大量数据时森林构造的性能优化。
+
+过去人们提出了很多随机森林的变体，不过构造单棵树的效率往往取决于特定随机森林变量和用于加速的方法。一种流行的方法是**极随机树**(*extremely randomized trees*)。在实践中，诉诸潜在的“次优”分割通常会产生竞争性的，有时甚至是更好的树木组合。此外，训练这种变体也可能更快。另一个变种是基于**补丁**(*patches*)，每个补丁都基于不同的 features 构成的子集，每颗树都独立地建立在这些补丁上。
+
+在软件层面上也可以优化实现来提高实际运行时间。
+
+众所周知，随机森林可以“并行化”。但是，针对未修剪的完整树，这种方法似乎并没有比标准的多核执行改善多少。
+
+另一个研究领域是分布式计算。比如对数据的子集构建单独的树或森林。最后由这些树或森林组成整个集合。
+
+### 2.2 deep trees
+
+> 探讨对于稀有类别进行分类可能出现的问题。
+
+原始的随机森林实现是生成完整的树。一个简单的变种是生成具有指定最大高度的树。尽管这种方法验证和测试的准确性可能提升，但失去了分辨稀有分类的能力。所谓的 $\frac{m}{n}$ 子集策略
+
+## 3 algorithmic framework
+
+提出了一种基于包装的方法，该方法可以处理单个计算节点上的大量数据集。
+
+3.1 概述一棵树的构造，3.2 介绍整体的实现如何同时构造所有的树。基本思路是由一小部分数据构造出顶层树，之后用这棵树将所有数据尽可能均匀地划分到不同的子集中。
+
+### 3.1 wrapper-based construction
+
+整体流程见算法 3：第一阶段，从所有训练集 t 中随机抽取一个子集 s，用于构建顶部树 $t_{top}$。第二阶段：训练数据 t 中所有数据都被这棵树分类到某个叶子节点中。第三阶段：对上一步分出的每个集合 $t_i$ 计算它的底部树，并将其附加到对应的顶部树的叶节点。这样就构成了一棵大树 $\cal t$。这棵大树类似于用 `buildtree` 方法构造的一棵树。但是为了避免生成的顶层树很不平衡，不能直接套用 `buildtree` 方法。
+
+#### 3.1.1 construction of top trees.
+
+算法 4 对 `buildtree` 进行了两点修改：
+1. *停止分裂条件*：递归构造只在节点大小达到最小叶节点大小时停止。$m$ 指定了一个期望最大叶节点大小。由于实际叶节点的大小只有在将所有数据实例都经过顶部树分类后才知道，他们选择用 $ \bar{m} = max(2, m\cdot\frac{r}{n}) $ 估计 m。
+1. *平衡分裂*：用公式 5 代替顶部树中的信息增益函数来提供更平衡的划分。公式 5 右边减去的部份体现了这个函数受左右两个子节点平衡性的影响。这与标准的 [k-d 树](https://www.cnblogs.com/flyinggod/p/8727584.html)相类似。$\lambda \in[0, 1]$ 用来决定原来的信息增益与平衡划分的权重。
+
+当分裂几乎很纯的节点时，公式 5 第二部分对划分的平衡性有重要意义。可以看图 3 的一个例子，a 和 b 分别是 $\lambda = 0$ 和 $\lambda = 1$ 的情形。红色表示叶子节点的大小比重。a 中只考虑信息增益会导致很不平衡的叶子。而 b 中划分很平衡。对后续底部树的构造更有利。但是也会造成顶部树的结构单一，缺乏随机性。
+
+#### 3.1.2 distribution &amp; construction of botton trees
+
+对数据进行划分时，根据数据实例返回一个分类的叶节点编号。最后根据所有这些编号分得叶 buckets。对每个叶 bucket，构建底部树的数目 $n_b$ 可以由用户定义。在大规模数据下，这些叶 buckets 之间可以并行，并且只需要自己那部份数据子集。但是这也会减少随机森林的整体随机性，可能影响模型的质量。*所以在运行时间和树的多样性之间有权衡*（废话）。
+
+### 3.2 implementation
+
+构造 $n_t$ 棵顶部树和将数据划分经过两轮整个数据集的处理。每轮都对特定块大小的数据进行处理。第一轮随机提取数据子集用于训练顶层树。第二轮分配数据阶段，为每个叶 bucket 创建一个训练子集。第三轮是对每个叶 bucket 训练树木。
+
+性能分析：略。所有 $n_t$ 棵顶部树的构造可以用额外的 o(r+c) 内存完成（r 是数据子集大小，c 是块大小 chunk size）。
+
+woody
+
+## 4 experiments
+
+用一台多核电脑做所有的实验。与当下另外三个方法对比。
+
+### 4.1 experimental setup
+
+使用一台标准桌面电脑 i7-3770 4 核 8 线程 cpu，16g 内存和 16g swap space。系统 ubuntu 16.04。关注构建阶段的运行时间和测试集的准确性。所有结果都是四轮测试的平均值。使用标准随机森林。实验验证，使用四种实现：
+1. 本文提出的基于包装的(wrapper-based)构造方案
+1. subsets，通过从所有数据中随机抽取很多子集，然后对这些子集构造分类树。
+1. sklearn，由 sklearn 提供的随机森林分类器实现
+1. h2o，由 $h_2o$ 包提供的随机森林实现
+
+只对分类问题进行测试。实验数据规模见表 1，d 是特征数。最大的 landsat-osm 是一个遥感数据集。
+
+### 4.2 model parameters
+
+分析两个重要参数的影响
+
+#### 4.2.1 $n_b$ 每棵顶部树构建的底部树数量
+
+增大 $n_b$ 来减少每棵顶部树的构建规模来减少构造时间，即让更多的树共享顶部树，不过这会导致随机性的减弱。
+
+m 是叶子 bucket 大小
+
+图 4：用 covtype 数据集探究这个参数的影响。使用 m 1000, 20000, 75000。m 很小时，会构建更大的顶部树，构造性能会更差。
+
+在每个测试例子中，底部树的数量总和都是 24 棵。$n_b$ 越大，精度越差，但是差异很小。同样地，m 的变化对精度影响叶很小，所以只要底部树的数量足够多，构造叶子更大的顶部树不会对精度有较大影响。
+
+#### 4.2.2 $\lambda$ 调节平衡性的指标
+
+使用改进信息增益函数作为节点划分依据的标准随机森林和本模型对比。
+
+图 5：同样使用 covtype 数据集，使用不同的 $\lambda$，每个测试节点都构造 24 棵底部树( $n_t=6, n_b=4$ )。
+
+左边是标准随机森林实现，右边是论文提出的方法（底部树中仍然使用 g 而不是 $\bar{g}$）。
+
+$\lambda$ 越小，精度越高。但在右下角的图看出在论文提出的实现中，它对精度影响不大。而且训练数据量越大，精度越高。
+
+### 4.3 small data
+
+图 6 是 covtype, susy, higgs 三个数据集的运行时间和模型精度。所有实现方法精度基本都差不多，而且 woody 方法在分类性能上的削弱基本可以忽略不计。subsets 从所有训练数据中抽取子集训练树木，并没有从更多的数据中提高精度，而是陷入一种粘滞的状态。本论文提出的方法还可以适用于更大的数据规模上，而且能构生成可分类稀有分类的完全树。
+
+### 4.4 big data
+
+使用 landsat-osm 数据集，生成 12 棵树。图 7，woody 和 subsets 两种方法都能成功处理所有的训练实例，而另外两种实现不能很好地处理这样大量的数据。sklearn 只能处理一千万数据，精度是 0.72，而 $h_2o$ 只能处理到三千万数据，但精度不足 0.24。woody 与 subsets 相比，精度有所提升，而且可以生成完全树，对稀有实例数据进行分类。
+
+用 landsat-osm 数据集所有十亿数据对 woody 训练，各阶段运行时间见图 8，这个数据中有很多不平衡的分类标签。训练参数 $n_t=1, n_b=4, \lambda=1$。从图中可以看出，woody 可以有效处理十亿规模的数据，而且分配数据阶段和构造底部树阶段占据了大部份的训练时间。
+
+## 5 conclusion 机器学习" data-astro-cid-wp2l4cmv><article class="article-card" data-astro-cid-7ahxywo7><div class="card-meta" data-astro-cid-7ahxywo7><time datetime="2019-12-14T02:01:00.000Z" data-astro-cid-7ahxywo7>2019年12月14日</time><span class="tags" data-astro-cid-7ahxywo7><a href="/tags/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/" class="tag" data-astro-cid-7ahxywo7>#机器学习</a></span></div><h2 class="card-title" data-astro-cid-7ahxywo7><a href="/posts/big-random-forests/" data-astro-cid-7ahxywo7>Training Big Random Forests with Little Resources</a></h2><p class="card-desc" data-astro-cid-7ahxywo7></p></article></div><div data-search-text="150 successful machine learning models: 6 lessons learned at booking.com ## abstract
+
+这篇论文介绍了在实际生产环境中机器学习如何发挥的重要作用。
+给出的结论是：成功的基础是迭代与假设驱动的过程
+
+<!--more-->
+
+## 1 introduction
+
+booking.com 是世界上最大的在线旅游服务提供商，它可以为客户提供住所，也可以为旅馆提供用户。
+
+* 高风险：推荐不好用户容易流失
+* 可供筛选的搜索信息少，很多搜索都只有一个地点，时间和人数。
+* 复杂的选项：预订的时候需要用户决定很多方面的东西，比如地点，时间，住宿类型，房间号，房间类型，退款策略等。用户需要帮助来找到最合适的组合。
+* 受限的供应量：
+* 推荐经常是冷启动的：用户一年只有1到2次出行的次数，每次消费记录之间的间隔接近半年，用户的喜好可能有很大的变化。所以消费历史难以用来预测用户的兴趣点。为不同用户提供个性化服务也是他们的目标之一。
+* 内容庞杂：对于住宿的评论、说明、图片以及旅游目的地的评论、攻略等。能够利用组织这些数据给用户借鉴也是一个挑战。
+
+过去他们尝试将机器学习用于这些方面，但是发现想驱动真正的业务影响非常困难，而且人们难以区分和理解在建模上花费的努力和实际观察到的影响，很多发行刊物上描述了机器学习特定的用例以及对业务指标的影响，但是没有发现有描述开发测试产品来通过机器学习获得商业和用户价值的过程。在这项工作中，他们分析了150种成功的面向客户的机器学习技术的应用程序，并分享了他们发现的挑战，及他们的解决方案，以及在此过程中经验教训和一般建议，这就是他们这篇论文的贡献。
+
+后面按照开发过程的顺序介绍：初始，建模，部署，监控和评估
+
+## 2 inception: machine learning as a swiss knife for product development 初始阶段
+
+机器学习可以在很多非常不同环境中的产品中使用。实践中，模型被用来帮助团队改善产品并向用户学习。在一方面，机器学习可以在极其特定的环境中使用，但对应模型的适用面很窄；另一个极端是充当语义层的模型。比如分析用户旅行目的地的灵活性。也就是量化了一些潜在的用户行为指标以供开发者使用来改进产品。这种模型与具体的业务指标联系不紧密，但它们应用范围更广。
+
+### 2.1 model families 模型家族
+
+下面的内容介绍了他们如何分类使用这些模型。这种模型分类为机器学习的使用提供了一个大致的参考思路。
+
+**2.1.1 旅行者偏好模型**
+
+用户对旅行中的不同方面有不同的关注度，比如地点、房价、位置、质量、日期、设施等。所以他们使用一些方面作为维度，通过多个模型组合得到用户偏好描述。这一族的模型是作为语义层。比如日期语义层可以判断用户对时间是否敏感，如果用户不太关心日期，在一些情况下会有日期的推荐。
+
+**2.1.2 旅行者上下文模型**
+
+情侣、家人、朋友一同出行；在一个城市长期停留与在多个城市进行短途旅行。这些称为旅行者上下文。它定义了旅行的限制和要求。大多数的这些上下文不会在平台上明确说明。即便有相关选项但用户通常忽视，所以需要进行预测。而且越早预测越好。这种模型也是语义层，为开发者提供旅行模式的参考。比如家庭旅行时，人们很可能忘记填写儿童数量，直到最后的阶段才发现所选地点不适合儿童。如果能预测到旅行模型就可以尽早提醒用户填写儿童数量（图1a）。
+
+**2.1.3 item space navigation models 项目空间导航模型**
+
+将用户的不同操作（例如滚动，单击，排序，过滤等）视为有关用户喜好的隐式反馈。
+
+**2.1.4 user interface optimization models 用户界面优化模型**
+
+字体大小，列表中的项目数，背景颜色或图像等，会对用户行为产生重要影响。这个系列的模型会针对特定目标业务指标直接优化这些参数。
+
+**2.1.5 content curation 内容策划**
+
+机器学习从大量庞杂的数据中如图片、结构化调查、用户评论和介绍中提取出住宿的特点和有代表性的摘要信息提供给用户，方便用户作出选择。如图1b
+
+**2.1.6 content augmentation 内容扩充**
+
+通过用户的数据反馈，提供更加多样的地点数据。如图1c。比如性价比、不同时间的价格趋势。
+
+### 2.2 all model families can provide value 所有模型族都能提供价值
+
+图2中每个柱是一个模型族对某一产品核心参数的贡献，数值是用中位数进行比较。大多数模型族都是有贡献的（大于1）。这些结果是在引入模型或改进模型的适合测量出来的。
+
+而且模型的使用会有一个迭代的过程。这个过程具有乘积效应。如图3每个柱表示在某一方面作出了改进与提升。每个柱的长度表示这次改进与第一次的相关性。所以后面的每次改进提升都会受到初始的影响。
+
+### 3 modeling: offline model performance is just a health check 离线模型性能检测的作用
+
+模型带来的价值通过rcts（随机对照实验）和特定业务指标来估计。有趣的一点是模型性能提升不一定会获得价值的提升。图4显示了性能和转化率的关系。横坐标为新模型与当前模型在离线性能预测上的相对差异，纵坐标是两个模型所针对的特定业务指标的差异。图中有23对模型的比较。目测它们没有相关性，而计算也说明缺乏相关性。这个相关性的缺乏实际是在离线性能提升与商业价值的提升之间。这个现象相关的原因大概有以下几点：
+
+* 价值绩效饱和：在一些业务问题中无法无尽地从模型绩效收益中获得业务价值。所以在某些时候，价值与绩效曲线趋于饱和，绩效收益不会产生价值收益，或者收益太小难以观察到。
+* 细分饱和度：不太懂
+* 怪异山谷效应：当模型越来越准确地预测用户时，有时会让客户感到不安，如图5。这可能对价值产生影响。
+* 代理过度化：通常使用受监督的模型，它可以最大化某些易观察的变量，但不一定能最大化特定的客观业务指标。如由于点击率与转化率之间存在正相关的关系，机器学习通过提高点击率构建推荐系统来提高转化率。而当模型越来越好时，或许只是提高点击率，而转化率没有影响。如根据相似度推荐酒店，点击率很高，却让用户陷入选择困难。
+
+针对这些问题，它们采用的方法依赖于一个快速循环过程：在研究假设、建立最小模型、使用结果继续迭代之间循环。
+
+### 4 modeling: before solving a problem, design it
+
+建模阶段需要建立机器学习模型，并用以解决当前业务案例。而关键是构建机器学习问题，这个过程输入业务案例或概念，输出明确的建模问题。之后的模型根据建模问题选择合适的方法构建。通常业务案例会给出预测目标，但目标变量和作为输入的观察向量空间并不总是给定的，这些都需要仔细选择构建。对构建出的可选问题进行比较时，可以考虑以下方面：
+
+* 学习困难度：由于目标向量不一定会给出，有些构造出的问题会更难以量化学习。对于分类问题，贝叶斯误差是一个好的估计。对排名问题的解决方法是将简单模型的性能和不重要的基准线（如随机、流行性）比较，那些简单模型远比基准模型好很多的问题更值得选择。
+* 数据与概念的匹配：一些构建的问题使用的数据更贴近我们要建模的概念。
+* 选择偏见：构建标签和观察空间很容易引入选择偏差。检测选择偏见很直接：对于观测空间中的样本，构造分类问题，将每个观测分类为可以计算目标变量的类别和不能计算目标变量的类别。如果这个分类问题很容易，即简单算法性能明显优于随机算法，说明偏差很严重。
+
+对于给定业务案例和选定的问题构建，改进模型是产生价值最明显的方法，但我们也可以改变问题本身。
+
+### 5 deployment: time is money
+
+众所周知，在信息检索和推荐系统中，高延迟会对用户行为产生负面影响。图6是用多臂rct来量化延迟对业务的影响。从图上可以作出假设：延迟减少可以带来转换收益。这对机器学习是很重要的。由于在很多地方使用了机器学习，保证整体延迟的最小化很有必要。为达到这一目的，采用了以下方法：
+
+* 模型冗余：模型的副本分布在整个集群中，以确保大流量下能提供足够的预测。
+* 内部开发的线性预测引擎：他们开发了自己的线性预测实现，可以加速所有可以简化为内积的模型
+* 稀疏模型：模型具有的参数越少，预测时所需的计算就越少
+* 预计算和缓存
+* 网络优化：将多个请求打包到一个请求包中以减小网络负载
+* 最小要素转化：为了减少计算进行更大粒度的预测
+
+### 6 monitoring: unsupervised red flags 实时检测模型缺陷的有效工具：响应分布分析
+
+模型处理请求的时候，需要监视输出质量，这有两个挑战：
+
+* 不完整的反馈：很多时候无法观察到真实的标签（预测用户的特殊要求，但只能知道进行预订的用户的标签）
+* 反馈延迟：有时候，只有在作出预测后的几天甚至几周才能得到真实标签。
+
+因此，这些情况下，依赖于标签的参数如精度和recall是不合适的。对于二分类器的结果评估，他们使用响应分布分析（rda）。这个方法基于响应分布图（rdc），即模型输出结果的直方图。理想的rdc在0和1各有一个峰。所以根据rdc图可以发现模型的潜在问题（图7四个情况，最后是一个正常分类情况）：
+略
+
+* 具有中心模式的平滑单峰分布可能表示模型中的个偏差或数据中的高贝叶斯误差
+* 特征层中存在缺陷
+* 模型过于稀疏
+* 一个清晰稳定点的平滑双峰分布是成功区分两个类别的模型的标志
+
+优势：
+略
+
+* 应用于任何评分分类器
+* 对分类的分布有鲁棒性
+* 解决了不完整反馈的问题和延迟反馈问题
+* 对类分布和特征空间的改变都很敏感
+* 类别较少时可以做修改用于多类别分类（每个分类都构造一个二元分类器区分该分类和其它所有分类）
+* 提供了一种无标签的标准方法实现在连续分数中选择一个阈值将分数转换为二维结果（选择两峰直接最小值）
+
+缺点：
+
+* 这是一种启发式方法，无法证明或反正模型具有高质量
+* 不适用于估计和排名
+
+### 7 evaluation: experiment design sophistication pays off
+
+booking.com 内部大量使用随机对照实验进行实验。这节用 triggered analysis（触发分析） 和 treatment design（实验组设计） 来区分特定模型和实现方法对业务指标的因果影响。
+
+#### 7.1 selective triggering
+
+rct中，将所有对象分为对照组和实验组。如图8 左边对照组，右边实验组。在机器学习中，很多时候模型需要特定的特征才能使用，所以有时不是所有的数据对象都适用于模型。所以将不适应的数据对象也放到实验组会削弱实际模型的效果。因此应用触发分析，仅分析两组中的可触发的对象。触发就是指数据对象可以应用于模型。
+
+#### 7.2 model-output dependent triggering
+
+有时候模型的处理标准也可能取决于模型输出。此时可以设置三组实验，如图9，最左边的不使用模型，右边两组使用模型，并根据结果作为触发，但只有实验组1的会实施改变。最后会从 t1 和 t2 触发的数据中进行统计分析
+
+#### 7.3 controlling performance impact
+
+7.2 的方法可以用来区分引进新模型时，模型的功能和模型计算导致的延迟对业务指标的影响。图9中 c 和 t1 的对比是新功能和性能下降综合的影响，而 c 和 t2 的比较只包括了性能下降的影响。t1 与 t2 的比较说明了在相同延迟下新功能带来的影响。
+
+#### 7.4 comparing models
+
+比较基于彼此进行改进的模型的处理时，通常存在很高的关联性。图10通过提取两个模型结果不一致的数据来进行统计分析。c 使用模型1，t1 和 t2 都计算两个模型，但使用的结果不同，分别使用模型1和2的结果。 机器学习" data-astro-cid-wp2l4cmv><article class="article-card" data-astro-cid-7ahxywo7><div class="card-meta" data-astro-cid-7ahxywo7><time datetime="2019-11-09T16:51:56.000Z" data-astro-cid-7ahxywo7>2019年11月9日</time><span class="tags" data-astro-cid-7ahxywo7><a href="/tags/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/" class="tag" data-astro-cid-7ahxywo7>#机器学习</a></span></div><h2 class="card-title" data-astro-cid-7ahxywo7><a href="/posts/booking-ml/" data-astro-cid-7ahxywo7>150 Successful Machine Learning Models: 6 Lessons Learned at Booking.com</a></h2><p class="card-desc" data-astro-cid-7ahxywo7></p></article></div><div data-search-text="第一篇 hugo 文章 测试 hugo markdown 语法样式
+<!--more-->
+
+# 一级标题
+
+## 二级标题
+
+### 三级标题
+
+# 语法介绍
+
+## 标题
+
+效果见上方
+
+```markdown
+# 一级标题
+
+## 二级标题
+
+### 三级标题
+```
+
+## 段落换行
+
+```markdown
+第一段
+继续第一段
+
+第二段
+
+第三段  
+换行（上一行末尾有两个空格）
+```
+
+第一段
+继续第一段
+
+第二段
+
+第三段  
+换行（上一行末尾有两个空格）
+
+
+## 文字样式
+
+```markdown
+**加粗** *斜体* ***加粗和斜体***
+
+~~删除线~~ ~~**加粗删除**~~ ~~*斜体删除*~~
+```
+
+**加粗** *斜体* ***加粗和斜体***
+
+~~删除线~~ ~~**加粗删除**~~ ~~*斜体删除*~~
+
+## 链接
+
+```markdown
+[zhb's blog](http://blog.gkzhb.tk)
+
+[相对链接](/)
+```
+
+[zhb's blog](http://blog.gkzhb.tk)
+
+[相对链接](/)
+
+## 图片
+
+```markdown
+![百(la)度(ji)](https://www.baidu.com/img/bd_logo1.png 文字)
+```
+
+![百(la)度(ji)](https://www.baidu.com/img/bd_logo1.png)
+
+## 列表
+
+### 无序列表
+
+```markdown
+* 列表项1
+* 列表项2
+* 列表项3
+```
+
+* 列表项1
+* 列表项2
+* 列表项3
+
+### 有序列表
+
+```
+1. 第一项
+
+	内容（tab），注意上面一行空行
+
+	很多
+
+    很多（空格）
+1. 第二项
+1. 第三项
+```
+
+1. 第一项
+
+	内容（tab），注意上面一行空行
+
+	很多
+
+    很多（空格）
+1. 第二项
+1. 第三项
+
+### 待办事项
+
+```markdown
+* [ ] 未完成
+* [x] 已完成
+```
+
+* [ ] 未完成
+* [x] 已完成
+
+### 多级混合列表
+
+```markdown
+* aaa
+	* 111
+	* 222
+* bbb
+	1. b.1
+	1. b.2
+* ccc
+	* [x] c.x
+	* [ ] c.todo
+- ddd
+	* dd
+		+ d
+		+ e
+	* ee
+```
+
+* aaa
+	* 111
+	* 222
+* bbb
+	1. b.1
+	1. b.2
+* ccc
+	* [x] c.x
+	* [ ] c.todo
+- ddd
+	* dd
+		+ d
+		+ e
+	* ee
+
+## 代码块
+
+行内代码：`inline code`
+
+```bash
+$ echo hello world
+hello world
+```
+
+## 表格
+
+```markdown
+表头|表头|表头|表头
+:-:|--:|---|:--
+居中|右对齐|默认|左对齐
+居中|右对齐|默认左对齐|左对齐
+xxxxxxx|aaaaaaaaaa|bbbbbbbb|cccccccc
+居中|右对齐|无|左对齐
+```
+
+表头|表头|表头|表头
+:-:|--:|---|:--
+居中|右对齐|默认|左对齐
+居中|右对齐|默认左对齐|左对齐
+xxxxxxx|aaaaaaaaaa|bbbbbbbb|cccccccc
+居中|右对齐|无|左对齐
+
+## 数学公式
+
+使用mathjax渲染
+
+行内公式：$a_1$
+
+```latex
+$$lim_{1\to+\infty}p(|\frac{1}{n}\sum_i^nx_i-\mu|<\epsilon)=1, i=1,...,n$$  
+```
+
+$$lim_{1\to+\infty}p(|\frac{1}{n}\sum_i^nx_i-\mu|<\epsilon)=1, i=1,...,n$$ " data-astro-cid-wp2l4cmv><article class="article-card" data-astro-cid-7ahxywo7><div class="card-meta" data-astro-cid-7ahxywo7><time datetime="2019-11-08T14:26:28.000Z" data-astro-cid-7ahxywo7>2019年11月8日</time></div><h2 class="card-title" data-astro-cid-7ahxywo7><a href="/posts/my-post/" data-astro-cid-7ahxywo7>第一篇 Hugo 文章</a></h2><p class="card-desc" data-astro-cid-7ahxywo7></p></article></div><div data-search-text="anki 自建同步服务器 ankisyncd anki 是一个用于记忆的软件，客户端同时支持电脑端和移动端（除了 ios 上 ankimobile 收费以外都是免费的）。如果要使用同步的功能，使用官方的 ankiweb 网速较慢，在同步大量的 media 文件的时候十分痛苦。github 上有牛人实现了 anki 同步的 api 接口，可以自建同步服务器：[dsnopek/anki-sync-server](https://github.com/dsnopek/anki-sync-server)。不过这个服务端已经很久没有维护过了，在电脑上最新的 anki 已经无法正常同步了。于是我在 google 上找到了一篇文章：[ankisyncd – a custom sync server for anki 2.1 | gene dan's blog](http://genedan.com/no-127-ankisyncd-a-custom-sync-server-for-anki-2-1/)。我按照博客里提供的 [tsudoko/anki-sync-server](https://github.com/tsudoko/anki-sync-server) 对应的文档，成功在自己的 vps 上搭建了服务器，并且在 ankidroid 上和 linux 端 2.1.11 版本的 anki 上成功同步数据。
+
+注意：
+
+* ios 上 ankimobile 不支持自定义同步服务器
+* 同步服务器没有 ankiweb 的网页端访问支持
+* ankisyncd 服务器支持 pc 端 anki 版本 **2.1.1 - 2.1.11**，但是 2.1.9 版本不支持
+* pc 端最新版 anki 因为更新了同步协议，而目前开源同步服务端并没有更新到新的协议，所以要使用自建服务器，请务必**使用老版 anki**
+* 另 ankidroid 似乎在 2.10 版本之后会要求使用 https 连接同步服务器，导致 http 服务器无法正常同步
+
+> 想使用最新版 pc 端 anki 可参考 [updating anki-bundled past 2.1.16+ · issue #67 · tsudoko/anki-sync-server](https://github.com/tsudoko/anki-sync-server/issues/67)
+
+<!--more-->
+
+# 环境要求
+
+* linux（理论上 windows 应该也可以）
+* python3（推荐，python2 估计也行，但没测试过也不推荐）
+* pip3（基于 python3 的 pip，和上一条 python 版本对应）
+* git（windows 下注意 git 命令使用环境）
+
+环境安装略。
+
+# ankisyncd 安装步骤
+
+## 配置环境
+
+### virtualenv
+
+为避免环境问题导致安装或运行出错，推荐使用 virtualenv ，不想安装也可以跳过这一部份内容。通过以下命令安装 virtualenv：
+```bash
+$ pip install virtualenv
+```
+在准备安装服务器的目录下创建 python 虚拟环境：
+```bash
+$ cd [安装目录]
+virtualenv ankienv
+```
+然后进入新创建的虚拟环境：
+```bash
+$ . ankienv/bin/activate
+```
+注意句号和路径之间有个空格。
+
+输入完成后，命令行前会多出 `(ankienv)` 表示当前的 python 环境，之后与 python 或 pip 有关的所有操作都要在这个环境中进行。
+
+## 安装 ankisyncd
+
+
+使用 git 来 clone 服务器代码：
+```bash
+$ git clone https://github.com/tsudoko/anki-sync-server.git
+```
+进入代码目录并安装 git 子模块：
+```bash
+$ cd anki-sync-server
+$ git submodule update --init
+```
+完成后进入 `anki-bundled` 目录并继续安装 python 模块环境：
+```bash
+$ cd anki-bundled
+$ pip install -r requirements.txt
+```
+我在执行这一步的时候报错 pyaudio 安装失败，解决方法是直接把 requirements.txt 文件中 pyaudio 删掉，再重新执行上面的 pip 命令。根据官方文档的说明这个模块不影响服务器同步功能的使用。
+
+继续安装 python 模块，安装完后进入 `anki-sync-server` 目录：
+```bash
+$ pip install webob
+$ cd ..
+```
+最后，还可以修改服务器配置文件：`anki-sync-server` 目录下的 `ankisyncd.conf`。对我来说无需更改任何配置。
+
+配置文件里包括 `host` 对应服务器监听地址，默认 `0.0.0.0` 表示接收所有 ip 的请求，如果改成 `127.0.0.1` 则无法接收外网或内网上的请求，也就是只能通过服务器本机访问，改成服务器内网 ip 则只接收内网的请求。port 表示监听端口，如果修改这个参数则客户端连接端口也要对应修改与其相同。`data_root` 应该是同步数据的保存目录。
+
+到此服务器已经安装完成了。
+
+# 运行服务器
+
+如果前面使用了 virtualenv，这一部份的命令仍然需要在 ankienv 环境下运行。运行服务器之前需要先创建用户（继续前面的命令，目前在 `anki-sync-server` 目录下）：
+```bash
+$ ./ankisyncctl.py adduser <username>
+```
+将命令中的 `<username>` 替换为实际的用户名。之后输入密码，按回车确定（linux 下输入密码不会显示出来）。
+
+最后，启动服务器：
+```bash
+$ python -m ankisyncd
+```
+
+执行这条命令的时候会一直占用命令行终端，否则表示服务器已停止运行。
+
+如果是通过 ssh 连接到 linux 服务器在服务器上运行，断开 ssh 连接会自动停止服务器运行，这就需要下面的命令防止进程停止：
+```bash
+$ nohup python -m ankisyncd &amp;
+```
+当然也可以用 screen 或 tmux 之类的服务器上常用的工具解决这个问题。
+
+# anki 客户端设置
+
+## linux 和 windows 端 anki
+
+### anki 2.1
+
+在 [add-on](https://apps.ankiweb.net/docs/addons.html#_add_on_folders) 文件夹 下创建文件夹 `ankisyncd`，并在其中创建并编辑文件 `__init__.py`：
+```python
+import anki.sync, anki.hooks, aqt
+
+addr = &quot;http://127.0.0.1:27701/&quot; # put your server address here
+anki.sync.sync_base = &quot;%s&quot; + addr
+def resethostnum():
+    aqt.mw.pm.profile['hostnum'] = none
+anki.hooks.addhook(&quot;profileloaded&quot;, resethostnum)
+```
+将 `addr = &quot;http://127.0.0.1:27701/&quot;` 行中的 `127.0.0.1` 换成对应服务器的 ip。`27701` 对应服务器配置的端口。
+
+### anki 2.0
+
+（我也不知道是否支持，但是官方文档上给了相关配置）在 `~/anki/addons` 下创建并编辑文件 `ankisyncd.py`：
+```python
+import anki.sync
+
+addr = &quot;http://127.0.0.1:27701/&quot; # put your server address here
+anki.sync.sync_base = addr
+anki.sync.sync_media_base = addr + &quot;msync/&quot;
+```
+同理，把 `127.0.0.1` 换成服务器的 ip 。`27701` 为服务器端口。
+
+## android 端 ankidroid
+
+设置 --> 高级设置 --> 自定义同步服务器
+
+* 同步地址：`http://127.0.0.1:27701/`
+* 媒体文件同步地址：`http://127.0.0.1:27701/msync`
+
+把以上地址中的 `127.0.0.1` 换成服务器的 ip 地址。`27701` 为端口设置。注意上面两个地址末尾的斜杠有无一定要正确，否则会同步失败。
+
+# 同步失败可能的问题排查
+
+如果服务器能正常运行，而同步无法正确进行，可以尝试以下几个方面的检查：
+
+* 在命令行 `ping [服务器 ip 地址]` 如果有持续输出表示可以连接上服务器，如果没有结果说明网络连接有问题
+* 检查服务器防火墙，如果是 vps 在控制台检查防火墙，添加 tcp 规则 27701 端口，windows 可以尝试关闭所有防火墙
+* 尝试通过浏览器打开链接 `http://127.0.0.1:27701` （将 `127.0.0.1` 换成服务器 ip 或域名），如果网页显示 `anki sync server` 说明可以访问到服务器
+
+# 参考
+
+* [no. 127: ankisyncd – a custom sync server for anki 2.1 | gene dan's blog](http://genedan.com/no-127-ankisyncd-a-custom-sync-server-for-anki-2-1/)
+* [tsudoko/anki-sync-server: self-hosted anki sync server](https://github.com/tsudoko/anki-sync-server)
+
+在写完这篇文章后，我发现有几篇博客已经有相关的记录了，这里也贴上链接吧。
+
+* [anki的使用以及anki server的配置 • extendswind](https://extendswind.top/posts/technical/anki_and_anki_server/)
+* [centos7自建anki同步服务器(python3) | bruce's blog](https://www.xiebruce.top/881.html) " data-astro-cid-wp2l4cmv><article class="article-card" data-astro-cid-7ahxywo7><div class="card-meta" data-astro-cid-7ahxywo7><time datetime="2019-06-23T03:25:09.000Z" data-astro-cid-7ahxywo7>2019年6月23日</time></div><h2 class="card-title" data-astro-cid-7ahxywo7><a href="/posts/ankisyncd/" data-astro-cid-7ahxywo7>Anki 自建同步服务器 ankisyncd</a></h2><p class="card-desc" data-astro-cid-7ahxywo7></p></article></div><div data-search-text="自建”稍后阅读“服务—— wallabag &quot;稍后阅读&quot;英文对应于 *read-it-later* ，是指将碎片化信息中需要花时间仔细阅读思考或需要二次阅读消化的内容收集起来，待空余时间统一消化理解。国外这方面的知名应用服务商有 pocket、 instapaper 以及我之前一直使用的网速慢而且标签功能有 bug 的 ioreader 等。由于国外服务商在国内网速较慢，而国内的也没找到附合心意的服务商，我选择自建服务 wallabag，运行在我的阿里云 vps 上。
+
+<!--more-->
+
+# wallabag 官方文档
+
+* [wallabag 官方文档](https://doc.wallabag.org/en/)
+
+主要安装过程参考上方 wallabag 官方文档的 `installation` 一栏。
+
+# 环境安装
+
+vps 当然选择的是 linux 系统，我使用的发行版是 ubuntu。
+
+注意以下命令行中 `$` 开头为普通用户执行的命令，`#` 开头表示命令需要以 `root` 权限运行。也就是说，如果是普通用户遇到 `#` 开头的命令，需要在命令前添加 `sudo` 执行。
+
+## 安装 php （世界上最好的语言）
+
+这里我安装的是 php7.0
+
+```bash
+apt-get install php
+```
+
+## 安装 composer
+
+```bash
+curl -s https://getcomposer.org/installer | php
+```
+
+命令执行完后会在当前目录下生成一个 composer.phar 的文件，将其移动到 `/usr/local/bin` 并添加一个软链接到 `/usr/local/bin/composer`：
+
+```bash
+mv composer.phar /usr/local/bin
+ln -s /usr/local/bin/composer.phar /usr/local/bin/composer
+```
+
+## 安装 php extensions
+
+下面的 php7.0 要和自己的 php 版本对应
+
+```bash
+apt-get install php7.0-mysql php7.0-session php7.0-ctype php7.0-dom php7.0-hash php7.0-simplexml php7.0-json php7.0-gd php7.0-mbstring php7.0-xml php7.0-tidy php7.0-iconv php7.0-curl php7.0-gettext php7.0-tokenizer php7.0-bcmath
+```
+
+其中会有一部分的包会安装出错，显示找不到，因为有的 php 插件集成在 `php7.0-common` 里。可以使用命令 `php -m` 查看已启用的插件。所以上面的命令参数中只需要尚未安装的 php 插件。
+
+## 安装 mysql 服务器
+
+```bash
+apt-get install mysql-server # 安装 mysql 服务器
+```
+
+详细配置可参考 [how to install mysql on ubuntu ###.04 | digitalocean](https://www.digitalocean.com/community/tutorials/how-to-install-mysql-on-ubuntu-###-04)
+
+## 配置 mysql 服务器
+
+连接 mysql 服务器并为 wallabag 添加用户、创建数据库并添加权限
+
+连接数据库：
+
+```bash
+mysqld -u root -p
+```
+
+之后在数据库中执行以下命令：
+
+```mysql
+create database wallabag; -- 创建数据库 wallabag
+create user wallabag@localhost; -- 创建用户 wallabag 且只允许本地访问
+set password for wallabag@localhost= password(&quot;your-password&quot;); -- 修改 wallabag 用户的密码，将 your-password 换成需要的密码
+grant all privileges on wallabag.* to wallabag@localhost identified by 'your-password'; -- 允许 wallabag 访问、修改数据库 wallabag 的权限
+flush privileges; -- 更新权限使之生效
+exit: -- 退出 mysql 数据库
+```
+
+## 安装 wallabag
+
+使用 git 获取 wallabag 代码：
+
+```bash
+git clone https://github.com/wallabag/wallabag.git
+```
+
+不过考虑 github 在国内网速较慢，可以考虑先将其导入到国内的代码仓库再从国内的代码托管平台上 clone 下来。下面的命令是从我的代码仓库克隆代码。
+
+```bash
+git clone https://gitee.com/gkzhb/wallabag.git
+```
+
+获取代码之后，进入目录并编译：
+
+```bash
+cd wallabag &amp;&amp; make install
+```
+
+这一步，我在官网上和其他网站上看到的安装方式不同。  
+在 linuxbabe 网站上，我看到的教程是执行以下命令，而非上面的 `make install` 命令：
+
+```bash
+symfony_env=prod composer install --no-dev -o --prefer-dist
+```
+
+不过，不论执行哪一个命令，最后都会出现以下内容需要我们填写：
+
+```
+creating the &quot;app/config/parameters.yml&quot; file
+ some parameters are missing. please provide them.
+ database_driver (pdo_sqlite): pdo_mysql
+ database_host (127.0.0.1): 127.0.0.1
+ database_port (null): 3306
+ database_name (symfony): wallabag
+ database_user (root): wallabag
+ database_password (null): your-password
+ database_path ('%kernel.root_dir%/../data/db/wallabag.sqlite'): /var/lib/mysql/wallabag
+ database_table_prefix (wallabag_): wallabag_
+ database_socket(null): press enter
+ domain_name ('https://your-wallabag-url-instance.com'): http://your-domain
+```
+
+按照以上说明填写即可。`database_path` 我不太记得是填上面的内容还是只要填 `wallabag` 。注意如果搭建的 wallabag 网站使用的不是默认的 80 端口，需要在上面的 domain_name 上添加 `:[port]` 也就是 `your-domain:[port]`，将 `[port]` 换成将要使用的端口。其它的设置可以默认直接 `press enter` 即直接按回车用默认值就好了。
+
+这里又出现了一个不同，如果按照官网的做法使用 `make install` 此时应该即将完成安装，请继续看下面的内容。而如果使用 linuxbabe 文章的做法，还需要执行以下命令来生成网站资源：
+
+```bash
+php bin/console wallabag:install --env=prod
+```
+
+`--env=prod` 也可以换成 `-e prod` 表示编译生成生产环境。
+
+接着两种方法都会又遇到一个配置 wallabag 的界面：
+
+```
+installing wallabag...
+
+step 1 of 5. checking system requirements.
++-----------------+--------+----------------+
+| checked         | status | recommendation |
++-----------------+--------+----------------+
+| pdo driver      | ok!    |                |
+| curl_exec       | ok!    |                |
+| curl_multi_init | ok!    |                |
++-----------------+--------+----------------+
+success! your system can run wallabag properly.
+
+step 2 of 5. setting up database.
+it appears that your database already exists. would you like to reset it? (y/n)n
+creating schema
+clearing the cache
+
+step 3 of 5. administration setup.
+would you like to create a new admin user (recommended) ? (y/n)y
+username (default: wallabag) : your-admin-username
+password (default: wallabag) : admin-pasword-here
+email: admin-email-here
+
+step 4 of 5. config setup.
+
+step 5 of 5. installing assets.
+
+wallabag has been successfully installed.
+just execute `php bin/console server:run --env=prod` for using wallabag: http://localhost:8000
+```
+
+输出内容可能有些不同，但是配置选项都是一样的。按照上面的提示输入 y 或 n 完成最后的安装。
+
+然后移动 wallabag 目录位置：
+
+```bash
+ mv ../wallabag/ /usr/share/nginx/
+```
+
+## 配置 nginx
+
+这里我选择 nginx 来运行 wallabag 网站，你也可以使用 apache 之类的其它工具，在官网文档上有相关配置教程。
+
+编辑配置文件：
+
+```bash
+vim /etc/nginx/conf.d/wallabag.conf
+```
+
+内容如下：
+
+```
+root@gkzhb:~/gitrep# cat /etc/nginx/conf.d/wallabag.conf
+server {
+    # listen 8081; # 监听端口，如果要修改网站端口将这一行开头的 # 去掉并修改端口数值
+    server_name example.com;
+    root /usr/share/nginx/wallabag/web;
+
+    location / {
+        # try to serve file directly, fallback to app.php
+        try_files $uri /app.php$is_args$args;
     }
-  </style><meta name="astro-view-transitions-enabled" content="true"><meta name="astro-view-transitions-fallback" content="animate"><script type="module" src="/_astro/ClientRouter.astro_astro_type_script_index_0_lang.BOel_0Ki.js"></script><script>
-"use strict";(()=>{(()=>{let t="theme-toggle",n;function r(){return window.matchMedia("(prefers-color-scheme: dark)").matches?"dark":"light"}function l(){let e=localStorage.getItem(t);return e==="dark"||e==="light"?e:null}function m(){return n||l()||r()}function s(e){e===r()?localStorage.removeItem(t):localStorage.setItem(t,e)}function h(e){let o=document.documentElement;o.classList.toggle("dark",e==="dark"),o.dataset.theme=e,o.style.colorScheme=e}function a(e){n=e,s(e),h(e)}function c(){a(m())}c(),document.addEventListener("astro:after-swap",c),window.astroThemeToggle={setTheme:a,getTheme:m}})();})();
-</script><title>gkzhb's blog</title><link rel="canonical" href="https://blog.gkzhb.top/search/"><meta name="description" content="My personal blogs"><meta name="robots" content="index, follow"><link rel="alternate" title="gkzhb's blog" href="/rss.xml" type="application/rss+xml"><script type="module">const c="1.2.1",o={bg:"background: #fcfaf2;",block:"display: inline-block; padding: 2px 6px;",badge:"color: #fcfaf2; background: #e06458;",text:"color: #374151;",arrow:"color: #212121;",link:"color: #e06458; text-decoration: underline;"};console.info(`%c Charm Theme  %cv${c} %c
-%c→%cGithub: %chttps://github.com/Yuhanawa/astro-charm`,`${o.block} ${o.badge} font-weight: bold;`,`${o.block} ${o.bg} ${o.text} opacity: 0.8;`,o.bg,`${o.block} ${o.bg} ${o.arrow}`,`${o.block} ${o.bg} ${o.text}`,`${o.block} ${o.bg} ${o.link}`);</script><link rel="stylesheet" href="/_astro/search.C3OxjYwR.css">
-<link rel="stylesheet" href="/_astro/_special_.BPu38SJZ.css">
-<style>:where(#astro-theme-toggle){padding:0;margin:0;border:none;background:none;cursor:pointer;width:100%;height:100%}.astro-theme-toggle-icon-light,.astro-theme-toggle-icon-dark{width:100%;height:100%;& *{display:block}}.astro-theme-toggle-icon-light{display:block;.dark &{display:none}}.astro-theme-toggle-icon-dark{display:none;.dark &{display:block}}
-</style><script type="module" src="/_astro/page.CPvyyiTs.js"></script></head> <body data-astro-cid-o3f7wajd> <main data-astro-cid-o3f7wajd>  <div class="mobile-menu-container" data-astro-cid-2yeyokk7> <header class="mobile-header" data-astro-cid-2yeyokk7> <a class="title" title="gkzhb's blog" href="/" data-astro-cid-2yeyokk7>gkzhb&#39;s blog</a> <button class="menu-toggle" aria-label="Toggle menu" data-astro-cid-2yeyokk7> <svg width="1em" height="1em" class="menu-icon" data-astro-cid-2yeyokk7="true" data-icon="solar:hamburger-menu-bold-duotone">   <symbol id="ai:solar:hamburger-menu-bold-duotone" viewBox="0 0 24 24"><path fill="currentColor" d="M12 22c-4.714 0-7.071 0-8.536-1.465C2 19.072 2 16.714 2 12s0-7.071 1.464-8.536C4.93 2 7.286 2 12 2s7.071 0 8.535 1.464C22 4.93 22 7.286 22 12s0 7.071-1.465 8.535C19.072 22 16.714 22 12 22" opacity=".5"/><path fill="currentColor" d="M18.75 8a.75.75 0 0 1-.75.75H6a.75.75 0 0 1 0-1.5h12a.75.75 0 0 1 .75.75m0 4a.75.75 0 0 1-.75.75H6a.75.75 0 0 1 0-1.5h12a.75.75 0 0 1 .75.75m0 4a.75.75 0 0 1-.75.75H6a.75.75 0 0 1 0-1.5h12a.75.75 0 0 1 .75.75"/></symbol><use href="#ai:solar:hamburger-menu-bold-duotone"></use>  </svg> </button> </header> <nav class="mobile-menu" data-astro-cid-2yeyokk7> <div class="menu-content" data-astro-cid-2yeyokk7> <ul class="nav-list" data-astro-cid-2yeyokk7> <li style="animation-delay: 0.2s;" data-astro-cid-2yeyokk7> <a href="/" title="Home" data-astro-prefetch="viewport" data-astro-cid-2yeyokk7> <div class="icon-state-wrapper" data-active="false" data-astro-cid-272faz54><svg width="1em" height="1em" viewBox="0 0 24 24" class="icon default icon" data-astro-cid-2yeyokk7="true" data-astro-cid-272faz54="true" data-astro-cid-bfoveg4b="true" data-icon="solar:file-text-broken">   <use href="#ai:solar:file-text-broken"></use>  </svg><svg width="1em" height="1em" viewBox="0 0 24 24" class="icon hover icon" data-astro-cid-2yeyokk7="true" data-astro-cid-272faz54="true" data-astro-cid-bfoveg4b="true" data-icon="solar:file-smile-outline">   <use href="#ai:solar:file-smile-outline"></use>  </svg><svg width="1em" height="1em" viewBox="0 0 24 24" class="icon active icon" data-astro-cid-2yeyokk7="true" data-astro-cid-272faz54="true" data-astro-cid-bfoveg4b="true" data-icon="solar:file-smile-bold-duotone">   <use href="#ai:solar:file-smile-bold-duotone"></use>  </svg></div> <span data-astro-cid-2yeyokk7>Home</span> </a> </li> <li style="animation-delay: 0.30000000000000004s;" data-astro-cid-2yeyokk7> <a href="/about" title="About" data-astro-prefetch="viewport" data-astro-cid-2yeyokk7> <div class="icon-state-wrapper" data-active="false" data-astro-cid-272faz54><svg width="1em" height="1em" viewBox="0 0 24 24" class="icon default icon" data-astro-cid-2yeyokk7="true" data-astro-cid-272faz54="true" data-astro-cid-bfoveg4b="true" data-icon="solar:ghost-broken">   <use href="#ai:solar:ghost-broken"></use>  </svg><svg width="1em" height="1em" viewBox="0 0 24 24" class="icon hover icon" data-astro-cid-2yeyokk7="true" data-astro-cid-272faz54="true" data-astro-cid-bfoveg4b="true" data-icon="solar:ghost-smile-outline">   <use href="#ai:solar:ghost-smile-outline"></use>  </svg><svg width="1em" height="1em" viewBox="0 0 24 24" class="icon active icon" data-astro-cid-2yeyokk7="true" data-astro-cid-272faz54="true" data-astro-cid-bfoveg4b="true" data-icon="solar:ghost-smile-bold-duotone">   <use href="#ai:solar:ghost-smile-bold-duotone"></use>  </svg></div> <span data-astro-cid-2yeyokk7>About</span> </a> </li> </ul> <div class="social-links" data-astro-cid-2yeyokk7> <a href="https://github.com/gkzhb" title="GitHub" class="social-link" style="animation-delay: 0.5s;" data-astro-cid-2yeyokk7> <svg width="1em" height="1em" viewBox="0 0 24 24" class="icon" data-astro-cid-2yeyokk7="true" data-icon="simple-icons:github">   <use href="#ai:simple-icons:github"></use>  </svg> <span data-astro-cid-2yeyokk7>GitHub</span> </a><a href="https://roam.gkzhb.top/" title="Obsidian 知识花园" class="social-link" style="animation-delay: 0.6000000000000001s;" data-astro-cid-2yeyokk7> <svg width="1em" height="1em" viewBox="0 0 24 24" class="icon" data-astro-cid-2yeyokk7="true" data-icon="simple-icons:obsidian">   <use href="#ai:simple-icons:obsidian"></use>  </svg> <span data-astro-cid-2yeyokk7>Obsidian 知识花园</span> </a><a href="/rss.xml" title="RSS" class="social-link" style="animation-delay: 0.7000000000000001s;" data-astro-cid-2yeyokk7> <svg width="1em" height="1em" viewBox="0 0 24 24" class="icon" data-astro-cid-2yeyokk7="true" data-icon="simple-icons:rss">   <use href="#ai:simple-icons:rss"></use>  </svg> <span data-astro-cid-2yeyokk7>RSS</span> </a> </div> </div> </nav> </div> <br data-astro-cid-2yeyokk7>  <script data-astro-rerun>
-  document.querySelector(".menu-toggle")?.addEventListener("click", () => {
-    const mobileMenu = document.querySelector(".mobile-menu");
-    const menuIcon = document.querySelector(".menu-icon");
-
-    mobileMenu?.classList.toggle("active");
-    menuIcon?.classList.toggle("active");
-    document.body.style.overflow = mobileMenu?.classList.contains("active")
-      ? "hidden"
-      : "";
-  });
-
-  document.addEventListener("click", (event) => {
-    if (
-      event.target instanceof Element &&
-      !event.target.closest(".mobile-menu") &&
-      !event.target.closest(".menu-toggle")
-    ) {
-      const mobileMenu = document.querySelector(".mobile-menu");
-      const menuIcon = document.querySelector(".menu-icon");
-
-      mobileMenu?.classList.remove("active");
-      menuIcon?.classList.remove("active");
-      document.body.style.overflow = "";
+    location ~ ^/app\.php(/|$) {
+        # if, for some reason, you are still using php 5,
+        # then replace /run/php/php7.0 by /var/run/php5
+        fastcgi_pass unix:/run/php/php7.0-fpm.sock;
+        fastcgi_split_path_info ^(.+\.php)(/.*)$;
+        include fastcgi_params;
+        # when you are using symlinks to link the document root to the
+        # current version of your application, you should pass the real
+        # application path instead of the path to the symlink to php
+        # fpm.
+        # otherwise, php's opcache may not properly detect changes to
+        # your php files (see https://github.com/zendtech/zendoptimizerplus/issues/126
+        # for more information).
+        fastcgi_param  script_filename  $realpath_root$fastcgi_script_name;
+        fastcgi_param document_root $realpath_root;
+        # prevents uris that include the front controller. this will 404:
+        # http://domain.tld/app.php/some-path
+        # remove the internal directive to allow uris like this
+        internal;
     }
-  });
-</script> <div class="side" data-astro-cid-jalpcphr> <div class="container" data-astro-cid-jalpcphr> <div class="shooting-star-container" aria-hidden="true" aria-label="shooting stars animation" data-astro-cid-eggminjp style="--shootingTime: 3000ms;--starColor: var(--charm-highlight-color);--starTailColor: rgba(0, 0, 255, 0);"> <div class="night" data-astro-cid-eggminjp style="--shootingTime: 3000ms;--starColor: var(--charm-highlight-color);--starTailColor: rgba(0, 0, 255, 0);"> <div class="shooting-star" style="--index: 1; --delay: 5309ms; --top-offset: -135px; --left-offset: 219px;; --shootingTime: 3000ms;--starColor: var(--charm-highlight-color);--starTailColor: rgba(0, 0, 255, 0);" data-astro-cid-eggminjp></div><div class="shooting-star" style="--index: 2; --delay: 7852ms; --top-offset: -141px; --left-offset: 298px;; --shootingTime: 3000ms;--starColor: var(--charm-highlight-color);--starTailColor: rgba(0, 0, 255, 0);" data-astro-cid-eggminjp></div><div class="shooting-star" style="--index: 3; --delay: 10937ms; --top-offset: 185px; --left-offset: 8px;; --shootingTime: 3000ms;--starColor: var(--charm-highlight-color);--starTailColor: rgba(0, 0, 255, 0);" data-astro-cid-eggminjp></div><div class="shooting-star" style="--index: 4; --delay: 2957ms; --top-offset: 30px; --left-offset: 51px;; --shootingTime: 3000ms;--starColor: var(--charm-highlight-color);--starTailColor: rgba(0, 0, 255, 0);" data-astro-cid-eggminjp></div><div class="shooting-star" style="--index: 5; --delay: 5530ms; --top-offset: -160px; --left-offset: 104px;; --shootingTime: 3000ms;--starColor: var(--charm-highlight-color);--starTailColor: rgba(0, 0, 255, 0);" data-astro-cid-eggminjp></div> </div> </div>  <div class="center" data-astro-cid-jalpcphr> <nav data-astro-cid-jalpcphr> <a href="/" title="Home" data-astro-prefetch="viewport" data-astro-cid-jalpcphr> <div class="item" data-astro-cid-jalpcphr> <span class="title transparent" data-astro-cid-jalpcphr> Home </span> <div class="icon-state-wrapper" data-active="false" data-astro-cid-272faz54><svg width="1em" height="1em" data-astro-cid-jalpcphr="true" class="icon default icon" data-astro-cid-272faz54="true" data-astro-cid-bfoveg4b="true" data-icon="solar:file-text-broken">   <symbol id="ai:solar:file-text-broken" viewBox="0 0 24 24"><g fill="none"><path stroke="currentColor" stroke-linecap="round" stroke-width="1.5" d="M6 14.5h8M6 18h5.5"/><path stroke="currentColor" stroke-width="1.5" d="M13 2.5V5c0 2.357 0 3.536.732 4.268S15.643 10 18 10h4"/><path fill="currentColor" d="M2.75 10a.75.75 0 0 0-1.5 0zm18.5 4a.75.75 0 0 0 1.5 0zm-5.857-9.946l-.502.557zm3.959 3.563l-.502.557zm2.302 2.537l-.685.305zM3.172 20.828l.53-.53zm17.656 0l-.53-.53zM1.355 5.927a.75.75 0 0 0 1.493.146zm21.29 12.146a.75.75 0 1 0-1.493-.146zM14 21.25h-4v1.5h4zM2.75 14v-4h-1.5v4zm18.5-.437V14h1.5v-.437zM14.891 4.61l3.959 3.563l1.003-1.115l-3.958-3.563zm7.859 8.952c0-1.689.015-2.758-.41-3.714l-1.371.61c.266.598.281 1.283.281 3.104zm-3.9-5.389c1.353 1.218 1.853 1.688 2.119 2.285l1.37-.61c-.426-.957-1.23-1.66-2.486-2.79zM10.03 2.75c1.582 0 2.179.012 2.71.216l.538-1.4c-.852-.328-1.78-.316-3.248-.316zm5.865.746c-1.086-.977-1.765-1.604-2.617-1.93l-.537 1.4c.532.204.98.592 2.15 1.645zM10 21.25c-1.907 0-3.261-.002-4.29-.14c-1.005-.135-1.585-.389-2.008-.812l-1.06 1.06c.748.75 1.697 1.081 2.869 1.239c1.15.155 2.625.153 4.489.153zM1.25 14c0 1.864-.002 3.338.153 4.489c.158 1.172.49 2.121 1.238 2.87l1.06-1.06c-.422-.424-.676-1.004-.811-2.01c-.138-1.027-.14-2.382-.14-4.289zM14 22.75c1.864 0 3.338.002 4.489-.153c1.172-.158 2.121-.49 2.87-1.238l-1.06-1.06c-.424.422-1.004.676-2.01.811c-1.027.138-2.382.14-4.289.14zm-3.97-21.5c-1.875 0-3.356-.002-4.511.153c-1.177.158-2.129.49-2.878 1.238l1.06 1.06c.424-.422 1.005-.676 2.017-.811c1.033-.138 2.395-.14 4.312-.14zM2.848 6.073c.121-1.234.382-1.9.854-2.371l-1.06-1.06c-.836.834-1.153 1.919-1.287 3.285zm18.304 11.854c-.121 1.234-.383 1.9-.854 2.371l1.06 1.06c.836-.834 1.153-1.919 1.287-3.285z"/></g></symbol><use href="#ai:solar:file-text-broken"></use>  </svg><svg width="1em" height="1em" data-astro-cid-jalpcphr="true" class="icon hover icon" data-astro-cid-272faz54="true" data-astro-cid-bfoveg4b="true" data-icon="solar:file-smile-outline">   <symbol id="ai:solar:file-smile-outline" viewBox="0 0 24 24"><path fill="currentColor" fill-rule="evenodd" d="M12.25 2.834c-.46-.078-1.088-.084-2.22-.084c-1.917 0-3.28.002-4.312.14c-1.012.135-1.593.39-2.016.812s-.677 1.003-.812 2.009c-.138 1.028-.14 2.382-.14 4.29v4c0 1.906.002 3.26.14 4.288c.135 1.006.389 1.586.812 2.01c.423.422 1.003.676 2.009.811c1.028.139 2.382.14 4.289.14h4c1.907 0 3.262-.002 4.29-.14c1.005-.135 1.585-.389 2.008-.812s.677-1.003.812-2.009c.138-1.027.14-2.382.14-4.289v-.437c0-1.536-.01-2.264-.174-2.813h-3.13c-1.133 0-2.058 0-2.79-.098c-.763-.103-1.425-.325-1.954-.854s-.751-1.19-.854-1.955c-.098-.73-.098-1.656-.098-2.79zm1.5.776V5c0 1.2.002 2.024.085 2.643c.08.598.224.891.428 1.094s.496.348 1.094.428c.619.083 1.443.085 2.643.085h2.02a46 46 0 0 0-1.17-1.076l-3.959-3.563A37 37 0 0 0 13.75 3.61m-3.575-2.36c1.385 0 2.28 0 3.103.315c.823.316 1.485.912 2.51 1.835l.107.096l3.958 3.563l.125.112c1.184 1.065 1.95 1.754 2.361 2.678s.412 1.954.411 3.546v.661c0 1.838 0 3.294-.153 4.433c-.158 1.172-.49 2.121-1.238 2.87c-.749.748-1.698 1.08-2.87 1.238c-1.14.153-2.595.153-4.433.153H9.944c-1.838 0-3.294 0-4.433-.153c-1.172-.158-2.121-.49-2.87-1.238c-.748-.749-1.08-1.698-1.238-2.87c-.153-1.14-.153-2.595-.153-4.433V9.945c0-1.838 0-3.294.153-4.433c.158-1.172.49-2.121 1.238-2.87c.75-.749 1.701-1.08 2.878-1.238c1.144-.153 2.607-.153 4.455-.153h.202" clip-rule="evenodd"/><path fill="currentColor" d="M18 14.5c0 .829-.448 1.5-1 1.5s-1-.671-1-1.5c0-.828.448-1.5 1-1.5s1 .672 1 1.5"/><path fill="currentColor" fill-rule="evenodd" d="M8.376 17.084a.75.75 0 0 1 1.04-.208a4.66 4.66 0 0 0 5.168 0a.75.75 0 1 1 .832 1.248a6.16 6.16 0 0 1-6.832 0a.75.75 0 0 1-.208-1.04" clip-rule="evenodd"/><path fill="currentColor" d="M8 14.5c0 .829-.448 1.5-1 1.5s-1-.671-1-1.5c0-.828.448-1.5 1-1.5s1 .672 1 1.5"/></symbol><use href="#ai:solar:file-smile-outline"></use>  </svg><svg width="1em" height="1em" data-astro-cid-jalpcphr="true" class="icon active icon" data-astro-cid-272faz54="true" data-astro-cid-bfoveg4b="true" data-icon="solar:file-smile-bold-duotone">   <symbol id="ai:solar:file-smile-bold-duotone" viewBox="0 0 24 24"><path fill="currentColor" fill-rule="evenodd" d="M14 22h-4c-3.771 0-5.657 0-6.828-1.172S2 17.771 2 14v-4c0-3.771 0-5.657 1.172-6.828S6.239 2 10.03 2c.606 0 1.091 0 1.5.017q-.02.12-.02.244l-.01 2.834c0 1.097 0 2.067.105 2.848c.114.847.375 1.694 1.067 2.386c.69.69 1.538.952 2.385 1.066c.781.105 1.751.105 2.848.105h4.052c.043.534.043 1.19.043 2.063V14c0 3.771 0 5.657-1.172 6.828S17.771 22 14 22" clip-rule="evenodd" opacity=".5"/><path fill="currentColor" d="M8 14.5c0 .828-.448 1.5-1 1.5s-1-.672-1-1.5s.448-1.5 1-1.5s1 .672 1 1.5m1.416 2.376a.75.75 0 0 0-.832 1.248a6.16 6.16 0 0 0 6.832 0a.75.75 0 1 0-.832-1.248a4.66 4.66 0 0 1-5.168 0M18 14.5c0 .828-.448 1.5-1 1.5s-1-.672-1-1.5s.448-1.5 1-1.5s1 .672 1 1.5M11.51 2.26l-.01 2.835c0 1.097 0 2.066.105 2.848c.114.847.375 1.694 1.067 2.385c.69.691 1.538.953 2.385 1.067c.781.105 1.751.105 2.848.105h4.052q.02.232.028.5H22c0-.268 0-.402-.01-.56a5.3 5.3 0 0 0-.958-2.641c-.094-.128-.158-.204-.285-.357C19.954 7.494 18.91 6.312 18 5.5c-.81-.724-1.921-1.515-2.89-2.161c-.832-.556-1.248-.834-1.819-1.04a6 6 0 0 0-.506-.154c-.384-.095-.758-.128-1.285-.14z"/></symbol><use href="#ai:solar:file-smile-bold-duotone"></use>  </svg></div> </div> </a> <a href="/about" title="About" data-astro-prefetch="viewport" data-astro-cid-jalpcphr> <div class="item" data-astro-cid-jalpcphr> <span class="title transparent" data-astro-cid-jalpcphr> About </span> <div class="icon-state-wrapper" data-active="false" data-astro-cid-272faz54><svg width="1em" height="1em" data-astro-cid-jalpcphr="true" class="icon default icon" data-astro-cid-272faz54="true" data-astro-cid-bfoveg4b="true" data-icon="solar:ghost-broken">   <symbol id="ai:solar:ghost-broken" viewBox="0 0 24 24"><g fill="none"><path fill="currentColor" d="M16 10.5c0 .828-.448 1.5-1 1.5s-1-.672-1-1.5s.448-1.5 1-1.5s1 .672 1 1.5"/><ellipse cx="9" cy="10.5" fill="currentColor" rx="1" ry="1.5"/><path stroke="currentColor" stroke-linecap="round" stroke-width="1.5" d="M22 12.3C22 6.613 17.523 2 12 2S2 6.612 2 12.3v7.423c0 1.322 1.351 2.182 2.5 1.591a2.82 2.82 0 0 1 2.896.186a2.82 2.82 0 0 0 3.208 0l.353-.242a1.84 1.84 0 0 1 2.086 0l.353.242a2.82 2.82 0 0 0 3.208 0a2.82 2.82 0 0 1 2.897-.186c1.148.591 2.499-.269 2.499-1.591v-3.711"/></g></symbol><use href="#ai:solar:ghost-broken"></use>  </svg><svg width="1em" height="1em" data-astro-cid-jalpcphr="true" class="icon hover icon" data-astro-cid-272faz54="true" data-astro-cid-bfoveg4b="true" data-icon="solar:ghost-smile-outline">   <symbol id="ai:solar:ghost-smile-outline" viewBox="0 0 24 24"><path fill="currentColor" d="M10 9.5c0 .828-.448 1.5-1 1.5s-1-.672-1-1.5S8.448 8 9 8s1 .672 1 1.5m5 1.5c.552 0 1-.672 1-1.5S15.552 8 15 8s-1 .672-1 1.5s.448 1.5 1 1.5m-5.553 3.398a.75.75 0 1 0-.894 1.204A5.77 5.77 0 0 0 12 16.75a5.77 5.77 0 0 0 3.447-1.148a.75.75 0 1 0-.894-1.204A4.27 4.27 0 0 1 12 15.25a4.27 4.27 0 0 1-2.553-.852"/><path fill="currentColor" fill-rule="evenodd" d="M12 1.25C6.042 1.25 1.25 6.219 1.25 12.3v7.423c0 1.847 1.912 3.123 3.593 2.258a2.07 2.07 0 0 1 2.129.137a3.57 3.57 0 0 0 4.056 0l.353-.242a1.085 1.085 0 0 1 1.238 0l.353.242a3.57 3.57 0 0 0 4.056 0a2.07 2.07 0 0 1 2.13-.137c1.68.865 3.592-.412 3.592-2.258v-7.422C22.75 6.219 17.958 1.25 12 1.25M2.75 12.3c0-5.295 4.162-9.55 9.25-9.55s9.25 4.255 9.25 9.55v7.423c0 .798-.79 1.242-1.406.924a3.57 3.57 0 0 0-3.665.235a2.07 2.07 0 0 1-2.358 0l-.353-.243a2.585 2.585 0 0 0-2.936 0l-.353.242a2.07 2.07 0 0 1-2.358 0a3.57 3.57 0 0 0-3.665-.234c-.617.318-1.406-.126-1.406-.924z" clip-rule="evenodd"/></symbol><use href="#ai:solar:ghost-smile-outline"></use>  </svg><svg width="1em" height="1em" data-astro-cid-jalpcphr="true" class="icon active icon" data-astro-cid-272faz54="true" data-astro-cid-bfoveg4b="true" data-icon="solar:ghost-smile-bold-duotone">   <symbol id="ai:solar:ghost-smile-bold-duotone" viewBox="0 0 24 24"><path fill="currentColor" d="M22 12v7.206a1.727 1.727 0 0 1-2.5 1.544a2.89 2.89 0 0 0-2.896.18a2.89 2.89 0 0 1-3.208 0l-.353-.234a1.88 1.88 0 0 0-2.086 0l-.353.235a2.89 2.89 0 0 1-3.208 0a2.89 2.89 0 0 0-2.897-.18A1.727 1.727 0 0 1 2 19.205V12C2 6.477 6.477 2 12 2s10 4.477 10 10" opacity=".5"/><path fill="currentColor" d="M9.447 14.398a.75.75 0 1 0-.894 1.204A5.77 5.77 0 0 0 12 16.75a5.77 5.77 0 0 0 3.447-1.148a.75.75 0 1 0-.894-1.204A4.27 4.27 0 0 1 12 15.25a4.27 4.27 0 0 1-2.553-.852M16 9.5c0 .828-.448 1.5-1 1.5s-1-.672-1-1.5s.448-1.5 1-1.5s1 .672 1 1.5M9 11c.552 0 1-.672 1-1.5S9.552 8 9 8s-1 .672-1 1.5s.448 1.5 1 1.5"/></symbol><use href="#ai:solar:ghost-smile-bold-duotone"></use>  </svg></div> </div> </a> </nav> <div class="content" data-astro-cid-jalpcphr> <ul class="side-home" data-astro-cid-fjevzmm4> <li data-astro-cid-fjevzmm4><h1 class="side-home-title" data-astro-cid-fjevzmm4="true">gkzhb&#39;s blog</h1></li> <li class="side-home-sub" data-astro-cid-fjevzmm4></li> <li class="side-home-bio" data-astro-cid-fjevzmm4><p data-astro-cid-fjevzmm4>Always believe that something wonderful is about to happen.</p></li> </ul> </div> </div> </div> <div class="footer" data-astro-cid-jalpcphr> <a id="theme-toggle" href="javascript:void(0)" role="button" data-astro-cid-jalpcphr> <div class="item width-2" data-astro-cid-jalpcphr> <span class="title transparent" data-astro-cid-jalpcphr> <span class="light" data-astro-cid-jalpcphr>light</span> <span class="dark" data-astro-cid-jalpcphr>dark</span> </span> <div class="icon-wrapper" data-astro-cid-bfoveg4b><svg width="1em" height="1em" data-astro-cid-jalpcphr="true" class="icon light-only icon" data-astro-cid-bfoveg4b="true" data-icon="solar:cloud-sun-2-bold-duotone">   <symbol id="ai:solar:cloud-sun-2-bold-duotone" viewBox="0 0 24 24"><path fill="currentColor" d="M11.5 8a3.5 3.5 0 1 1-7 0a3.5 3.5 0 0 1 7 0" opacity=".5"/><path fill="currentColor" fill-rule="evenodd" d="M7.5 1.25a.75.75 0 0 1 .75.75v.5a.75.75 0 0 1-1.5 0V2a.75.75 0 0 1 .75-.75M3.08 3.08a.75.75 0 0 1 1.062 0l.216.217a.75.75 0 0 1-1.061 1.06l-.216-.216a.75.75 0 0 1 0-1.06m8.839 0a.75.75 0 0 1 0 1.061l-.216.216a.75.75 0 1 1-1.06-1.06l.215-.216a.75.75 0 0 1 1.061 0M1.25 7.5A.75.75 0 0 1 2 6.75h.5a.75.75 0 0 1 0 1.5H2a.75.75 0 0 1-.75-.75m3.108 3.143a.75.75 0 0 1 0 1.06l-.216.216a.75.75 0 0 1-1.061-1.06l.216-.216a.75.75 0 0 1 1.06 0" clip-rule="evenodd" opacity=".5"/><path fill="currentColor" d="M16.286 22C19.442 22 22 19.472 22 16.353c0-2.472-1.607-4.573-3.845-5.338C17.837 8.194 15.415 6 12.476 6C9.32 6 6.762 8.528 6.762 11.647c0 .69.125 1.35.354 1.962a4.4 4.4 0 0 0-.83-.08C3.919 13.53 2 15.426 2 17.765S3.919 22 6.286 22z"/></symbol><use href="#ai:solar:cloud-sun-2-bold-duotone"></use>  </svg><svg width="1em" height="1em" data-astro-cid-jalpcphr="true" class="icon dark-only icon" data-astro-cid-bfoveg4b="true" data-icon="solar:moon-bold-duotone">   <symbol id="ai:solar:moon-bold-duotone" viewBox="0 0 24 24"><path fill="currentColor" fill-rule="evenodd" d="M22 12c0 5.523-4.477 10-10 10a10 10 0 0 1-3.321-.564A9 9 0 0 1 8 18a8.97 8.97 0 0 1 2.138-5.824A6.5 6.5 0 0 0 15.5 15a6.5 6.5 0 0 0 5.567-3.143c.24-.396.933-.32.933.143" clip-rule="evenodd" opacity=".5"/><path fill="currentColor" d="M2 12c0 4.359 2.789 8.066 6.679 9.435A9 9 0 0 1 8 18c0-2.221.805-4.254 2.138-5.824A6.47 6.47 0 0 1 9 8.5a6.5 6.5 0 0 1 3.143-5.567C12.54 2.693 12.463 2 12 2C6.477 2 2 6.477 2 12"/></symbol><use href="#ai:solar:moon-bold-duotone"></use>  </svg></div> </div> </a> <a href="https://github.com/gkzhb" data-astro-cid-jalpcphr> <div class="item width-2" data-astro-cid-jalpcphr> <span class="title transparent" data-astro-cid-jalpcphr> GitHub </span> <svg width="1em" height="1em" data-astro-cid-jalpcphr="true" class="icon" data-icon="simple-icons:github">   <symbol id="ai:simple-icons:github" viewBox="0 0 24 24"><path fill="currentColor" d="M12 .297c-6.63 0-12 5.373-12 12c0 5.303 3.438 9.8 8.205 11.385c.6.113.82-.258.82-.577c0-.285-.01-1.04-.015-2.04c-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729c1.205.084 1.838 1.236 1.838 1.236c1.07 1.835 2.809 1.305 3.495.998c.108-.776.417-1.305.76-1.605c-2.665-.3-5.466-1.332-5.466-5.93c0-1.31.465-2.38 1.235-3.22c-.135-.303-.54-1.523.105-3.176c0 0 1.005-.322 3.3 1.23c.96-.267 1.98-.399 3-.405c1.02.006 2.04.138 3 .405c2.28-1.552 3.285-1.23 3.285-1.23c.645 1.653.24 2.873.12 3.176c.765.84 1.23 1.91 1.23 3.22c0 4.61-2.805 5.625-5.475 5.92c.42.36.81 1.096.81 2.22c0 1.606-.015 2.896-.015 3.286c0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></symbol><use href="#ai:simple-icons:github"></use>  </svg> </div> </a><a href="https://roam.gkzhb.top/" data-astro-cid-jalpcphr> <div class="item width-2" data-astro-cid-jalpcphr> <span class="title transparent" data-astro-cid-jalpcphr> Obsidian 知识花园 </span> <svg width="1em" height="1em" data-astro-cid-jalpcphr="true" class="icon" data-icon="simple-icons:obsidian">   <symbol id="ai:simple-icons:obsidian" viewBox="0 0 24 24"><path fill="currentColor" d="M19.355 18.538a68.967 68.959 0 0 0 1.858-2.954a.81.81 0 0 0-.062-.9c-.516-.685-1.504-2.075-2.042-3.362c-.553-1.321-.636-3.375-.64-4.377a1.7 1.7 0 0 0-.358-1.05l-3.198-4.064a4 4 0 0 1-.076.543c-.106.503-.307 1.004-.536 1.5c-.134.29-.29.6-.446.914l-.31.626c-.516 1.068-.997 2.227-1.132 3.59c-.124 1.26.046 2.73.815 4.481q.192.016.386.044a6.36 6.36 0 0 1 3.326 1.505c.916.79 1.744 1.922 2.415 3.5zM8.199 22.569q.11.019.22.02c.78.024 2.095.092 3.16.29c.87.16 2.593.64 4.01 1.055c1.083.316 2.198-.548 2.355-1.664c.114-.814.33-1.735.725-2.58l-.01.005c-.67-1.87-1.522-3.078-2.416-3.849a5.3 5.3 0 0 0-2.778-1.257c-1.54-.216-2.952.19-3.84.45c.532 2.218.368 4.829-1.425 7.531zM5.533 9.938q-.035.15-.098.29L2.82 16.059a1.6 1.6 0 0 0 .313 1.772l4.116 4.24c2.103-3.101 1.796-6.02.836-8.3c-.728-1.73-1.832-3.081-2.55-3.831zM9.32 14.01c.615-.183 1.606-.465 2.745-.534c-.683-1.725-.848-3.233-.716-4.577c.154-1.552.7-2.847 1.235-3.95q.17-.35.328-.664c.149-.297.288-.577.419-.86c.217-.47.379-.885.46-1.27c.08-.38.08-.72-.014-1.043c-.095-.325-.297-.675-.68-1.06a1.6 1.6 0 0 0-1.475.36l-4.95 4.452a1.6 1.6 0 0 0-.513.952l-.427 2.83c.672.59 2.328 2.316 3.335 4.711q.136.317.253.653"/></symbol><use href="#ai:simple-icons:obsidian"></use>  </svg> </div> </a><a href="/rss.xml" data-astro-cid-jalpcphr> <div class="item width-2" data-astro-cid-jalpcphr> <span class="title transparent" data-astro-cid-jalpcphr> RSS </span> <svg width="1em" height="1em" data-astro-cid-jalpcphr="true" class="icon" data-icon="simple-icons:rss">   <symbol id="ai:simple-icons:rss" viewBox="0 0 24 24"><path fill="currentColor" d="M19.199 24C19.199 13.467 10.533 4.8 0 4.8V0c13.165 0 24 10.835 24 24zM3.291 17.415a3.3 3.3 0 0 1 3.293 3.295A3.303 3.303 0 0 1 3.283 24C1.47 24 0 22.526 0 20.71s1.475-3.294 3.291-3.295M15.909 24h-4.665c0-6.169-5.075-11.245-11.244-11.245V8.09c8.727 0 15.909 7.184 15.909 15.91"/></symbol><use href="#ai:simple-icons:rss"></use>  </svg> </div> </a> </div> </div> <script type="module" src="/_astro/BaseSide.astro_astro_type_script_index_0_lang.DOrw5quG.js"></script>   <div class="content-wrapper" data-astro-cid-4n3psh5z>     <h2 data-astro-cid-lw3dagai>Search</h2> <div class="pagefind-ui-container" data-astro-cid-lw3dagai> <div class="pagefind-init" data-pagefind-ui data-bundle-path="/pagefind/" data-ui-options="{&#34;showImages&#34;:false}"></div> <script type="module" src="/_astro/Search.astro_astro_type_script_index_0_lang.Dtqgzho9.js"></script> </div>  <a href="/search" data-astro-cid-hmy7dmgi> <svg width="1em" height="1em" data-astro-cid-hmy7dmgi="true" data-icon="solar:card-search-bold-duotone">   <symbol id="ai:solar:card-search-bold-duotone" viewBox="0 0 24 24"><path fill="currentColor" d="M10 20h3.627a5.25 5.25 0 1 1 8.369-6.34Q22 12.9 22 12c0-.442 0-1.608-.002-2H2.002C2 10.392 2 11.558 2 12c0 3.771 0 5.657 1.172 6.828S6.229 20 10 20" opacity=".5"/><path fill="currentColor" d="M5.25 16a.75.75 0 0 1 .75-.75h4a.75.75 0 0 1 0 1.5H6a.75.75 0 0 1-.75-.75"/><path fill="currentColor" fill-rule="evenodd" d="M17.75 14.5a2.25 2.25 0 1 0 0 4.5a2.25 2.25 0 0 0 0-4.5M14 16.75a3.75 3.75 0 1 1 6.879 2.068l.901.902a.75.75 0 1 1-1.06 1.06l-.902-.901A3.75 3.75 0 0 1 14 16.75" clip-rule="evenodd"/><path fill="currentColor" d="M9.995 4h4.01c3.781 0 5.672 0 6.846 1.116c.846.803 1.083 1.96 1.149 3.884v1H2V9c.066-1.925.303-3.08 1.149-3.884C4.323 4 6.214 4 9.995 4"/></symbol><use href="#ai:solar:card-search-bold-duotone"></use>  </svg> <span data-astro-cid-hmy7dmgi>Search</span> </a>   </div>   </main> </body></html>  
+
+    # return 404 for all other php files not matching the front controller
+    # this prevents access to other php files you don't want to be accessible.
+    location ~ \.php$ {
+        return 404;
+    }
+
+    error_log /var/log/nginx/wallabag_error.log;
+    access_log /var/log/nginx/wallabag_access.log;
+}
+```
+
+这里的配置我大部份摘录自 [wallabag doc](https://doc.wallabag.org/en/admin/installation/virtualhosts.html)
+
+修改完成后执行命令重启 nginx 服务：
+
+```bash
+systemctl restart nginx
+```
+
+之后可以在浏览器上访问 wallabag 网站了。
+
+## 用户管理
+
+未完待续...
+ 
+# 参考
+
+* [改变你的阅读方式：认识「稍后读」 - 少数派](https://sspai.com/post/25336)
+* [how to install wallabag on arch linux vps with lemp stack - linuxbabe](https://www.linuxbabe.com/arch/install-wallabag-arch-linux-server-nginx-mariadb-php7)
+* [how to check which php extensions have been enabled/disabled in ubuntu linux 12.04 lts? - stack overflow](https://stackoverflow.com/questions/24351260/how-to-check-which-php-extensions-have-been-enabled-disabled-in-ubuntu-linux-12)
+* [php - installing pdo driver on mysql linux server - stack overflow](https://stackoverflow.com/questions/13375061/installing-pdo-driver-on-mysql-linux-server) " data-astro-cid-wp2l4cmv><article class="article-card" data-astro-cid-7ahxywo7><div class="card-meta" data-astro-cid-7ahxywo7><time datetime="2019-04-03T13:00:53.000Z" data-astro-cid-7ahxywo7>2019年4月3日</time></div><h2 class="card-title" data-astro-cid-7ahxywo7><a href="/posts/wallabag/" data-astro-cid-7ahxywo7>自建”稍后阅读“服务—— wallabag</a></h2><p class="card-desc" data-astro-cid-7ahxywo7></p></article></div><div data-search-text="使用 ngrok 实现内网穿透（自建 ngrok 服务器） 有时候我希望能直接通过互联网访问到层层路由下的个人电脑，但是在没有固定 ipv4 的情况下很难做到这一点。一个解决方法就是使用内网穿透技术，而我选择用 ngrok 来实现。ngrok 在 1.x 版本时是开源的，到了 2.x 版本就闭源了。因为自建 ngrok 服务器需要将自己生成的证书编译到客户端中，所以只能使用开源的 1.x 版本从源码编译生成。
+
+<!--more-->
+
+## 前提条件
+
+* 拥有一个域名
+	免费域名可以在[freenom](https://www.freenom.com/)上买到，但域名无法在国内备案。
+* 拥有一个有固定 ip 的服务器
+	购买 vps 一般都会提供免费固定 ip，而且国内有学生优惠的话，vps 价格在每月 10 元左右，挺便宜。
+
+## 生成证书并编译 ngrok 服务端和客户端
+
+ngrok 1.x 版本在 github 上网址是 [[https://github.com/inconshreveable/ngrok]]，它是用 go 语言编写的。
+
+编译 ngrok 需要使用相应的编译工具，在 ubuntu 上可以使用命令来安装这些工具：
+```bash
+$ sudo apt-get install build-essential mercurial git
+```
+其中，mercurial 和 git 都是版本控制软件。还有最重要的就是安装 golang ，我选择从 golang 官网下载最新版本然后手动安装。安装过程可以参考 go 的官方文档。
+
+在安装好所需的编译环境后，可以从 github 上 clone 代码
+```bash
+$ git clone https://github.com/inconshreveable/ngrok.git
+```
+在编译之前，要先指定 go 的工作路径，即编译时源文件所在文件夹的位置：`export gopath=[working directory]`，将 `[working directory]` 改为 ngrok 的绝对路径，如果按照上面一步 clone 的话应该是当前工作路径 + `/ngrok`。在开始编译之前，我们还需要生成我们自己的证书：
+```bash
+export ngrok_domain=&quot;[ngrok_base_domain]&quot;  # 设置环境变量，ngrok 域名
+openssl genrsa -out rootca.key 2048
+openssl req -x509 -new -nodes -key rootca.key -subj &quot;/cn=$ngrok_domain&quot; -days 5000 -out rootca.pem
+openssl genrsa -out server.key 2048
+openssl req -new -key server.key -subj &quot;/cn=$ngrok_domain&quot; -out server.csr
+openssl x509 -req -in server.csr -ca rootca.pem -cakey rootca.key -cacreateserial -out server.crt -days 5000
+```
+其中，需要将 `[ngrok_base_domain]` 替换为你自己将要使用的 ngrok 域名。比如 `ngrok.yourdomain.com` 或 `tunnel.yourdomain.com`。我们需要将域名通过 a 记录指向那个拥有固定 ip 的服务器的 ip。在域名 dns 记录管理中，添加两条 a 记录：主机记录(host name)为 `*.tunnel` 或 `*.ngrok` 即你将要使用的 ngrok 子域名，另一条主机记录为 `tunnel` 或 `ngrok` 就是将前面的 `*.` 去掉，第二条主机记录应该可以不加。这两条记录类型(record type)都为 a 类型，ip 地址指向服务器的固定 ip 。
+不过我在 freenom 上无法添加 `*.ngrok` 主机记录，估计是 dns 服务商不支持通配符 `*`，所以我只能根据自己的需要手动添加多条 `[service].ngrok` 记录，`[service]` 更改为需要使用的二级域名。
+在执行完上面的 openssl 命令后，会生成六个文件，将其中几个文件移动到 ngrok 仓库的指定位置：
+```bash
+cp rootca.pem $gopath/assets/client/tls/ngrokroot.crt  # 复制rootca.pem到assets/client/tls/并更名为ngrokroot.crt
+cp server.crt $gopath/assets/server/tls/snakeoil.crt # 复制server.crt到assets/server/tls/并更名为snakeoil.crt
+cp server.key $gopath/assets/server/tls/snakeoil.key # 复制server.key到assets/server/tls/并更名为snakeoil.key
+```
+之后，我们就可以开始编译 ngrok 了:
+```bash
+goos=[os] goarch=[cpu arch] make release-server # 编译服务端
+goos=[os] goarch=[cpu arch] make release-client # 编译客户端
+```
+将 `[os]` 换成对应的操作系统 `linux` `windows` `android`，`[cpu arch]` 换成对应的 cpu 架构 `386`(32位 x86) `amd64`(64位 x86-64)。具体组合见 [stackoverflow](https://stackoverflow.com/questions/20728767/all-possible-goos-value/20728862)：
+```
+$goos $goarch
+android   arm
+darwin    386
+darwin    amd64
+darwin    arm
+darwin    arm64
+dragonfly amd64
+freebsd   386
+freebsd   amd64
+freebsd   arm
+linux     386
+linux     amd64
+linux     arm
+linux     arm64
+linux     ppc64
+linux     ppc64le
+linux     mips
+linux     mipsle
+linux     mips64
+linux     mips64le
+netbsd    386
+netbsd    amd64
+netbsd    arm
+openbsd   386
+openbsd   amd64
+openbsd   arm
+plan9     386
+plan9     amd64
+solaris   amd64
+windows   386
+windows   amd64
+```
+常用 `windows` + `amd64` 或者 `linux` + `amd64` 组合。  
+编译完成后在 `$gopath/bin` 下可以看到 `ngrok` `ngrokd` 两个文件，如果编译 windows 平台的会有 `.exe` 后缀。服务端文件是 `ngrokd`，客户端文件为 `ngrok`。
+
+## 配置并运行服务端与客户端
+
+### 服务端
+
+服务器上可以将 `ngrokd` 与之前生成的证书 `server.crt` `server.key` 放在同一个目录中，并在目录中创建一个脚本文件 `run.sh` 来启动 ngrokd：
+```bash
+#!/bin/bash
+./ngrokd -tlskey=server.key -tlscrt=server.crt -domain=&quot;[ngrok_base_domain]&quot; -httpaddr=&quot;:[port]&quot; -httpsaddr=&quot;:[port]&quot;
+```
+将中括号部份换成实际需要的值。后两个 `[port]` 指定 ngrok 在服务器上 http 和 https 协议使用的端口。  
+服务端运行起来之后，可以通过浏览器访问之前设置 dns 记录的子域名，注意如果端口不是默认的，需要在域名后添加 `:[port]`。如果网页显示类似 `tunnel ngrok.yourdomain.com:[port] not found` 字样则说明服务器成功启动。
+
+### 客户端
+
+#### 安装、配置和运行
+
+客户端方面，注意要使用之前编译生成的 ngrok，似乎也可以使用 [python-ngork](https://github.com/hauntek/python-ngrok) 但我没有成功。客户端方面，需要新建配置文件 `ngrok.cfg`（使用 yaml 语法格式），内容如下：
+```yaml
+server_addr: [ngrok_base_domain]:4443
+trust_host_root_certs: false
+```
+这里 4443 是 ngrokd 默认的监听端口。  
+之后通过命令运行（同样可以将这条命令写成脚本）：`./ngrok -subdomain [subdomain] -config=[your_config_file_name] [port]` 这是将客户端本地 80 端口代理到服务器对应的 httpaddr 端口。  
+同样可以代理 tcp 的端口：`./ngrok -subdomain mydatabaseserver -config=[your_config_file_name] -proto tcp 3306` 将 mysql 的 3306 端口代理到服务器上，这样就可以通过域名 + 端口访问到客户端对应的端口上的服务。
+
+不过这样设置并不方便，写入配置文件 `ngrok.cfg` 然后选择需要的代理更加便捷：
+```yaml
+server_addr: ngrok.yourdomain.com:4443
+trust_host_root_certs: false
+tunnels:
+  http:
+    subdomain: &quot;http&quot;
+    proto:
+      http: &quot;4000&quot;
+  ssh:
+    subdomain: &quot;zhb&quot;
+    remote_port: 4422
+    proto:
+      tcp: &quot;22&quot;
+```
+`remote_port` 表示指定 tcp 在服务器上监听的端口。注意不要使用 tab 而应该用空格进行缩进。 
+最后通过命令 `./ngrok -config=ngrok.cfg start ssh` 启动 tunnels 中的 ssh 代理。start 后可以接多个代理名称，中间用空格分格。  
+更多客户端配置文件选项可以访问 ngork 官网的文档进行了解（2.x 的配置文件应该是兼容的吧）。
+
+#### 使用 systemctl 添加 ngrok 服务
+
+##### systemctl 使用命令
+
+以下的 `[service name].service` 中的 `.service` 可以省略，即使用 `[service name]` 即可。
+```bash
+$ systemctl start [service name].service # 启动 [service name] 服务
+$ systemctl stop [service name].service # 停止 [service name] 服务
+$ systemctl restart [service name].service # 重启 [service name] 服务
+$ systemctl status [service name].service # 查看 [service name] 服务运行状态
+$ systemctl enable [service name].service # 设置 [service name] 服务开机自启动
+$ systemctl disable [service name].service # 关闭 [service name] 服务开机自启动
+$ systemctl daemon-reload # 重新载入 systemd,扫描新的或有变动的单元
+```
+
+下面我们将新建一个自定义的 ngrok 服务。
+
+##### 添加自定义 systemctl 服务
+
+新建配置文件 `ngrok.service`，内容如下：
+```
+[unit]
+description=share local port(s) with ngrok
+after=syslog.target network.target
+
+[service]
+privatetmp=true
+type=simple
+restart=always
+restartsec=1min
+standardoutput=null
+standarderror=null
+execstart=/usr/local/ngrok/ngrok -config=/usr/local/ngrok/ngrok.cfg start ssh
+#execstop=/usr/bin/killall ngrok
+
+[install]
+wantedby=multi-user.target
+```
+注意要修改你的 `execstart` 项的值，这项的值与上面的运行命令类似，不过注意 ngrok 客户端和配置文件要使用绝对路径。`execstop` 这项我将它注释掉了，这个命令可能误杀进程，所以不建议使用它。systemctl 有默认的 `execstop` 命令，具体可以参考[linux - how stop systemd service - stack overflow](https://stackoverflow.com/questions/40411338/how-stop-systemd-service) 中 umut 的回答。  
+将文件 `ngrok.service` 复制到路径 `/usr/lib/systemd/system/` 下（需要 root 权限）。然后执行命令使其开机启动与生效：
+```bash
+$ systemctl enable ngrok.service
+$ systemctl daemon-reload
+```
+最后，可以通过命令 `systemctl start ngrok.service` 启动 ngrok 服务，使用命令 `systemctl stop ngrok.service` 停止 ngrok 服务，使用 `systemctl status ngrok.service` 查看 ngrok 服务的运行状态。
+
+## 参考
+
+* [run ngrok on your own server - svenbit](https://www.svenbit.com/2014/09/run-ngrok-on-your-own-server/)
+* [一分钟实现内网穿透（ngrok服务器搭建） - 学习笔记 - csdn博客](https://blog.csdn.net/zhangguo5/article/details/77848658)
+* [ngrok完美实现内网穿透 - 知乎](https://zhuanlan.zhihu.com/p/29019562)
+* [安卓端搭建网站+自建内网穿透ngrok – 沧水的博客](https://cangshui.net/?p=1943)
+* systemctl 配置
+	* [centos 7 ngrok 加入系统服务，支持开启和关闭服务 - opfan的博客 - csdn博客](https://blog.csdn.net/qazx123q/article/details/81212858)
+	* [centos7使用systemctl添加自定义服务 - 简书](https://www.jianshu.com/p/79059b06a121) **详细**
+	* [linux - how stop systemd service - stack overflow](https://stackoverflow.com/questions/40411338/how-stop-systemd-service)
+	* [centos7利用systemctl添加自定义系统服务 - 梦徒 - 博客园](https://www.cnblogs.com/saneri/p/7778756.html)
+	* [systemd.service 文档](https://www.freedesktop.org/software/systemd/man/systemd.service.html) network" data-astro-cid-wp2l4cmv><article class="article-card" data-astro-cid-7ahxywo7><div class="card-meta" data-astro-cid-7ahxywo7><time datetime="2019-03-16T19:18:13.000Z" data-astro-cid-7ahxywo7>2019年3月16日</time><span class="tags" data-astro-cid-7ahxywo7><a href="/tags/Network/" class="tag" data-astro-cid-7ahxywo7>#Network</a></span></div><h2 class="card-title" data-astro-cid-7ahxywo7><a href="/posts/ngrok/" data-astro-cid-7ahxywo7>使用 ngrok 实现内网穿透（自建 ngrok 服务器）</a></h2><p class="card-desc" data-astro-cid-7ahxywo7></p></article></div><div data-search-text="hexo 标签插件使用 本文来源于 [hexo 官方文档](https://hexo.io/zh-cn/docs/tag-plugins)
+
+<!-- more -->
+
+标签插件和 front-matter 中的标签不同，它们是用于在文章中快速插入特定内容的插件。
+
+## 引用块
+
+在文章中插入引言，可包含作者、来源和标题。
+
+**别号：** quote
+
+```
+{% blockquote [author[, source]] [link] [source_link_title] %}
+content
+{% endblockquote %}
+```
+
+### 样例
+
+**没有提供参数，则只输出普通的 blockquote**
+
+```
+{% blockquote %}
+lorem ipsum dolor sit amet, consectetur adipiscing elit. pellentesque hendrerit lacus ut purus iaculis feugiat. sed nec tempor elit, quis aliquam neque. curabitur sed diam eget dolor fermentum semper at eu lorem.
+{% endblockquote %}
+```
+
+{% blockquote %}
+lorem ipsum dolor sit amet, consectetur adipiscing elit. pellentesque hendrerit lacus ut purus iaculis feugiat. sed nec tempor elit, quis aliquam neque. curabitur sed diam eget dolor fermentum semper at eu lorem.
+{% endblockquote %}
+
+**引用书上的句子**
+
+```
+{% blockquote david levithan, wide awake %}
+do not just seek happiness for yourself. seek happiness for all. through kindness. through mercy.
+{% endblockquote %}
+```
+
+{% blockquote david levithan, wide awake %}
+do not just seek happiness for yourself. seek happiness for all. through kindness. through mercy.
+{% endblockquote %}
+
+**引用 twitter**
+
+```
+{% blockquote @devdocs https://twitter.com/devdocs/status/356095192085962752 %}
+new: devdocs now comes with syntax highlighting. http://devdocs.io
+{% endblockquote %}
+```
+
+{% blockquote @devdocs https://twitter.com/devdocs/status/356095192085962752 %}
+new: devdocs now comes with syntax highlighting. http://devdocs.io
+{% endblockquote %}
+
+**引用网络上的文章**
+
+```
+{% blockquote seth godin http://sethgodin.typepad.com/seths_blog/2009/07/welcome-to-island-marketing.html welcome to island marketing %}
+every interaction is both precious and an opportunity to delight.
+{% endblockquote %}
+```
+
+{% blockquote seth godin http://sethgodin.typepad.com/seths_blog/2009/07/welcome-to-island-marketing.html welcome to island marketing %}
+every interaction is both precious and an opportunity to delight.
+{% endblockquote %}
+
+## 代码块
+
+在文章中插入代码。
+
+**别名：** code
+
+```
+{% codeblock [title] [lang:language] [url] [link text] %}
+code snippet
+{% endcodeblock %}
+```
+
+### 样例
+
+**普通的代码块**
+
+```
+{% codeblock %}
+alert('hello world!');
+{% endcodeblock %}
+```
+
+{% codeblock %}
+alert('hello world!');
+{% endcodeblock %}
+
+**指定语言**
+
+```
+{% codeblock lang:objc %}
+[rectangle setx: 10 y: 10 width: 20 height: 20];
+{% endcodeblock %}
+```
+
+{% codeblock lang:objc %}
+[rectangle setx: 10 y: 10 width: 20 height: 20];
+{% endcodeblock %}
+
+**附加说明**
+
+```
+{% codeblock array.map %}
+array.map(callback[, thisarg])
+{% endcodeblock %}
+```
+
+{% codeblock array.map %}
+array.map(callback[, thisarg])
+{% endcodeblock %}
+
+**附加说明和网址**
+
+```
+{% codeblock _.compact http://underscorejs.org/#compact underscore.js %}
+_.compact([0, 1, false, 2, '', 3]);
+=> [1, 2, 3]
+{% endcodeblock %}
+```
+
+{% codeblock _.compact http://underscorejs.org/#compact underscore.js %}
+_.compact([0, 1, false, 2, '', 3]);
+=> [1, 2, 3]
+{% endcodeblock %}
+
+## 反引号代码块
+
+另一种形式的代码块，不同的是它使用三个反引号来包裹。
+
+{% raw %}
+&amp;#96`` [language] [title] [url] [link text]
+code snippet
+&amp;#96;``
+{% endraw %}
+
+## pull quote
+
+在文章中插入 pull quote。
+
+```
+{% pullquote [class] %}
+content
+{% endpullquote %}
+```
+
+## jsfiddle
+
+在文章中嵌入 jsfiddle。
+
+```
+{% jsfiddle shorttag [tabs] [skin] [width] [height] %}
+```
+
+## gist
+
+在文章中嵌入 gist。
+
+```
+{% gist gist_id [filename] %}
+```
+
+## iframe
+
+在文章中插入 iframe。
+
+```
+{% iframe url [width] [height] %}
+```
+
+## image
+
+在文章中插入指定大小的图片。
+
+```
+{% img [class names] /path/to/image [width] [height] [title text [alt text]] %}
+```
+
+## link
+
+在文章中插入链接，并自动给外部链接添加 `target=&quot;_blank&quot;` 属性。
+
+```
+{% link text url [external] [title] %}
+```
+
+## include code
+
+插入 `source` 文件夹内的代码文件。
+
+```
+{% include_code [title] [lang:language] path/to/file %}
+```
+
+## youtube
+
+在文章中插入 youtube 视频。
+
+```
+{% youtube video_id %}
+```
+
+## vimeo
+
+在文章中插入 vimeo 视频。
+
+```
+{% vimeo video_id %}
+```
+
+## 引用文章
+
+引用其他文章的链接。
+
+```
+{% post_path slug %}
+{% post_link slug [title] %}
+```
+
+## 引用资源
+
+引用文章的资源。
+
+```
+{% asset_path slug %}
+{% asset_img slug [title] %}
+{% asset_link slug [title] %}
+```
+
+## raw
+
+如果您想在文章中插入 swig 标签，可以尝试使用 raw 标签，以免发生解析异常。
+
+```
+{% raw %}
+content
+{% endraw %}
+``` blog" data-astro-cid-wp2l4cmv><article class="article-card" data-astro-cid-7ahxywo7><div class="card-meta" data-astro-cid-7ahxywo7><time datetime="2019-02-19T21:30:00.000Z" data-astro-cid-7ahxywo7>2019年2月19日</time><span class="tags" data-astro-cid-7ahxywo7><a href="/tags/blog/" class="tag" data-astro-cid-7ahxywo7>#blog</a></span></div><h2 class="card-title" data-astro-cid-7ahxywo7><a href="/posts/hexo-tag-plugins/" data-astro-cid-7ahxywo7>Hexo 标签插件使用</a></h2><p class="card-desc" data-astro-cid-7ahxywo7></p></article></div><div data-search-text="spring 入门笔记 spring in action *4th edition* 笔记
+
+<!-- more -->
+
+## spring 概览
+
+### 核心概念
+
+* 依赖注入 (**dependency injection** *abbr* di)
+* 面向切面编程 (**aspect-oriented programming** *abbr* aop)
+
+### 名词定义
+
+* **pojo**: plain old java object
+* **wiring**: the act of creating associations between application components
+* **container**: where application objects live in a spring-based application. there are two distinct types of container implementations:
+	* bean factories: the simplest of containers
+	* application contexts: build on the notion of a bean factory by providing application-framework services
+
+### spring 家族
+
+spring 发展到现在已经不仅仅只是一个框架了。它还发展出了一系列的 spring 配套的工具集，比如 spring boot, spring cloud 等。
+
+## 连接(wiring) beans
+
+在 spring 中有三种方式配置 beans：
+* xml 配置
+* 在 java 中配置
+* 自动连接(automatically wiring beans)
+
+### automatically wiring beans
+
+* **component scanning**: 自动发现并添加 beans
+* **autowiring**: 自动配置 beans 依赖关系
+
+#### component scanning
+
+使用 `@component` 标记需要添加到 beans 的类，如：
+```java
+package ...;
+import org.springframework.stereotype.component;
+
+@component
+public class sgtpeppers implements compactdisc {
+	...
+}
+```
+
+同时，需要明确配置开启 componentscan：
+```java
+package ...;
+import org.springframework.context.annotation.componentscan;
+import org.springframework.context.annotation.configuration;
+
+@configureation
+@componentscan
+public class cdplayerconfig {
+}
+```
+
+* 命名 component-scanned bean
+
+每个 bean 都有一个 id，如果不明确分配，将使用类名的第一个字母小写的形式作为 id。注明 id 的方式为 `@component(&quot;[bean-id]&quot;)`，也可以使用 *java dependency injection specification (jsr-330)* 中的 `@named` 注释来提供 bean id：`@named(&quot;[bean-id]&quot;)` （需要 `import javax.inject.named;`）。在 spring 中，这两种方式有微小的差别，但在大多数情况下两者是可以互换的。
+
+* 为 component scanning 设置 base packages
+
+`@componentscan(&quot;[package-name]&quot;)` 使用 string 类型指定包，更明显地传递参数方式 `@componentscan(basepackages=&quot;[package-name]&quot;)`，也可以指定多个包 `@componentscan(basepackages={&quot;[package-name1]&quot;, &quot;[package-name2]&quot;)`。
+
+除了使用字符串指定包，也可以使用包中的类或接口 `@componentscan(basepackageclasses={[class-name1].class, [class-name2].class})` 注意参数名变成了 **basepackageclasses**
+
+#### autowiring
+
+使用 `@autowired` 注释类中的方法（需要 `import org.springframework.beans.factory.annotation.autowired;`）。spring 在实例化 bean 之后，将尽力去满足被 `@autowired` 标记的方法需要的依赖。 如果没有满足的 bean ，spring 会在生成 application context 的时候抛出一个异常。可以设置 `@autowired` 的 `required` 参数为 `false` 来避免异常的抛出。不过尽量不要修改这个参数。当有多个 beans 满足依赖关系时，spring 也会抛出一个异常，指出 autowiring 选择 bean 时有歧义。
+
+`@autowired` 有类似的 java 中的注释 `@inject` (`import javax.inject.inject`)，和 `@component` 与 `@named` 的情况类似。
+
+### 使用 java 配置 beans (javaconfig)
+
+> 注：java 配置虽然使用 java 语言，但它实际上是配置文件，而非业务逻辑代码。所以 javaconfig 中不能包含逻辑代码，同时配置内容也必须保存在 javaconfig 中。
+
+* 创建配置类：使用 `@configuration` 注释类
+```
+package ...;
+import org.springframework.context.annotation.configuration;
+
+@configuration
+public class cdplayerconfig {
+}
+```
+
+* 声明 bean：被 `@bean` 注释的方法将返回一个将被注册为 bean 的对象。默认情况下，bean id 为方法名。通过 `@bean` 的 `name` 参数可以显式指定 id 。
+```java
+@bean // 或者 @bean(name=&quot;lonelyheartsclubband&quot;) 指定 bean id
+public compactdisc sgtpeppers() {
+	return new sgtpeppers();
+}
+```
+声明方法中可以使用任意 java 代码来最终获得 bean 对象。
+
+* 注入依赖：将依赖作为方法参数传入
+```java
+@bean
+public cdplayer cdplayer(compactdisc compactdisc) {
+	return new cdplayer(compactdisc);
+}
+```
+
+### 使用 xml 配置
+
+> 注：xml 配置尽量少用，推荐使用 javaconfig 。但能读懂 xml 配置也是必须的。
+
+
+### 导入和混合配置
+
+* 导入：`@import([javaconfig-name].class)` `@importresource(&quot;classpath:[xml-config-name].xml&quot;)` 导入多个配置可以在圆括号 `( )` 中使用花括号 `{ }`
+
+## 高级 wiring 技巧
+
+### scoping beans （作用域）
+
+* 分类：
+	* singleton
+	* prototype
+	* session
+	* request
+
+* 声明 scope：`@scope(configurablebeanfactory.scope_[scope-name])` 位于 bean 声明注释之后（`@bean` 或 `@component`）
+
+使用 session 或 request scope 时，需要同时声明代理类型：
+```java
+@scope(
+	value=webapplicationcontext.scope_[session | request],
+	proxymode=scopedproxymode.[interfaces | target_class])
+```
+
+当声明的 bean 类型是一个接口时，代理使用 `interfaces`，否则为具体的类时，代理使用 `target_class`。
+
+## spring 项目创建、编译与运行
+
+创建项目可以在 [spring initializr](https://start.spring.io/) 上填入相关信息，点击生成项目就可以得到项目初始的 zip 压缩包了。
+
+编译 jar 包的命令
+
+* gradle: `gradle build`
+* maven: `mvn package`
+
+gradle maven 编译生成的 jar 包的位置分别为 `build/libs/[project][-version].jar` `target/[project][-version].jar`
+
+运行 jar 包的命令：`java -jar [target].jar`
+
+如果要生成 war 包，在 maven 中只需要修改/添加 `pom.xml` 中相应内容：`<packaging>war</packaging>`，而在 gradle 中，需要添加 war 插件：`apply plugin: 'war'`，同时还要将设置项中的 `jar` 改为 `war`：
+```
+war {
+  basename = '[project-name]'
+  version = '0.0.1'
+}
+```
+
+具体的 maven 编译过程可以参考 [理解maven命令package、install、deploy的联系与区别 - zhaojianting的博客 - csdn博客](https://blog.csdn.net/zhaojianting/article/details/80324533) spring" data-astro-cid-wp2l4cmv><article class="article-card" data-astro-cid-7ahxywo7><div class="card-meta" data-astro-cid-7ahxywo7><time datetime="2019-02-19T15:22:33.000Z" data-astro-cid-7ahxywo7>2019年2月19日</time><span class="tags" data-astro-cid-7ahxywo7><a href="/tags/Spring/" class="tag" data-astro-cid-7ahxywo7>#Spring</a></span></div><h2 class="card-title" data-astro-cid-7ahxywo7><a href="/posts/spring/" data-astro-cid-7ahxywo7>Spring 入门笔记</a></h2><p class="card-desc" data-astro-cid-7ahxywo7></p></article></div><div data-search-text="hexo 博客搭建折腾记录 记录自己搭建博客遇到的问题的解决方案，方便今后查找。
+
+<!-- more -->
+
+## 在 hexo 中使用 latex 渲染数学公式
+
+来源：
+
+* [使用latex添加公式到hexo博客里 - aoman_hao的博客 - csdn博客](https://blog.csdn.net/aoman_hao/article/details/81381507)
+* [hexo下latex无法显示的解决方案 - crazy_scott的博客 - csdn博客](https://blog.csdn.net/crazy_scott/article/details/79293576)
+
+### 步骤
+
+1. 安装 kramed
+
+	将 hexo 默认渲染引擎 marked (不支持 mathjax) 更换为 hexo-renderer-kramed 引擎 (支持 mathjax 公式输出)
+	在 hexo 目录下，输入下面的命令卸载默认渲染引擎，安装新的引擎：
+```bash
+$ npm uninstall hexo-renderer-marked --save
+$ npm install hexo-renderer-kramed --save
+```
+
+1. 修改配置文件
+
+	打开 `node_modules/hexo-renderer-kramed/lib/renderer.js`，将
+```javascript
+// change inline math rule
+function formattext(text) {
+    // fit kramed's rule: $$ + \1 + $$
+    return text.replace(/`\$(.*?)\$`/g, '$$$$$1$$$$');
+}
+```
+	中 `return` 那行注释掉 (开头加两斜线，同 `return` 上面一行那样)，在下面一行添加 `return text;`。也即改为下面这样：
+```javascript
+// change inline math rule
+function formattext(text) {
+    // fit kramed's rule: $$ + \1 + $$
+    // return text.replace(/`\$(.*?)\$`/g, '$$$$$1$$$$');
+	return text;
+}
+```
+
+1. 停止使用 hexo-math，并安装 mathjax 包
+
+	卸载 hexo-math：
+```bash
+$ npm uninstall hexo-math --save
+```
+
+	安装 hexo-renderer-mathjax 包：
+```
+$ npm install hexo-renderer-mathjax --save
+```
+
+1. 更新 mathjax 的配置文件
+
+	打开 `node_modules/hexo-renderer-mathjax/mathjax.html`，将所有内容注释掉，加上以下内容：
+```html
+<script src=&quot;https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/mathjax.js?config=tex-mml-am_chtml&quot;></script>
+```
+
+1. 更改默认转义规则 (解决语义冲突)
+
+	因为 latex 与 markdown 语法有语义冲突，所以 hexo 默认的转义规则会将一些字符进行转义，因此要对默认规则进行修改。
+	打开 `node_modules/kramed/lib/rules/inline.js`，找到第 11 行的 `escape: ` 项和原第 20 行的 `em: ` 项，分别注释掉并添加内容，即修改为以下这样：
+```javascript
+  // escape: /^\\([\\`*{}\[\]()#$+\-.!_>])/,
+  escape: /^\\([`*\[\]()# +\-.!_>])/,
+```
+	和
+```javascript
+  // em: /^\b_((?:__|[\s\s])+?)_\b|^\*((?:\*\*|[\s\s])+?)\*(?!\*)/,
+  em: /^\*((?:\*\*|[\s\s])+?)\*(?!\*)/,
+```
+	这两项修改分别
+1. 开启 mathjax
+
+	在 `themes/[your theme]/config.yml` 中，添加如下代码 (如果存在 `mathjax:` 就不用添加这一行了)
+```
+mathjax:
+	enable: true
+```
+
+	或者
+```
+mathjax: true
+```
+
+	**注意配置项和参数中间有一个空格不能漏掉**
+
+	写博客 posts 时，要开启 `mathjax` 选项，即在文章的 front-matter 里添加以下内容：
+```
+mathjax: true
+```
+
+	例如 (上下各三个减号我的代码渲染有问题就不加上了)：
+```hexo
+title: hexo
+date: 2019-1-1
+tags:
+mathjax: true
+```
+
+	*ps: 我没有添加这一项也成功渲染出来了。* 
+
+1. 测试
+
+	添加一段 latex 代码：
+```latex
+$$lim_{1\to+\infty}p(|\frac{1}{n}\sum_i^nx_i-\mu|<\epsilon)=1, i=1,...,n$$  
+```
+
+	渲染结果如下：
+$$lim_{1\to+\infty}p(|\frac{1}{n}\sum_i^nx_i-\mu|<\epsilon)=1, i=1,...,n$$  
+
+## 使用七牛云加速网站资源的加载 (无法长期使用，放弃)
+
+考虑到 github 网速较慢，加载网页图片等速度较慢。我选择国内的 cdn 服务运营商七牛云来加速网站加载。
+
+### 使用插件 [hexo-qiniu-sync](https://github.com/gyk001/hexo-qiniu-sync)
+
+1. 根据插件的 `readme` 操作，用 `npm install hexo-qiniu-sync --save` 命令安装插件
+1. 在 `_config.yml` 文件中，根据提示修改。主要修改的地方有几个：
+	* `bucket` - 改为自己的空间名称
+	* `access_key` `secret_key` - 在七牛云中点击个人面板，密钥管理中有这两个参数，**注意不要泄漏这些密钥**！ (如果仓库是公开的话，可以修改 `secret_file` 参数，将密钥放在本地文件中而不在此处添加密钥，并将这个文件添加到 `.gitignore` 中)
+	* `urlprefix` - 修改为自己存储空间的域名 (注意 `.com/` 后面的部分要与 `dirprefix` 的内容保持一致)
+1. 设置完成后，执行 `hexo g` 就会自动生成一个 `local_dir` 对应的目录，在其中对应目录下存放对应文件即可
+1. 使用命令 `hexo s` 会自动上传同步 `local_dir` 中的文件
+**不知为何我一直无法成功上传**，两个 key 也检查过没有错误。
+```
+error get file stat err: static/images/xxx.jpeg
+[object object]
+``` blog" data-astro-cid-wp2l4cmv><article class="article-card" data-astro-cid-7ahxywo7><div class="card-meta" data-astro-cid-7ahxywo7><time datetime="2019-01-01T21:35:16.000Z" data-astro-cid-7ahxywo7>2019年1月1日</time><span class="tags" data-astro-cid-7ahxywo7><a href="/tags/blog/" class="tag" data-astro-cid-7ahxywo7>#blog</a></span></div><h2 class="card-title" data-astro-cid-7ahxywo7><a href="/posts/hexo/" data-astro-cid-7ahxywo7>Hexo 博客搭建折腾记录</a></h2><p class="card-desc" data-astro-cid-7ahxywo7></p></article></div><div data-search-text="using grep &amp; regular expressions from [using grep &amp; regular expressions to search for text patterns in linux](https://www.digitalocean.com/community/tutorials/using-grep-regular-expressions-to-search-for-text-patterns-in-linux)
+
+<!-- more -->
+
+## basic usage
+
+```bash
+$ grep [pattern] [input file]
+```
+
+print out every **line** in the file containing that pattern
+
+common options|description
+---|---
+`-i` == `--ignore-case`|both upper- and lower-case variations
+`-v` == `--invert-match`|do not contain the pattern
+`-n` == `--line-number`|show the line number
+
+## a little bit about regular expressions
+
+### anchor matches
+
+anchor matches|description
+:-:|---
+`^`|at the begining of the string(line)
+`$`|at the end of the string
+
+### matching any character
+
+any character|description
+:-:|---
+`.`|match any single character
+
+### bracket expressions
+
+* characters between `[` and `]` means `or`
+* but if the characters start with `^`, it means `not`, i.e. **except**
+* represent a range of characters: `[a-z]`, but we can use posix character classes to replace the `[a-z]`: `[[:upper:]]`
+
+### repeat pattern zero or more times
+
+character|description
+:-:|---
+`*`|repeat the previous character or expression zero or more times
+
+### escaping meta-characters
+
+using backslash character `\` to escape characters that would normally have a special meaning.
+
+## extended regular expressions
+
+use `-e` flag or call `egrep` command to use extended regular expressions
+
+### groupinn
+
+### alternation
+
+### quantifiers
+
+character|description
+:-:|---
+`?`|match the previouscharacter zero or one times
+`+`|one or more times
+
+### specifying match repetition
+
+`{num}` to specify matching times, from an exact number, a range, or an upper or lower bounds command line linux regular expression" data-astro-cid-wp2l4cmv><article class="article-card" data-astro-cid-7ahxywo7><div class="card-meta" data-astro-cid-7ahxywo7><time datetime="2018-11-07T17:33:47.000Z" data-astro-cid-7ahxywo7>2018年11月7日</time><span class="tags" data-astro-cid-7ahxywo7><a href="/tags/Command%20Line/" class="tag" data-astro-cid-7ahxywo7>#Command Line</a><a href="/tags/linux/" class="tag" data-astro-cid-7ahxywo7>#linux</a><a href="/tags/Regular%20Expression/" class="tag" data-astro-cid-7ahxywo7>#Regular Expression</a></span></div><h2 class="card-title" data-astro-cid-7ahxywo7><a href="/posts/grep/" data-astro-cid-7ahxywo7>Using Grep &amp; Regular Expressions</a></h2><p class="card-desc" data-astro-cid-7ahxywo7></p></article></div><div data-search-text="排序 数据结构课后整理的一部分内容。（没啥干货，就不要再点开看了）
+
+<!-- more -->
+
+## 排序 (sorting) 的定义
+
+排序:
+	将一个数据元素（或记录）的任意序列重新排列成一个按关键字 **有序** 的序列。
+
+
+* 升序：关键字从小到大
+* 降序：关键字从大到小
+
+## 排序的稳定性
+
+若序列中关键字值相等的节点经过某种排列方法进行排序之后，仍能保持它们在排序前的相对顺序，则称这种排序方法是 **稳定** 的；否则，称这种排序方法是 **不稳定** 的。
+
+用符号表达：
+在序列 $a_0$, $a_1$, $a_2$, ... , $a_{n-1}$ 排序前 ( $a_i$ 对应关键字为 $k_i$) ，若 i < j ^ $k_i$ = $k_j$，且排序后，$a_i$ 一定仍在 $a_j$ 之前，则称这种排序方法是稳定的，否则这种排序方法是不稳定的。
+
+## 排序的分类
+
+### 内存使用
+
+* 内部排序
+	排序期间全部节点都存储于内存，并在内存中调整等待排序节点的存放位置。
+
+* 外部排序
+	排序期间大部分节点存储于外存中，排序过程中借助内存，调整那些存放在外存，等待排序的节点的存放值。
+
+### 排序实现手段
+
+* 基于“比较-交换”的排序
+	如 插入排序、冒泡排序、快速排序、希尔排序、堆排序等。
+
+* 基于“分配”的排序
+	如 基数排序、桶排序等。
+
+### 实现难易
+
+* 基本排序方法
+	通常认为包括插入排序、冒泡排序、选择排序。
+
+* 高级排序方法
+	如 快速排序、归并排序、堆排序等。
+
+## 排序方法介绍
+
+### 基本排序方法
+
+#### 冒泡排序
+
+#### 插入排序
+
+### 高级排序
+
+#### 快速排序
+
+#### 归并排序
+
+##### 性质
+
+* 稳定性
+
+##### 内容
+
+归并排序可分为 自下而上 和 自上而下 两种方式（本质相同）
+先将数组拆分成许多很小的数组分别进行排序，然后小数组两两合并成较大的有序数组，较大的有序数组继续两两合并，重复该过程直至完全合并。
+
+#### 堆排序
+
+1. 构造出 `堆` 这种数据结构（可以用数组存储）
+2. 得到所有数据中的最大/小值（位于堆的根节点上）
+3. 将其与堆中末尾元素互换，堆元素数目减一
+4. 调整堆，得到剩下的最值，重复操作
+
+
+#### 计数排序
+
+##### 性质
+
+* 稳定性
+
+##### 内容
+
+创建一个和数据范围一样大的数组来存储每个数据出现次数
+
+#### 桶排序
+
+通过将所有数据根据大小均匀分配在 n 个桶中，然后对桶内的元素排序
+
+1. 找出数组最值，确定桶的数目
+2. 计算桶的大小，由此可得到每个桶存储数据的范围
+3. 将待排序数据放入对应桶中
+4. 在桶内部进行排序，并将所有桶合并以完成排序
+
+#### 基数排序
+
+基数排序分为 lsd(最低位优先法) 和 msd(最高位优先法) 两种
+中文
+##### lsd
+
+1. 根据进制数 n 设置 n 元数组 count，count[i] 统计第 j 位数字为 i 的数的数目
+2. 将 count 从前到后累加，即 `count[i] = count[i] + count[i - 1]`(i 从 1 到 n - 1) ，得到 count[i] 即为 count[i] 所统计数字组在原数组中的结束位置
+3. 根据 count 数组 **从后向前** 遍历原排序数组将每个数字放入数组中对应位置(第 j 位数字 i 对应的 count[i] - 1 即为对应位置)，同时更新 count 数组(count[i] 递减)
+4. j 从最低位循环到最高位，即可完成排序
+
+## 参考资料
+
+* [**排序算法（三）：计数排序与桶排序**](https://blog.csdn.net/sunjinshengli/article/details/70738527) <- 这个靠谱
+* [经典排序思想——桶排序](https://blog.csdn.net/yinhjiang/article/details/80397415)
+* [基数排序与计数排序](https://blog.csdn.net/jp413670706/article/details/52745767)
+* [计数排序和基数排序和桶排序](https://blog.csdn.net/msdnwolaile/article/details/52459452) <- [经典排序算法 - 计数排序counting sort](http://www.cnblogs.com/kkun/archive/2011/11/23/2260299.html)
+
+### 推荐视频
+
+* [6 分钟演示 15 种排序算法 - bilibili](https://www.bilibili.com/video/av685670?from=search&amp;seid=13221889579576927281) data structure" data-astro-cid-wp2l4cmv><article class="article-card" data-astro-cid-7ahxywo7><div class="card-meta" data-astro-cid-7ahxywo7><time datetime="2018-11-05T23:15:59.000Z" data-astro-cid-7ahxywo7>2018年11月5日</time><span class="tags" data-astro-cid-7ahxywo7><a href="/tags/Data%20Structure/" class="tag" data-astro-cid-7ahxywo7>#Data Structure</a></span></div><h2 class="card-title" data-astro-cid-7ahxywo7><a href="/posts/sort/" data-astro-cid-7ahxywo7>排序</a></h2><p class="card-desc" data-astro-cid-7ahxywo7></p></article></div></div></main><footer class="site-footer" data-astro-cid-jo6i4kqk><div class="container footer-inner" data-astro-cid-jo6i4kqk><div class="footer-socials" aria-label="Social and feed links" data-astro-cid-jo6i4kqk><a href="https://github.com/gkzhb" target="_blank" rel="noopener noreferrer" class="footer-social-btn" aria-label="GitHub" title="Source on GitHub" data-astro-cid-jo6i4kqk><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-astro-cid-jo6i4kqk><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22" data-astro-cid-jo6i4kqk></path></svg></a><a href="/rss.xml" target="_blank" rel="noopener noreferrer" class="footer-social-btn" aria-label="RSS Feed" title="Subscribe to RSS Feed" data-astro-cid-jo6i4kqk><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-astro-cid-jo6i4kqk><path d="M4 11a9 9 0 0 1 9 9" data-astro-cid-jo6i4kqk></path><path d="M4 4a16 16 0 0 1 16 16" data-astro-cid-jo6i4kqk></path><circle cx="5" cy="19" r="1" data-astro-cid-jo6i4kqk></circle></svg></a></div><a href="https://roam.gkzhb.top/" target="_blank" rel="noopener noreferrer" data-astro-cid-jo6i4kqk>Obsidian 知识花园</a><div class="footer-copy" data-astro-cid-jo6i4kqk><span data-astro-cid-jo6i4kqk>© 2026 gkzhb&#39;s blog.</span><span class="footer-separator" data-astro-cid-jo6i4kqk>•</span><span class="footer-ssg" data-astro-cid-jo6i4kqk>Pure SSG powered by <a href="https://astro.build" target="_blank" rel="noopener noreferrer" data-astro-cid-jo6i4kqk>Astro</a></span></div><div class="footer-license" data-astro-cid-jo6i4kqk>内容许可：<a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener noreferrer" data-astro-cid-jo6i4kqk>CC-BY-4.0</a></div><div class="footer-signature" data-astro-cid-jo6i4kqk><em data-astro-cid-jo6i4kqk>Crafted with precision by the <a href="https://github.com/rnt-rez/minrock" target="_blank" rel="noopener noreferrer" data-astro-cid-jo6i4kqk>Minrock Project</a>. Engineered for the open web.</em></div></div></footer><!-- Search Modal Backdrop & Container --><div id="search-modal-backdrop" class="search-backdrop" aria-hidden="true" role="dialog" aria-modal="true" aria-label="Global Search" data-astro-cid-etsyzymg><div class="search-dialog" id="search-modal-dialog" data-astro-cid-etsyzymg><!-- Header --><div class="search-dialog-header" data-astro-cid-etsyzymg><div class="search-input-wrapper" data-astro-cid-etsyzymg><svg class="search-input-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" data-astro-cid-etsyzymg><circle cx="11" cy="11" r="8" data-astro-cid-etsyzymg></circle><path d="m21 21-4.3-4.3" data-astro-cid-etsyzymg></path></svg><input type="text" id="search-modal-input" class="search-input" placeholder="搜索文章、正文与标签…" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" data-astro-cid-etsyzymg><button id="search-modal-clear" class="search-clear-btn" aria-label="Clear search" type="button" style="display: none;" data-astro-cid-etsyzymg><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-astro-cid-etsyzymg><line x1="18" y1="6" x2="6" y2="18" data-astro-cid-etsyzymg></line><line x1="6" y1="6" x2="18" y2="18" data-astro-cid-etsyzymg></line></svg></button></div><button id="search-modal-close" class="search-close-badge" type="button" aria-label="Close search (Esc)" title="Close (Esc)" data-astro-cid-etsyzymg><kbd class="kbd-esc" data-astro-cid-etsyzymg>ESC</kbd></button></div><!-- Results Area --><div id="search-modal-results" class="search-dialog-body" tabindex="-1" data-astro-cid-etsyzymg><div class="search-initial-state" data-astro-cid-etsyzymg><div class="initial-section-title" data-astro-cid-etsyzymg>Quick Access &amp; Navigation</div><div class="initial-shortcuts" data-astro-cid-etsyzymg><a href="/posts/" class="initial-pill" data-astro-cid-etsyzymg><span class="pill-icon" data-astro-cid-etsyzymg>📄</span><span data-astro-cid-etsyzymg>All Articles</span></a><a href="/tags" class="initial-pill" data-astro-cid-etsyzymg><span class="pill-icon" data-astro-cid-etsyzymg>🏷️</span><span data-astro-cid-etsyzymg>All Tags</span></a><a href="/about" class="initial-pill" data-astro-cid-etsyzymg><span class="pill-icon" data-astro-cid-etsyzymg>👤</span><span data-astro-cid-etsyzymg>About</span></a></div><div class="initial-hint" data-astro-cid-etsyzymg>输入关键词搜索文章标题、正文与标签，例如 <code data-astro-cid-etsyzymg>Linux</code>、<code data-astro-cid-etsyzymg>Node.js</code> 或 <code data-astro-cid-etsyzymg>机器学习</code>。</div></div></div><!-- Footer --><div class="search-dialog-footer" data-astro-cid-etsyzymg><div class="search-shortcuts-guide" data-astro-cid-etsyzymg><span class="guide-item" data-astro-cid-etsyzymg><kbd data-astro-cid-etsyzymg>↑</kbd><kbd data-astro-cid-etsyzymg>↓</kbd> Navigate</span><span class="guide-item" data-astro-cid-etsyzymg><kbd data-astro-cid-etsyzymg>↵</kbd> Select</span><span class="guide-item" data-astro-cid-etsyzymg><kbd data-astro-cid-etsyzymg>ESC</kbd> Close</span></div><div class="search-brand-note" data-astro-cid-etsyzymg>🪨 博客搜索</div></div></div></div><script type="module" src="/_astro/SearchModal.astro_astro_type_script_index_0_lang.BRotAnrF.js"></script><button id="back-to-top" aria-label="Back to top" title="Back to top" data-astro-cid-vy5be4ad><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" data-astro-cid-vy5be4ad><polyline points="18 15 12 9 6 15" data-astro-cid-vy5be4ad></polyline></svg></button><script type="module">var e=null;function t(){e&&=(e.abort(),null);let t=document.getElementById(`back-to-top`);if(!t)return;e=new AbortController;let{signal:n}=e,r=!1;function i(){r||=(window.requestAnimationFrame(()=>{window.scrollY>300?t?.classList.add(`visible`):t?.classList.remove(`visible`),r=!1}),!0)}window.addEventListener(`scroll`,i,{passive:!0,signal:n}),i(),t.addEventListener(`click`,()=>{window.scrollTo({top:0,behavior:`smooth`})},{signal:n})}t(),document.addEventListener(`astro:page-load`,t),document.addEventListener(`astro:after-swap`,t),document.addEventListener(`astro:before-swap`,()=>{e&&=(e.abort(),null)});</script><script type="module" src="/_astro/ImageZoom.astro_astro_type_script_index_0_lang.BnzCcsvf.js"></script></body></html><script type="module">var e=document.querySelector(`#search-page-input`),t=Array.from(document.querySelectorAll(`[data-search-text]`)),n=document.querySelector(`#search-page-status`);e?.addEventListener(`input`,()=>{let r=e.value.trim().toLocaleLowerCase().split(/\s+/).filter(Boolean),i=0;for(let e of t)e.hidden=!r.every(t=>e.dataset.searchText?.includes(t)),e.hidden||i++;n&&(n.textContent=`找到 ${i} 篇文章`)});</script>
